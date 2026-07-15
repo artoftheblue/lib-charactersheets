@@ -1,0 +1,113 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/oracle/mystery/lore
+in: remaster/oracle/mystery
+group: "_{Player Core 2}"
+name: "_{Lore}"
+
+inc:
+  - set: subclass
+    value: "_{Lore}"
+  - set: oracle-mystery
+    value: "_{Lore}"
+
+  - set: occultism-proficiency
+    value: trained
+
+  - at: '@oracle/mystery/title'
+    replace:
+      - h4: "_{Lore}"
+
+  - set: oracle-mystery-skill
+    value: "_{Occultism}"
+  - set: oracle-mystery-domains
+    value: "_{Knowledge, Magic, Secrecy, Truth}"
+  - set: oracle-mystery-feat
+    value: "_{Whispers of Weakness}"
+  - set: oracle-mystery-granted-spells
+    value: "_{Cantrip: read aura. 1st: mindlink. 3rd: hypercognition. 6th: never mind.}"
+
+  - at: '@oracle/mystery/skill'
+    replace:
+      - field: oracle-mystery-skill
+        icon: proficiency-trained
+        width: stretch
+        label: "_{Mystery Skill}"
+      - field: "##:oracle-mystery-lore-skill"
+        icon: proficiency-trained
+        width: stretch
+        label: "_{Lore Skill (choose one)}"
+
+  - set: oracle-revelation-spell-initial
+    value: "_{Brain Drain}"
+  - set: oracle-revelation-spell-advanced
+    value: "_{Access Lore}"
+  - set: oracle-revelation-spell-greater
+    value: "_{Dread Secret}"
+
+  - at: '@oracle/spells-list/granted-cantrip'
+    replace:
+      - "_{Read Aura}"
+
+  - at: '@oracle/spells-list/granted-spells'
+    replace:
+      - "_{Mindlink}"
+      - ""
+      - "_{Hypercognition}"
+      - ""
+      - ""
+      - "_{Never Mind}"
+      - ""
+      - ""
+      - ""
+
+  - at: '@oracle/revelation-spell/initial'
+    replace:
+      - action: 2
+        contents:
+          - article:
+            title: "_{Brain Drain}"
+            cat: "_{Focus 1}"
+            contents:
+              - p: "_{Rip knowledge from a creature's mind, dealing mental damage and letting you ask it a single question that it must answer truthfully.}"
+
+  - at: '@oracle/revelation-spell/advanced'
+    replace:
+      - action:
+        contents:
+          - article:
+            title: "_{Access Lore}"
+            cat: "_{Focus 4}"
+            contents:
+              - p: "_{Tap into the collective knowledge of your mystery to gain a bonus on a single Recall Knowledge check.}"
+
+  - at: '@oracle/revelation-spell/greater'
+    replace:
+      - action:
+        contents:
+          - article:
+            title: "_{Dread Secret}"
+            cat: "_{Focus 8}"
+            contents:
+              - p: "_{Reveal a terrible secret to a creature, dealing mental damage and frightening it.}"
+
+  - at: '@oracle/mystery/curse'
+    replace:
+      - h4: "_{Curse of Torrential Knowledge}"
+        size: small
+      - flags:
+        contents:
+          - "_{Curse}"
+          - "_{Divine}"
+          - "_{Oracle}"
+      - p: "_{You have a link to true divine knowledge, but your mortal mind struggles to process and act on what you know. Loose materials around you, such as dust, grains of rice, and droplets of water, slowly shift to form strange runes or faint, indecipherable writing, and you sometimes speak unintelligible truths or statements in unknown languages without realising it.}"
+      - p: "_{While cursebound, you take a status penalty to Perception checks and Will saving throws equal to your cursebound value due to the torrential distractions of unasked-for knowledge flooding your mind. If you are cursebound 4, you additionally can't speak, use linguistic effects, or otherwise communicate with your allies, and you are stupefied 1.}"
+      - row:
+        contents:
+          - field: oracle-mystery-lore-penalty
+            legend: "_{Perception / Will Penalty}"
+            border: full
+            width: large
+          - p: "_{Equal to your cursebound value.}"

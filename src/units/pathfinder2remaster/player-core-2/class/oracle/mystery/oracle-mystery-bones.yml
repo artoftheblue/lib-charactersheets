@@ -1,0 +1,116 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/oracle/mystery/bones
+in: remaster/oracle/mystery
+group: "_{Player Core 2}"
+name: "_{Bones}"
+
+inc:
+  - set: subclass
+    value: "_{Bones}"
+  - set: oracle-mystery
+    value: "_{Bones}"
+
+  - set: medicine-proficiency
+    value: trained
+
+  - at: '@oracle/mystery/title'
+    replace:
+      - h4: "_{Bones}"
+
+  - set: oracle-mystery-skill
+    value: "_{Medicine}"
+  - set: oracle-mystery-domains
+    value: "_{Death, Decay*, Undeath, Vigil*}"
+  - set: oracle-mystery-feat
+    value: "_{Nudge the Scales}"
+  - set: oracle-mystery-granted-spells
+    value: "_{Cantrip: void warp. 1st: grim tendrils. 2nd: false vitality. 3rd: ghostly weapon.}"
+
+  - set: oracle-revelation-spell-initial
+    value: "_{Soul Siphon}"
+  - set: oracle-revelation-spell-advanced
+    value: "_{Armor of Bones}"
+  - set: oracle-revelation-spell-greater
+    value: "_{Claim Undead}"
+
+  - at: '@oracle/spells-list/granted-cantrip'
+    replace:
+      - "_{Void Warp}"
+
+  - at: '@oracle/spells-list/granted-spells'
+    replace:
+      - "_{Grim Tendrils}"
+      - "_{False Vitality}"
+      - "_{Ghostly Weapon}"
+      - ""
+      - ""
+      - ""
+      - ""
+      - ""
+      - ""
+
+  - at: '@oracle/revelation-spell/initial'
+    replace:
+      - action:
+        contents:
+          - article:
+            title: "_{Soul Siphon}"
+            cat: "_{Focus 1}"
+            contents:
+              - p: "_{Draw the life from a creature into yourself, dealing void damage and healing you for a portion of the damage dealt.}"
+
+  - at: '@oracle/revelation-spell/advanced'
+    replace:
+      - action:
+        contents:
+          - article:
+            title: "_{Armor of Bones}"
+            cat: "_{Focus 4}"
+            contents:
+              - p: "_{Surround yourself with spectral bones, gaining a circumstance bonus to AC.}"
+
+  - at: '@oracle/revelation-spell/greater'
+    replace:
+      - action: 2
+        contents:
+          - article:
+            title: "_{Claim Undead}"
+            cat: "_{Focus 8}"
+            contents:
+              - p: "_{Attempt to seize control of a nearby undead creature, forcing it to obey your commands.}"
+
+  - at: '@oracle/mystery/curse'
+    replace:
+      - h4: "_{Curse of Living Death}"
+        size: small
+      - flags:
+        contents:
+          - "_{Curse}"
+          - "_{Divine}"
+          - "_{Oracle}"
+          - "_{Void}"
+          - "_{Vitality}"
+      - p: "_{Your body is slowly decaying even though you are alive, and using your powers furthers this unnatural living death, making you susceptible to both void and vitality damage. You carry a touch of the grave about you, manifesting as bloodless pallor, a faint smell of earth, or deathly cold skin.}"
+      - list:
+        hr: true
+        light: true
+        contents:
+          - p:
+            title: "_{Cursebound 1}"
+            content: "_{Weakness 2 to vitality and void damage. You can be hurt by both vitality and void damage even if one or the other normally has no effect on you. Any immunity or resistance you have to vitality or void is suppressed.}"
+          - p:
+            title: "_{Cursebound 2}"
+            content: "_{-1 status penalty to Fortitude saves.}"
+          - level: 11
+            contents:
+              - p:
+                title: "_{Cursebound 3}"
+                content: "_{Your weakness to vitality and void damage is equal to 5 plus your level.}"
+          - level: 17
+            contents:
+              - p:
+                title: "_{Cursebound 4}"
+                content: "_{Your status penalty to Fortitude saving throws increases to -2.}"

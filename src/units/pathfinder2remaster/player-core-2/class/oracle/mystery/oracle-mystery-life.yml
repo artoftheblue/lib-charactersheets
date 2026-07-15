@@ -1,0 +1,111 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/oracle/mystery/life
+in: remaster/oracle/mystery
+group: "_{Player Core 2}"
+name: "_{Life}"
+
+inc:
+  - set: subclass
+    value: "_{Life}"
+  - set: oracle-mystery
+    value: "_{Life}"
+
+  - set: medicine-proficiency
+    value: trained
+
+  - at: '@oracle/mystery/title'
+    replace:
+      - h4: "_{Life}"
+
+  - set: oracle-mystery-skill
+    value: "_{Medicine}"
+  - set: oracle-mystery-domains
+    value: "_{Death, Healing, Pain, Soul*}"
+  - set: oracle-mystery-feat
+    value: "_{Nudge the Scales}"
+  - set: oracle-mystery-granted-spells
+    value: "_{Cantrip: vitality lash. 1st: soothe. 2nd: false vitality. 5th: grisly growths.}"
+
+  - set: oracle-revelation-spell-initial
+    value: "_{Life Link}"
+  - set: oracle-revelation-spell-advanced
+    value: "_{Delay Affliction}"
+  - set: oracle-revelation-spell-greater
+    value: "_{Life-Giving Form}"
+
+  - at: '@oracle/spells-list/granted-cantrip'
+    replace:
+      - "_{Vitality Lash}"
+
+  - at: '@oracle/spells-list/granted-spells'
+    replace:
+      - "_{Soothe}"
+      - "_{False Vitality}"
+      - ""
+      - ""
+      - "_{Grisly Growths}"
+      - ""
+      - ""
+      - ""
+      - ""
+
+  - at: '@oracle/revelation-spell/initial'
+    replace:
+      - action:
+        contents:
+          - article:
+            title: "_{Life Link}"
+            cat: "_{Focus 1}"
+            contents:
+              - p: "_{Forge a bond of shared vitality with an ally, allowing you to transfer your own Hit Points to shield them from harm.}"
+
+  - at: '@oracle/revelation-spell/advanced'
+    replace:
+      - action:
+        contents:
+          - article:
+            title: "_{Delay Affliction}"
+            cat: "_{Focus 4}"
+            contents:
+              - p: "_{Touch a creature to delay the progression of a disease or poison afflicting it.}"
+
+  - at: '@oracle/revelation-spell/greater'
+    replace:
+      - action: 2
+        contents:
+          - article:
+            title: "_{Life-Giving Form}"
+            cat: "_{Focus 8}"
+            contents:
+              - p: "_{Suffuse an ally with the teeming energy of life, healing them and granting resistance to death effects.}"
+
+  - at: '@oracle/mystery/curse'
+    replace:
+      - h4: "_{Curse of Outpouring Life}"
+        size: small
+      - flags:
+        contents:
+          - "_{Curse}"
+          - "_{Divine}"
+          - "_{Oracle}"
+      - p: "_{Life energy flows outward from you and connects you to all living things, but you expend your vital essence to do so. Your presence comforts the ill and injured, causes scars to fade slightly, spurs new growth in plants, and otherwise infuses your surroundings with vitality.}"
+      - p: "_{As your life force seeps outward, it becomes more difficult to keep your body functioning. Magical effects that restore Hit Points to you take a status penalty equal to your level (minimum 1) times your cursebound value to the number of HP you recover.}"
+      - row:
+        contents:
+          - calc:
+            output:
+              field: oracle-mystery-life-healing-penalty
+              legend: "_{Healing Penalty}"
+              width: large
+              eq: "%{level}*%{oracle-cursebound}"
+            inputs:
+              - field:
+                ref: level
+                label: "_{Level}"
+              - span: "&times;"
+              - field:
+                ref: oracle-cursebound
+                label: "_{Cursebound}"

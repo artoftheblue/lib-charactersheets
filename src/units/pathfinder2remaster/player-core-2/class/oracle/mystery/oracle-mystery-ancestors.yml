@@ -1,0 +1,103 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/oracle/mystery/ancestors
+in: remaster/oracle/mystery
+group: "_{Player Core 2}"
+name: "_{Ancestors}"
+
+inc:
+  - set: subclass
+    value: "_{Ancestors}"
+  - set: oracle-mystery
+    value: "_{Ancestors}"
+
+  - set: society-proficiency
+    value: trained
+
+  - at: '@oracle/mystery/title'
+    replace:
+      - h4: "_{Ancestors}"
+
+  - set: oracle-mystery-skill
+    value: "_{Society}"
+  - set: oracle-mystery-domains
+    value: "_{Death, Duty*, Family, Soul*}"
+  - set: oracle-mystery-feat
+    value: "_{Whispers of Weakness}"
+  - set: oracle-mystery-granted-spells
+    value: "_{Cantrip: guidance. 1st: ill omen. 2nd: ghostly carrier. 5th: dreaming potential.}"
+
+  - set: oracle-revelation-spell-initial
+    value: "_{Ancestral Touch}"
+  - set: oracle-revelation-spell-advanced
+    value: "_{Ancestral Defense}"
+  - set: oracle-revelation-spell-greater
+    value: "_{Ancestral Form}"
+
+  - at: '@oracle/spells-list/granted-cantrip'
+    replace:
+      - "_{Guidance}"
+
+  - at: '@oracle/spells-list/granted-spells'
+    replace:
+      - "_{Ill Omen}"
+      - "_{Ghostly Carrier}"
+      - ""
+      - ""
+      - "_{Dreaming Potential}"
+      - ""
+      - ""
+      - ""
+      - ""
+
+  - at: '@oracle/revelation-spell/initial'
+    replace:
+      - action:
+        contents:
+          - article:
+            title: "_{Ancestral Touch}"
+            cat: "_{Focus 1}"
+            contents:
+              - p: "_{Touch a creature to let an ancestral spirit lend it aid, granting a status bonus to a skill check or saving throw it attempts before the start of your next turn.}"
+
+  - at: '@oracle/revelation-spell/advanced'
+    replace:
+      - action: reaction
+        contents:
+          - article:
+            title: "_{Ancestral Defense}"
+            cat: "_{Focus 4}"
+            contents:
+              - p: "_{An ancestral spirit interposes itself to protect an ally, granting a circumstance bonus to AC or a save against the triggering effect.}"
+
+  - at: '@oracle/revelation-spell/greater'
+    replace:
+      - action: 2
+        contents:
+          - article:
+            title: "_{Ancestral Form}"
+            cat: "_{Focus 8}"
+            contents:
+              - p: "_{Take on the form of a legendary ancestor, gaining benefits based on the ancestor you choose to emulate.}"
+
+  - at: '@oracle/mystery/curse'
+    replace:
+      - h4: "_{Curse of Ancestral Meddling}"
+        size: small
+      - flags:
+        contents:
+          - "_{Curse}"
+          - "_{Divine}"
+          - "_{Oracle}"
+          - "_{Spirit}"
+      - p: "_{The ancestral spirits you commune with haunt you and meddle with your belongings and actions, either out of a well-intentioned (but ultimately detrimental) attempt to assist you, as punishment for your audacity in circumventing the traditional means of achieving divine power, for their own amusement, or a mixture of the above.}"
+      - p: "_{While cursebound, the spirits of your ancestors temporarily possess you and vie for control in your mind, hindering your movements.}"
+      - row:
+        contents:
+          - field: oracle-mystery-ancestors-clumsy
+            legend: "_{Clumsy}"
+            border: full
+            width: large
+          - p: "_{Equal to your cursebound value.}"
