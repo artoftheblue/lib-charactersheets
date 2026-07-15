@@ -1,0 +1,33 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/swashbuckler/style/gymnast
+in: remaster/swashbuckler/style
+group: "_{Player Core 2}"
+name: "_{Gymnast}"
+
+inc:
+  - set: subclass
+    value: "_{Gymnast}"
+  - set: swashbuckler-style
+    value: "_{Gymnast}"
+
+  - set: athletics-proficiency
+    value: trained
+
+  - at: '@swashbuckler/style/title'
+    replace:
+      - h4: "_{Gymnast}"
+
+  - set: swashbuckler-style-skill
+    value: "_{Athletics}"
+  - set: swashbuckler-style-bravado-action
+    value: "_{Grapple, Reposition, Shove, or Trip}"
+
+  - at: '@swashbuckler/gain-panache'
+    replace:
+      - li: "_{You Grapple, Reposition, Shove, or Trip a foe}"
+
+  - set: swashbuckler-style-exemplary-finisher
+    value: "_{If the foe is grabbed, restrained, or prone, gain a circumstance bonus to the damage roll equal to double the number of weapon damage dice.}"

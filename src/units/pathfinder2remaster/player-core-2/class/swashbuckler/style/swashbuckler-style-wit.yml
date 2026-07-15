@@ -1,0 +1,43 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/swashbuckler/style/wit
+in: remaster/swashbuckler/style
+group: "_{Player Core 2}"
+name: "_{Wit}"
+
+inc:
+  - set: subclass
+    value: "_{Wit}"
+  - set: swashbuckler-style
+    value: "_{Wit}"
+
+  - set: diplomacy-proficiency
+    value: trained
+
+  - at: '@swashbuckler/style/title'
+    replace:
+      - h4: "_{Wit}"
+
+  - set: swashbuckler-style-skill
+    value: "_{Diplomacy}"
+  - set: swashbuckler-style-bravado-action
+    value: "_{Bon Mot}"
+
+  - at: '@swashbuckler/gain-panache'
+    replace:
+      - li: "_{You use Bon Mot}"
+
+  - at: '@swashbuckler/style/bonus-feat'
+    replace:
+      - h5: "_{Bonus Feat}"
+      - article: "##:feat/bon-mot"
+        title: "_{Bon Mot}"
+        cat: "_{Skill Feat}"
+        lines: 3
+        contents:
+          - p: "_{Choose a foe within 30 feet and attempt a Diplomacy check against its Will DC to fluster it with a cutting remark.}"
+
+  - set: swashbuckler-style-exemplary-finisher
+    value: "_{The foe takes a -2 circumstance penalty to attack rolls against you until the start of your next turn.}"

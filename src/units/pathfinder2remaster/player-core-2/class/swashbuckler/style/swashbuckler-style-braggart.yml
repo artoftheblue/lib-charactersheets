@@ -1,0 +1,33 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/swashbuckler/style/braggart
+in: remaster/swashbuckler/style
+group: "_{Player Core 2}"
+name: "_{Braggart}"
+
+inc:
+  - set: subclass
+    value: "_{Braggart}"
+  - set: swashbuckler-style
+    value: "_{Braggart}"
+
+  - set: intimidation-proficiency
+    value: trained
+
+  - at: '@swashbuckler/style/title'
+    replace:
+      - h4: "_{Braggart}"
+
+  - set: swashbuckler-style-skill
+    value: "_{Intimidation}"
+  - set: swashbuckler-style-bravado-action
+    value: "_{Demoralize}"
+
+  - at: '@swashbuckler/gain-panache'
+    replace:
+      - li: "_{You Demoralize a foe}"
+
+  - set: swashbuckler-style-exemplary-finisher
+    value: "_{If the foe was temporarily immune to your Demoralize, their temporary immunity ends.}"

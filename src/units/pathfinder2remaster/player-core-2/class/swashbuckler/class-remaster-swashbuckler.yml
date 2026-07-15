@@ -1,0 +1,445 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: class/remaster/swashbuckler
+in: class
+group: "_{Player Core 2}"
+name: "_{Swashbuckler}"
+# enabled: false
+
+form:
+  - select: remaster/swashbuckler/style
+    name: "_{Swashbuckler's Style}"
+    max: 1
+  - select: feat/swashbuckler
+    name: "_{Swashbuckler Feats}"
+    max: 11
+    levels: [ 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+
+require:
+  - unit: weapon-spec/fast
+  - with: option/reference
+    unit: class/remaster/swashbuckler/reference
+  - deny: archetype/swashbuckler
+  - deny: class/apg/swashbuckler
+
+inc:
+
+  - set: class
+    value: "_{Swashbuckler}"
+  - set: hp-class
+    value: 10
+  - set: class-icon
+    value: swashbuckler
+  - set: subclass-label
+    value: "_{Style}"
+
+  - set: swashbuckler-class-dc-proficiency
+    value: trained
+  - set: perception-proficiency
+    value: expert
+
+  - set: unarmoured-proficiency
+    value: trained
+  - set: light-armour-proficiency
+    value: trained
+
+  - set: fortitude-proficiency
+    value: trained
+  - set: reflex-proficiency
+    value: expert
+  - set: will-proficiency
+    value: expert
+
+  - set: acrobatics-proficiency
+    value: trained
+
+  - set: simple-weapons-proficiency
+    value: trained
+  - set: martial-weapons-proficiency
+    value: trained
+  - set: unarmed-attack-proficiency
+    value: trained
+
+  - set: key-attribute
+    value: DEX
+
+  - at: '@key-attribute-field'
+    replace:
+      - field: key-attribute
+        label: "_{DEX}"
+        underlay: "_{DEX}"
+        ref: DEX
+
+  - at: '@advancement'
+    add:
+      - level: 1
+        class-feat: true
+      - level: 1
+        gain: "_{Swashbuckler's Style}"
+      - level: 1
+        advance: "_{Panache}"
+      - level: 1
+        advance: "_{Precise Strike}"
+      - level: 1
+        advance: "_{Stylish Combatant}"
+      - level: 1
+        advance: "_{Confident Finisher}"
+
+      - level: 3
+        advance: "_{Opportune Riposte}"
+      - level: 3
+        advance: "_{Stylish Tricks}"
+      - level: 3
+        advance: "_{Vivacious Speed}"
+      - level: 7
+        advance: "_{Confident Evasion}"
+      - level: 7
+        advance: "_{Stylish Tricks}"
+      - level: 7
+        advance: "_{Vivacious Speed}"
+      - level: 9
+        advance: "_{Exemplary Finisher}"
+      - level: 9
+        advance: "_{Swashbuckler Expertise}"
+      - level: 11
+        advance: "_{Continuous Flair}"
+      - level: 11
+        advance: "_{Vivacious Speed}"
+      - level: 13
+        advance: "_{Assured Evasion}"
+      - level: 15
+        advance: "_{Greater Weapon Specialisation}"
+      - level: 15
+        advance: "_{Keen Flair}"
+      - level: 15
+        advance: "_{Stylish Tricks}"
+      - level: 15
+        advance: "_{Vivacious Speed}"
+      - level: 17
+        advance: "_{Reinforced Ego}"
+      - level: 19
+        advance: "_{Eternal Confidence}"
+      - level: 19
+        advance: "_{Vivacious Speed}"
+
+      - levels: [ 1, 5, 9, 13, 17 ]
+        precise-strike: [ "_{+2}", "_{+3}", "_{+4}", "_{+5}", "_{+6}" ]
+        precise-strike-finisher: [ "_{2d6}", "_{3d6}", "_{4d6}", "_{5d6}", "_{6d6}" ]
+
+      - level: 3
+        advance: "_{Fortitude saves}"
+        proficiency: expert
+        colour: CON
+      - level: 5
+        advance: "_{Simple weapons}, _{Martial weapons}, _{Unarmed attacks}"
+        proficiency: expert
+      - level: 5
+        advance: "_{Weapon Expertise}"
+      - level: 7
+        advance: "_{Reflex saves}"
+        proficiency: master
+        colour: DEX
+      - level: 7
+        advance: "_{Weapon Specialisation}"
+      - level: 9
+        advance: "_{Swashbuckler class DC}"
+        proficiency: expert
+      - level: 11
+        advance: "_{Perception}"
+        proficiency: master
+        colour: WIS
+      - level: 13
+        advance: "_{Light armour}, _{Unarmoured defence}"
+        proficiency: expert
+      - level: 13
+        advance: "_{Reflex saves}"
+        proficiency: legendary
+        colour: DEX
+      - level: 13
+        advance: "_{Simple weapons}, _{Martial weapons}, _{Unarmed attacks}"
+        proficiency: master
+      - level: 17
+        advance: "_{Will saves}"
+        proficiency: master
+        colour: WIS
+      - level: 19
+        advance: "_{Swashbuckler class DC}"
+        proficiency: master
+      - level: 19
+        advance: "_{Light armour}, _{Unarmoured defence}"
+        proficiency: master
+
+  - at: '@advancement-fields'
+    add:
+      - name: "_{Precise\nStrike}"
+        key: precise-strike
+        format: string
+      - name: "_{Finisher}"
+        key: precise-strike-finisher
+        format: string
+
+  - at: '@saving-throws'
+    add:
+      - level: 7
+        contents:
+          - paste: improved-save-ref
+            params:
+              title: "_{Confident Evasion}"
+      - level: 13
+        contents:
+          - paste: improved-save-ref-2
+            params:
+              title: "_{Assured Evasion}"
+          - p: "_{When you fail a Reflex save against a damaging effect, take half damage.}"
+      - level: 17
+        contents:
+          - paste: improved-save-will
+            params:
+              title: "_{Reinforced Ego}"
+
+  - at: '@actions'
+    add:
+      - action:
+        contents:
+          - row:
+            contents:
+              - p:
+                title: "_{Confident Finisher}"
+                content: "_{Make a Strike with panache, dealing half your precise strike damage on a failure.}"
+              - flags:
+                  - "_{Finisher}"
+      - action: reaction
+        contents:
+          - p:
+            title: "_{Opportune Riposte}"
+            content: "_{Trigger: an enemy in your reach critically fails a Strike against you. Make a melee Strike against it, or attempt to Disarm it.}"
+            flags:
+              - "_{Bravado}"
+
+  - at: '@pages'
+    add:
+      - page: swashbuckler
+        name: "_{Swashbuckler}"
+        flex: true
+        order: 10
+        contents:
+          - layout: 2l
+            contents:
+              - g:
+                contents:
+                  - class-icon: swashbuckler
+                    optional: true
+                  - class-name: "_{Swashbuckler}"
+
+                  - section: "_{Class DC}"
+                    contents:
+                      - paste: class-dc
+                        params:
+                          id: swashbuckler-class-dc
+                          legend: "_{Swashbuckler\nClass DC}"
+
+                  - section: "_{Precise Strike}"
+                    contents:
+                      - list:
+                        hr: true
+                        contents:
+                          - p: "_{When you Strike with an agile or finesse melee weapon or unarmed attack, deal additional precision damage. If the Strike is part of a finisher, the additional damage is precision damage dice instead.}"
+                          - advancement:
+                            flip: true
+                            elide: true
+                            fields:
+                              - key: bonus
+                                name: "_{Damage\nBonus}"
+                                format: string
+                              - key: finisher
+                                name: "_{Finisher\nBonus}"
+                                format: string
+                            advances:
+                              - level: 1
+                                bonus: "_{+2}"
+                                finisher: "_{2d6}"
+                              - level: 5
+                                bonus: "_{+3}"
+                                finisher: "_{3d6}"
+                              - level: 9
+                                bonus: "_{+4}"
+                                finisher: "_{4d6}"
+                              - level: 13
+                                bonus: "_{+5}"
+                                finisher: "_{5d6}"
+                              - level: 17
+                                bonus: "_{+6}"
+                                finisher: "_{6d6}"
+
+                  - section: "_{Confident Finisher}"
+                    contents:
+                      - list:
+                        hr: true
+                        contents:
+                          - action:
+                            contents:
+                              - flags:
+                                  - "_{Finisher}"
+                              - p: "_{Make a Strike with the following failure effect.}"
+                              - p:
+                                title: "_{Failure}"
+                                content: "_{Deal half your precise strike damage to the target.}"
+                          - level: 19
+                            contents:
+                              - h5: "_{Eternal Confidence}"
+                              - p: "_{When you Strike as part of a finisher or Opportune Riposte, you can give the Strike the failure effect from Confident Finisher.}"
+
+                  - section: "_{Opportune Riposte}"
+                    contents:
+                      - level: 3
+                        contents:
+                          - action: reaction
+                            contents:
+                              - flags:
+                                  - "_{Bravado}"
+                              - p: "_{Trigger: an enemy within your reach critically fails a Strike against you. Make a melee Strike against it, or attempt to Disarm it.}"
+
+                  - section: "_{Continuous Flair}"
+                    contents:
+                      - level: 11
+                        contents:
+                          - p: "_{The circumstance bonus from Stylish Combatant applies in exploration mode too.}"
+
+                  - section: "_{Keen Flair}"
+                    contents:
+                      - level: 15
+                        contents:
+                          - p: "_{When you Strike with a weapon or unarmed attack with which you have master proficiency, a roll of 19 that would be a success is a critical success instead.}"
+
+                  - tail:
+                  - spacer:
+
+              - g:
+                contents:
+                  - section: "_{Swashbuckler's Style}"
+                    primary: true
+                    contents:
+                      - zone: '@swashbuckler/style/title'
+                        contents:
+                          - field: swashbuckler-style
+                            size: huge
+                            width: stretch
+                            frame: none
+                            merge-bottom: true
+                      - hr:
+                        swash: true
+                      - layout: 2e
+                        contents:
+                          - g:
+                            contents:
+                              - field: swashbuckler-style-skill
+                                icon: proficiency-trained
+                                width: stretch
+                                label: "_{Style Skill}"
+                              - h5: "_{Bravado Action}"
+                              - field: swashbuckler-style-bravado-action
+                                width: stretch
+                                frame: none
+                                merge-bottom: true
+                              - zone: '@swashbuckler/style/bonus-feat'
+                                contents:
+                                  - h5: "_{Bonus Feat}"
+                                  - article: "##:swashbuckler/style/bonus-feat"
+                                    lines: 3
+                                    reduce: 1
+                          - g:
+                            contents:
+                              - level: 9
+                                contents:
+                                  - h5: "_{Exemplary Finisher}"
+                                  - p: "_{When a Strike you make as part of a finisher hits a foe:}"
+                                  - field: swashbuckler-style-exemplary-finisher
+                                    width: stretch
+                                    frame: none
+                                    control: p
+                                    lines: 3
+                                    with-title: false
+                                    merge-bottom: true
+
+                  - section: "_{Panache}"
+                    contents:
+                      - list:
+                        hr: true
+                        contents:
+                          - row:
+                            contents:
+                              - spacer:
+                              - layout: indent-l
+                                contents:
+                                  - field: panache
+                                    control: checkbox
+                                  - h6: "_{Panache}"
+                              - spacer:
+
+                          - layout: 2e
+                            contents:
+                              - g:
+                                contents:
+                                  - h6: "_{Gain panache when...}"
+                                  - ul:
+                                    contents:
+                                      - li: "_{You successfully Tumble Through an enemy's space}"
+                                      - zone: '@swashbuckler/gain-panache'
+                                        contents:
+                                          - li: "_{Your style's bravado action succeeds (or fails without a critical failure)}"
+                                      - li: "_{At the GM's discretion, when you do something spectacular}"
+                                  - h6: "_{Spend panache to...}"
+                                  - ul:
+                                    contents:
+                                      - li: "_{Make a finisher}"
+                              - g:
+                                contents:
+                                  - h6: "_{Stylish Combatant}"
+                                  - p: "_{+1 circumstance bonus (+2 at 9th level) to skill checks with the bravado trait while in a combat encounter.}"
+                                  - h6: "_{While you have panache...}"
+                                  - table:
+                                    flip: true
+                                    collapse: true
+                                    columns:
+                                      - label: "_{Level}"
+                                      - label: "_{Speed\nBonus}"
+                                      - label: "_{Half\nBonus}"
+                                    rows:
+                                      - level: 1
+                                        speed: "_{+5ft}"
+                                        half: ""
+                                      - level: 3
+                                        speed: "_{+10ft}"
+                                        half: "_{+5ft}"
+                                      - level: 7
+                                        speed: "_{+15ft}"
+                                        half: "_{+5ft}"
+                                      - level: 11
+                                        speed: "_{+20ft}"
+                                        half: "_{+10ft}"
+                                      - level: 15
+                                        speed: "_{+25ft}"
+                                        half: "_{+10ft}"
+                                      - level: 19
+                                        speed: "_{+30ft}"
+                                        half: "_{+15ft}"
+                                    template:
+                                      - value: "#{level}"
+                                      - value: "#{speed}"
+                                        size: small
+                                      - value: "#{half}"
+                                        size: small
+                                  - p: "_{Half the Speed bonus applies even when you don't have panache, rounded down to the nearest 5ft.}"
+
+                  - paste: class-feats
+                    params:
+                      id: swashbuckler-feats
+                      title: "_{Swashbuckler Feats}"
+                      slots: [ 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+                      mark: swashbuckler
+                      lines: 2
+
+                  - tail:
+                  - spacer:

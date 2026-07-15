@@ -1,0 +1,33 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/swashbuckler/style/fencer
+in: remaster/swashbuckler/style
+group: "_{Player Core 2}"
+name: "_{Fencer}"
+
+inc:
+  - set: subclass
+    value: "_{Fencer}"
+  - set: swashbuckler-style
+    value: "_{Fencer}"
+
+  - set: deception-proficiency
+    value: trained
+
+  - at: '@swashbuckler/style/title'
+    replace:
+      - h4: "_{Fencer}"
+
+  - set: swashbuckler-style-skill
+    value: "_{Deception}"
+  - set: swashbuckler-style-bravado-action
+    value: "_{Create a Distraction or Feint}"
+
+  - at: '@swashbuckler/gain-panache'
+    replace:
+      - li: "_{You Create a Distraction or Feint}"
+
+  - set: swashbuckler-style-exemplary-finisher
+    value: "_{The foe is off-guard until your next turn.}"

@@ -1,0 +1,43 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/swashbuckler/style/battledancer
+in: remaster/swashbuckler/style
+group: "_{Player Core 2}"
+name: "_{Battledancer}"
+
+inc:
+  - set: subclass
+    value: "_{Battledancer}"
+  - set: swashbuckler-style
+    value: "_{Battledancer}"
+
+  - set: performance-proficiency
+    value: trained
+
+  - at: '@swashbuckler/style/title'
+    replace:
+      - h4: "_{Battledancer}"
+
+  - set: swashbuckler-style-skill
+    value: "_{Performance}"
+  - set: swashbuckler-style-bravado-action
+    value: "_{Perform}"
+
+  - at: '@swashbuckler/gain-panache'
+    replace:
+      - li: "_{You Perform}"
+
+  - at: '@swashbuckler/style/bonus-feat'
+    replace:
+      - h5: "_{Bonus Feat}"
+      - article: "##:feat/fascinating-performance"
+        title: "_{Fascinating Performance}"
+        cat: "_{Feat}"
+        lines: 3
+        contents:
+          - p: "_{Attempt a Performance check against an audience's Will DC to fascinate them.}"
+
+  - set: swashbuckler-style-exemplary-finisher
+    value: "_{You can Step as a free action immediately after the finisher.}"
