@@ -35,7 +35,8 @@ inc:
 
       spells: trained
       unarmoured: trained
-      unarmed: traomed
+      unarmed: trained
+      simple-weapons: trained
 
       perception: trained
       religion: trained
