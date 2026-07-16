@@ -180,7 +180,7 @@ inc:
                             legend: "_{Uses per day}"
                             width: large
                             border: full
-                            eq: "1+%{CHA}"
+                            eq: "1+%{WIS}"
                             
                           - span: "= 4"
 
