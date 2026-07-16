@@ -46,6 +46,8 @@ inc:
       reflex: trained
       will: expert
 
+      spells: trained
+
   - at: '@key-attribute-field'
     replace:
       - field: key-attribute
