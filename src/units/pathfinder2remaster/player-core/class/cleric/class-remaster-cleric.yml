@@ -308,7 +308,7 @@ inc:
                                 output:
                                   field: "##:divine-font/bonus"
                                   legend: "_{Bonus}"
-                                  width: lage
+                                  width: large
                                   eq: "%{focus-level}*8"
                                 inputs:
                                   - field:
