@@ -23,11 +23,11 @@ inc:
   - set: swashbuckler-style-skill
     value: "_{Intimidation}"
   - set: swashbuckler-style-bravado-action
-    value: "_{Demoralize}"
+    value: "_{Demoralise}"
 
   - at: '@swashbuckler/gain-panache'
     replace:
-      - li: "_{You Demoralize a foe}"
+      - li: "_{You Demoralise a foe}"
 
   - set: swashbuckler-style-exemplary-finisher
-    value: "_{If the foe was temporarily immune to your Demoralize, their temporary immunity ends.}"
+    value: "_{If the foe was temporarily immune to your Demoralise, their temporary immunity ends.}"

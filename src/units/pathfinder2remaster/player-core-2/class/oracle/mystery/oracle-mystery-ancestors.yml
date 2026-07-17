@@ -32,7 +32,7 @@ inc:
   - set: oracle-revelation-spell-initial
     value: "_{Ancestral Touch}"
   - set: oracle-revelation-spell-advanced
-    value: "_{Ancestral Defense}"
+    value: "_{Ancestral Defence}"
   - set: oracle-revelation-spell-greater
     value: "_{Ancestral Form}"
 
@@ -67,7 +67,7 @@ inc:
       - action: reaction
         contents:
           - article:
-            title: "_{Ancestral Defense}"
+            title: "_{Ancestral Defence}"
             cat: "_{Focus 4}"
             contents:
               - p: "_{An ancestral spirit interposes itself to protect an ally, granting a circumstance bonus to AC or a save against the triggering effect.}"
