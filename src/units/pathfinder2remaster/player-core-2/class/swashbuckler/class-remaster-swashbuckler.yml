@@ -214,7 +214,7 @@ inc:
         contents:
           - p:
             title: "_{Opportune Riposte}"
-            content: "_{Trigger: an enemy in your reach critically fails a Strike against you. Make a melee Strike against it, or attempt to Disarm it.}"
+            content: "_{Trigger: an enemy in your reach critically fails a Strike against you. Make a melee Strike or Disarm attempt against it.}"
             flags:
               - "_{Bravado}"
 
@@ -245,7 +245,7 @@ inc:
                       - list:
                         hr: true
                         contents:
-                          - p: "_{When you Strike with an agile or finesse melee weapon or unarmed attack, deal additional precision damage. If the Strike is part of a finisher, the additional damage is precision damage dice instead.}"
+                          - p: "_{When you Strike with an agile or finesse melee weapon or unarmed attack, deal additional precision damage, or precision damage dice if the Strike is part of a finisher.}"
                           - advancement:
                             flip: true
                             elide: true
@@ -299,7 +299,7 @@ inc:
                             contents:
                               - flags:
                                   - "_{Bravado}"
-                              - p: "_{Trigger: an enemy within your reach critically fails a Strike against you. Make a melee Strike against it, or attempt to Disarm it.}"
+                              - p: "_{Trigger: an enemy in your reach critically fails a Strike against you. Make a melee Strike or Disarm attempt against it.}"
 
                   - section: "_{Continuous Flair}"
                     contents:
@@ -311,7 +311,7 @@ inc:
                     contents:
                       - level: 15
                         contents:
-                          - p: "_{When you Strike with a weapon or unarmed attack with which you have master proficiency, a roll of 19 that would be a success is a critical success instead.}"
+                          - p: "_{When you Strike with a weapon or unarmed attack in which you're a master, a 19 that would be a success becomes a critical success.}"
 
                   - tail:
                   - spacer:
@@ -431,7 +431,7 @@ inc:
                                         size: small
                                       - value: "#{half}"
                                         size: small
-                                  - p: "_{Half the Speed bonus applies even when you don't have panache, rounded down to the nearest 5ft.}"
+                                  - p: "_{Half the Speed bonus applies even without panache, rounded down to the nearest 5ft.}"
 
                   - paste: class-feats
                     params:

@@ -37,7 +37,7 @@ inc:
         cat: "_{Skill Feat}"
         lines: 3
         contents:
-          - p: "_{Choose a foe within 30 feet and attempt a Diplomacy check against its Will DC to fluster it with a cutting remark.}"
+          - p: "_{Choose a foe within 30 feet and attempt a Diplomacy check against its Will DC.}"
 
   - set: swashbuckler-style-exemplary-finisher
     value: "_{The foe takes a -2 circumstance penalty to attack rolls against you until the start of your next turn.}"

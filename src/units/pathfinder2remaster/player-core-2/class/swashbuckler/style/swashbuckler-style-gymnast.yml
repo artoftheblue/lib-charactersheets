@@ -30,4 +30,4 @@ inc:
       - li: "_{You Grapple, Reposition, Shove, or Trip a foe}"
 
   - set: swashbuckler-style-exemplary-finisher
-    value: "_{If the foe is grabbed, restrained, or prone, gain a circumstance bonus to the damage roll equal to double the number of weapon damage dice.}"
+    value: "_{If the foe is grabbed, restrained, or prone, gain a circumstance bonus to damage equal to twice your weapon damage dice.}"
