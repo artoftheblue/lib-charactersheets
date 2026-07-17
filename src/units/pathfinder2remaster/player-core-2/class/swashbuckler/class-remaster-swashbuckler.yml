@@ -214,7 +214,7 @@ inc:
         contents:
           - p:
             title: "_{Opportune Riposte}"
-            content: "_{Trigger: an enemy in your reach critically fails a Strike against you. Make a melee Strike or Disarm attempt against it.}"
+            content: "_{An enemy in your reach critically fails a Strike against you. Make a melee Strike or Disarm attempt against it.}"
             flags:
               - "_{Bravado}"
 
@@ -299,7 +299,7 @@ inc:
                             contents:
                               - flags:
                                   - "_{Bravado}"
-                              - p: "_{Trigger: an enemy in your reach critically fails a Strike against you. Make a melee Strike or Disarm attempt against it.}"
+                              - p: "_{An enemy in your reach critically fails a Strike against you. Make a melee Strike or Disarm attempt against it.}"
 
                   - section: "_{Continuous Flair}"
                     contents:
