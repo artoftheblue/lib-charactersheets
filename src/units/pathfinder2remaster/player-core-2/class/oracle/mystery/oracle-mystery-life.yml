@@ -91,8 +91,8 @@ inc:
           - "_{Curse}"
           - "_{Divine}"
           - "_{Oracle}"
-      - p: "_{Life energy flows outward from you and connects you to all living things, but you expend your vital essence to do so. Your presence comforts the ill and injured, causes scars to fade slightly, spurs new growth in plants, and otherwise infuses your surroundings with vitality.}"
-      - p: "_{As your life force seeps outward, it becomes more difficult to keep your body functioning. Magical effects that restore Hit Points to you take a status penalty equal to your level (minimum 1) times your cursebound value to the number of HP you recover.}"
+      - p: "_{Life energy flows outward from you, connecting you to all living things at the cost of your own vital essence. Your presence comforts the ill and injured, fades scars, spurs plant growth, and infuses your surroundings with vitality.}"
+      - p: "_{As your life force seeps outward, it's harder to keep your body functioning. Magical healing you receive takes a status penalty equal to your level (minimum 1) times your cursebound value to the HP recovered.}"
       - row:
         contents:
           - calc:

@@ -91,7 +91,7 @@ inc:
           - "_{Curse}"
           - "_{Divine}"
           - "_{Oracle}"
-      - p: "_{You thrive in the thick of battle, but your mystery's sheer focus on the physical and material leaves your soul weak against the tricks of spellcraft. You smell faintly of steel and blood, appear more imposing and muscular than you actually are, and hear the faint clash and clamour of battle in the distance at all times.}"
+      - p: "_{You thrive in battle, but your mystery's focus on the physical leaves your soul weak against spellcraft. You smell of steel and blood, look more imposing and muscular than you are, and always hear the faint clash of distant battle.}"
       - list:
         hr: true
         light: true

@@ -91,7 +91,7 @@ inc:
           - "_{Curse}"
           - "_{Divine}"
           - "_{Oracle}"
-      - p: "_{Your body is drawn toward the heavens, making you lighter and less substantial than you should be. Your eyes glow with starry light, and your hair and clothing float and drift around you.}"
+      - p: "_{Your body is drawn toward the heavens, making you lighter and less substantial. Your eyes glow with starry light, and your hair and clothing drift around you.}"
       - p: "_{While cursebound, you are enfeebled and take a status penalty to saves and DCs against all forms of forced movement, each equal to your cursebound value.}"
       - row:
         contents:

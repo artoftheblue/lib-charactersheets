@@ -213,19 +213,13 @@ inc:
                         contents:
                           - g:
                             contents:
-                              - p: "_{Using a cursebound ability makes you cursebound 1, or increases the value of your cursebound condition by 1 if you're already cursebound. Refocusing reduces your cursebound condition by 1 and restores a Focus Point.}"
-                              - p: "_{You can't mitigate, reduce or remove the effects of your curse (or any cursebound ability) other than by Refocusing.}"
-                                optional: true
-                              - row:
-                                contents:
-                                  - field: oracle-cursebound
-                                    legend: "_{Cursebound}"
-                                    control: counter
-                                    max: 4
-                                    border: full
-                                    width: large
-                                  - p: "_{Maximum cursebound value: 2 (3 at 11th level, 4 at 17th level).}"
-                                    optional: true
+                              - p: "_{Using a cursebound ability makes you cursebound 1, or increases it by 1 if you're already cursebound (max 2, 3 at 11th level, 4 at 17th level). Nothing but Refocusing mitigates, reduces, or removes this; Refocusing reduces it by 1 and restores a Focus Point.}"
+                              - field: oracle-cursebound
+                                legend: "_{Cursebound}"
+                                control: counter
+                                max: 4
+                                border: full
+                                width: large
 
                           - zone: '@oracle/mystery/curse'
                             contents:

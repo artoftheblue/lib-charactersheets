@@ -93,7 +93,7 @@ inc:
           - "_{Fire}"
           - "_{Oracle}"
       - p: "_{Fires flare noticeably (though not dangerously) in your presence, you occasionally smoke slightly, and your body is almost painfully hot to the touch.}"
-      - p: "_{While cursebound, you catch fire, taking persistent fire damage equal to your cursebound value. The flames shed light like a torch, and if you enter an environment where they could not burn (such as underwater), you simply seethe with flameless heat. The flames subside when you begin Refocusing to assuage your curse or if you fall unconscious, but they resume if your Refocus activity is interrupted or when you return to consciousness.}"
+      - p: "_{While cursebound, you catch fire, taking persistent fire damage equal to your cursebound value; the flames shed light like a torch, or flameless heat if they can't burn (such as underwater). They subside when you begin Refocusing or fall unconscious, and resume if that Refocus is interrupted or you regain consciousness.}"
       - row:
         contents:
           - field: oracle-mystery-flames-persistent-damage

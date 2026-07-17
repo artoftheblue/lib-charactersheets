@@ -93,7 +93,7 @@ inc:
           - "_{Oracle}"
           - "_{Void}"
           - "_{Vitality}"
-      - p: "_{Your body is slowly decaying even though you are alive, and using your powers furthers this unnatural living death, making you susceptible to both void and vitality damage. You carry a touch of the grave about you, manifesting as bloodless pallor, a faint smell of earth, or deathly cold skin.}"
+      - p: "_{Your body slowly decays despite being alive, and using your powers furthers this unnatural living death, making you susceptible to both void and vitality damage. You carry a touch of the grave: bloodless pallor, a faint smell of earth, or deathly cold skin.}"
       - list:
         hr: true
         light: true

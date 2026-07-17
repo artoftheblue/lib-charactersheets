@@ -91,7 +91,7 @@ inc:
           - "_{Curse}"
           - "_{Divine}"
           - "_{Oracle}"
-      - p: "_{The weather seems to always oppose you in ways large and small. Even when you are calm and at rest, your hair and clothing are inconveniently blown about by gentle winds, you are slightly damp from the faintest drizzle, and your touch often comes with a static shock.}"
+      - p: "_{The weather always seems to oppose you, in ways large and small. Even at rest, your hair and clothing are blown about by gentle winds, you're slightly damp from a faint drizzle, and your touch carries a static shock.}"
       - list:
         hr: true
         light: true
