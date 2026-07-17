@@ -116,6 +116,10 @@
   &--layout_3e {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "a b c";
+
+    > .layout__inner {
+      padding-right: 0.6rem;
+    }
   }
 
   &--layout_3lr {
