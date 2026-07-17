@@ -90,4 +90,4 @@ inc:
       - article:
         title: "_{Blood Magic—Tongue of Flame}"
         contents:
-          - p: "_{Your tongue becomes laced with the fires of Hell, and you can either lash out at a foe with it or swallow it to make your lies more palatable. Either a target takes 1 fire damage per spell rank (if the spell already deals initial fire damage, combine this with the spell's initial damage before determining weaknesses and resistances), or you gain a +2 status bonus to Deception checks for 1 round.}"
+          - p: "_{Your tongue becomes laced with hellfire. Either a target takes 1 fire damage per spell rank (combine this with the spell's own fire damage before applying weaknesses and resistances), or you gain a +2 status bonus to Deception checks for 1 round.}"

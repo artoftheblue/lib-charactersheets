@@ -90,4 +90,4 @@ inc:
       - article:
         title: "_{Blood Magic—Retributive Spite}"
         contents:
-          - p: "_{Malice and acrimony take physical form around you. You deal 4 mental damage per spell rank (basic Will save) to the first creature that deals damage to you before the end of your next turn; if no creature damages you in that time, you consume that spite to gain temporary Hit Points at the beginning of your next turn equal to the spell's rank. These temporary Hit Points last until the beginning of your following turn.}"
+          - p: "_{You deal 4 mental damage per spell rank (basic Will save) to the first creature that damages you before your next turn ends, or gain temporary Hit Points equal to the spell's rank (lasting until the turn after next) if none do.}"

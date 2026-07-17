@@ -77,5 +77,5 @@ inc:
 
   - at: '@sorcerer/spellbook/bloodline/preface'
     replace:
-      - p: "_{Sorcerous Gifts shared by every draconic exemplar: cantrip: shield; 1st: fear; 4th: fly; 7th: mask of terror; 9th: overwhelming presence. Your draconic exemplar determines your tradition, second bloodline skill, and the spells granted at 2nd, 5th and 8th rank.}"
+      - p: "_{Every draconic exemplar shares: cantrip shield; 1st fear; 4th fly; 7th mask of terror; 9th overwhelming presence. Your exemplar sets your tradition, second bloodline skill, and the 2nd/5th/8th spells.}"
         optional: true

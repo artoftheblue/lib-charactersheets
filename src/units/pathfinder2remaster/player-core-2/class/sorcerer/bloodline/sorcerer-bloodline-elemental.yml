@@ -80,9 +80,9 @@ inc:
       - article:
         title: "_{Blood Magic—Elemental Fury}"
         contents:
-          - p: "_{Elemental energy wreathes your form and infuses your magic. Either you gain a +2 status bonus to Intimidation checks for 1 round, or a target takes 1 damage per spell rank; this damage type is listed under your elemental influence. If the spell already deals that type of damage, combine it with the spell's initial damage before determining weaknesses and resistances.}"
+          - p: "_{Elemental energy wreathes your form. Either gain a +2 status bonus to Intimidation checks for 1 round, or a target takes 1 damage per spell rank of the type listed under your elemental influence (combine with the spell's own damage of that type before applying weaknesses and resistances).}"
 
   - at: '@sorcerer/spellbook/bloodline/preface'
     replace:
-      - p: "_{Sorcerous Gifts shared by every elemental influence: 2nd: resist energy; 4th: unfettered movement; 5th: elemental form (your influence's element only); 7th: energy aegis; 8th: earthquake; 9th: wrathful storm. Your elemental influence determines your cantrip, 1st-, 3rd- and 6th-rank sorcerous gifts, and your blood magic damage type.}"
+      - p: "_{Every elemental influence shares: 2nd resist energy; 4th unfettered movement; 5th elemental form (your element only); 7th energy aegis; 8th earthquake; 9th wrathful storm. Your influence sets your cantrip, 1st/3rd/6th spells, and blood magic damage type.}"
         optional: true

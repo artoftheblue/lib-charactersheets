@@ -90,4 +90,4 @@ inc:
       - article:
         title: "_{Blood Magic—Stolen Life}"
         contents:
-          - p: "_{You can channel the necromantic energy in your blood. Either you gain temporary Hit Points equal to the spell's rank that last until the start of your next turn, or a target takes 1 void damage per spell rank (if the spell already deals initial void damage, combine this with the spell's initial damage before determining weaknesses and resistances).}"
+          - p: "_{Either gain temporary Hit Points equal to the spell's rank, lasting until the start of your next turn, or a target takes 1 void damage per spell rank (combine with the spell's own void damage before applying weaknesses and resistances).}"

@@ -279,7 +279,7 @@ inc:
                             contents:
                               - paste: focus
                                 contents:
-                                  - p: "_{Bloodline spells are focus spells. You don't need to do anything specific to Refocus—your focus pool naturally replenishes.}"
+                                  - p: "_{Bloodline spells are focus spells. Refocus normally to restore your focus pool.}"
                                     optional: true
                           - field: sorcerer-bloodline-spell-initial
                             label: "_{Initial Bloodline Spell}"
@@ -367,7 +367,7 @@ inc:
             contents:
               - paste: focus
                 contents:
-                  - p: "_{Bloodline spells are focus spells. You don't need to do anything specific to Refocus—your focus pool naturally replenishes.}"
+                  - p: "_{Bloodline spells are focus spells. Refocus normally to restore your focus pool.}"
                     optional: true
 
           - g:
