@@ -9,3 +9,13 @@ src/units/premium
 lib-premium.json
 test/out/i18n
 package-lock.json
+test/in/*.json
+test/out/*.html
+lib/data-pathfinder2.json
+lib/data-pathfinder2remaster.json
+lib/lib-common.json
+lib/lib-pathfinder2.json
+lib/lib-pathfinder2remaster.json
+test/generate-character.config.json
+test/generate-character.js
+\[PZO12004] Player Core 2.pdf
