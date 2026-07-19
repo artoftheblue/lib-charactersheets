@@ -14,6 +14,7 @@ test/out/*.html
 lib/data-pathfinder2.json
 lib/data-pathfinder2remaster.json
 lib/data-premium.json
+lib/lib-charactersheets.js
 lib/lib-common.json
 lib/lib-pathfinder2.json
 lib/lib-pathfinder2remaster.json
