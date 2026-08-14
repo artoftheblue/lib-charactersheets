@@ -46,7 +46,7 @@ inc:
 
   - at: '@class/dark-archive/psychic:conscious-mind/unique-cantrip/deepest'
     replace:
-      - h6: "_{Forsee the Path}"
+      - h6: "_{Foresee the Path}"
 
   - at: '@class/dark-archive/psychic:conscious-mind/granted-spells'
     replace:

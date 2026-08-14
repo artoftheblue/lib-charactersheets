@@ -78,7 +78,7 @@ inc:
 
   - at: '@class/dark-archive/psychic:conscious-mind/unique-cantrip/surface'
     replace:
-      - h6: "_{Thermal Statis}"
+      - h6: "_{Thermal Stasis}"
 
   - at: '@class/dark-archive/psychic:conscious-mind/unique-cantrip/deeper'
     replace:
