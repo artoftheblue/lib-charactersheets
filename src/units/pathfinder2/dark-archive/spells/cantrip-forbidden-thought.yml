@@ -3,14 +3,14 @@
 # See the text of the OGL within this repository.
 
 unit: cantrip/forbidden-thought
-name: "_{Forbidden Thoguht}"
+name: "_{Forbidden Thought}"
 group: "_{Dark Archive}"
 
 inc:
   - copy: cantrip/forbidden-thought
     contents:
       - article: cantrip/forbidden-thought
-        title: "_{Forbidden Thoguht}"
+        title: "_{Forbidden Thought}"
         cat: "_{Cantrip} 1"
         contents:
           - dl:
