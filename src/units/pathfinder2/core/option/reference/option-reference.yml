@@ -367,6 +367,9 @@ inc:
                                   additive:
                                     name: "_{Additive}"
                                     desc: "_{Spend actions to add effects to bombs and elixirs. Can only use one additive effect at once. Additive number + item level cannot exceed your level.}"
+                                  amp:
+                                    name: "_{Amp}"
+                                    desc: "_{Spend 1 Focus Point as a free action to apply an amp to the next psi cantrip you cast. Only one amp per cantrip; can't combine with a metamagic ability.}"
                                   concentrate:
                                     name: "_{Concentrate}"
                                     desc: "_{Cannot use this during rage. Includes all spells with a verbal component.}"
@@ -388,12 +391,18 @@ inc:
                                   metamagic:
                                     name: "_{Metamagic}"
                                     desc: "_{Use directly before casting a spell to alter its effect.}"
+                                  mindshift:
+                                    name: "_{Mindshift}"
+                                    desc: "_{Can be altered to deal mental damage, gain the mental trait, and use a Will save instead of its normal save, losing any traits for damage types it no longer deals.}"
                                   open:
                                     name: "_{Open}"
                                     desc: "_{Must be the first open or attack action this turn.}"
                                   press:
                                     name: "_{Press}"
                                     desc: "_{Use this directly after another attack.}"
+                                  psyche:
+                                    name: "_{Psyche}"
+                                    desc: "_{Requires your psyche to be Unleashed to use; ends automatically when your unleashed psyche subsides.}"
                                   rage:
                                     name: "_{Rage}"
                                     desc: "_{Must be raging to use this ability.}"
