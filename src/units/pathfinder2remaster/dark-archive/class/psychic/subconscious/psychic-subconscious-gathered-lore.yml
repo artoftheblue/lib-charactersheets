@@ -1,0 +1,27 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/psychic/subconscious/gathered-lore
+in: remaster/psychic/subconscious
+group: "_{Dark Archive}"
+name: "_{Gathered Lore}"
+
+inc:
+  - set: psychic-subconscious
+    value: "_{Gathered Lore}"
+
+  - set: key-ability
+    value: INT
+
+  - at: '@class/remaster/psychic:subconscious-mind/title'
+    replace:
+      - h4: "_{Gathered Lore}"
+        size: small
+  - at: '@class/remaster/psychic:subconscious-mind/body'
+    replace:
+      - action:
+        title: "_{Recall the Teachings}"
+        contents:
+          - p: "_{Until the start of your next turn, you count as having prepared to Aid all allies within 30ft.}"
+          - p: "_{If you Aid an ally, roll an occultism check for it.}"

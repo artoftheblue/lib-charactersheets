@@ -1,0 +1,27 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/psychic/subconscious/precise-discipline
+in: remaster/psychic/subconscious
+group: "_{Dark Archive}"
+name: "_{Precise Discipline}"
+
+inc:
+  - set: psychic-subconscious
+    value: "_{Precise Discipline}"
+
+  - set: key-ability
+    value: INT
+
+  - at: '@class/remaster/psychic:subconscious-mind/title'
+    replace:
+      - h4: "_{Precise Discipline}"
+        size: small
+  - at: '@class/remaster/psychic:subconscious-mind/body'
+    replace:
+      - action:
+        title: "_{Calculate Threats}"
+        contents:
+          - value-block: "+2"
+            content: "_{AC and Reflex saves until your next turn}"

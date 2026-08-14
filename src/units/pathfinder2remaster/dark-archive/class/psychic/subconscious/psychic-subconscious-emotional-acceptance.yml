@@ -1,0 +1,30 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/psychic/subconscious/emotional-acceptance
+in: remaster/psychic/subconscious
+group: "_{Dark Archive}"
+name: "_{Emotional Acceptance}"
+
+inc:
+  - set: psychic-subconscious
+    value: "_{Emotional Acceptance}"
+
+  - set: key-ability
+    value: CHA
+
+  - at: '@class/remaster/psychic:subconscious-mind/title'
+    replace:
+      - h4: "_{Emotional Acceptance}"
+        size: small
+  - at: '@class/remaster/psychic:subconscious-mind/body'
+    replace:
+      - action:
+        title: "_{Restore the Mind}"
+        contents:
+          - p: "_{One ally within 30ft gains:}"
+          - ul:
+            contents:
+              - li: "_{+1 to saves against mental effects}"
+              - li: "_{Regain hp = 2 + (level &times; 2)}"

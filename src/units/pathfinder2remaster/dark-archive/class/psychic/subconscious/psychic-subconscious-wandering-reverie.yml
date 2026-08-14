@@ -1,0 +1,26 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/psychic/subconscious/wandering-reverie
+in: remaster/psychic/subconscious
+group: "_{Dark Archive}"
+name: "_{Wandering Reverie}"
+
+inc:
+  - set: psychic-subconscious
+    value: "_{Wandering Reverie}"
+
+  - set: key-ability
+    value: CHA
+
+  - at: '@class/remaster/psychic:subconscious-mind/title'
+    replace:
+      - h4: "_{Wandering Reverie}"
+        size: small
+  - at: '@class/remaster/psychic:subconscious-mind/body'
+    replace:
+      - action:
+        title: "_{Fade Into Daydreams}"
+        contents:
+          - p: "_{Concealed until the start of your next turn.}"
