@@ -1,0 +1,90 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/psychic/conscious/infinite-eye
+in: remaster/psychic/conscious
+group: "_{Dark Archive}"
+name: "_{The Infinite Eye}"
+
+require:
+  - unit: cantrip/psychic/detect-magic
+  - unit: cantrip/psychic/guidance
+  - unit: cantrip/glimpse-weakness
+  - unit: cantrip/omnidirectional-scan
+  - unit: cantrip/foresee-the-path
+
+inc:
+  - set: psychic-conscious
+    value: "_{The Infinite Eye}"
+
+  - at: '@class/remaster/psychic:conscious-mind'
+    replace:
+      - h4: "_{The Infinite Eye}"
+        size: small
+
+  - set: class/remaster/psychic:conscious-mind/spell1
+    value: "_{Detect Magic}"
+
+  - set: class/remaster/psychic:conscious-mind/spell2
+    value: "_{Guidance}"
+
+  - at: '@class/remaster/psychic:conscious-mind/psi-cantrips'
+    replace:
+      - layout: 2e
+        contents:
+          - h6: "_{Detect Magic}"
+          - h6: "_{Guidance}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/surface'
+    replace:
+      - h6: "_{Glimpse Weakness}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deeper'
+    replace:
+      - h6: "_{Omnidirectional Scan}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deepest'
+    replace:
+      - h6: "_{Foresee the Path}"
+
+  - at: '@class/remaster/psychic:conscious-mind/granted-spells'
+    replace:
+      - "_{Sure Strike}"
+      - "_{Augury}"
+      - "_{Locate}"
+      - "_{Clairvoyance}"
+      - "_{Scouting Eye}"
+      - "_{Truesight}"
+      - "_{True Target}"
+      - "_{Unrelenting Observation}"
+      - "_{Foresight}"
+
+
+  # spellbook
+
+  - at: '@spellbook/title'
+    replace:
+      - h2: "_{The Infinite Eye}"
+
+  - at: '@class/remaster/psychic:spellbook/cantrips'
+    replace:
+      - paste: cantrip/psychic/detect-magic
+      - paste: cantrip/psychic/guidance
+
+  - at: '@class/remaster/psychic:spellbook/unique-cantrips'
+    add:
+      - g:
+        contents:
+          - paste: cantrip/glimpse-weakness
+          - paste: cantrip/glimpse-weakness/amp
+
+      - g:
+        contents:
+          - paste: cantrip/omnidirectional-scan
+          - paste: cantrip/omnidirectional-scan/amp
+
+      - g:
+        contents:
+          - paste: cantrip/foresee-the-path
+          - paste: cantrip/foresee-the-path/amp

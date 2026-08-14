@@ -1,0 +1,90 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/psychic/conscious/tangible-dream
+in: remaster/psychic/conscious
+group: "_{Dark Archive}"
+name: "_{The Tangible Dream}"
+
+require:
+  - unit: cantrip/psychic/dancing-lights
+  - unit: cantrip/psychic/shield
+  - unit: cantrip/imaginary-weapon
+  - unit: cantrip/astral-rain
+  - unit: cantrip/hologram-cage
+
+inc:
+  - set: psychic-conscious
+    value: "_{The Tangible Dream}"
+
+  - at: '@class/remaster/psychic:conscious-mind'
+    replace:
+      - h4: "_{The Tangible Dream}"
+        size: small
+
+  - set: class/remaster/psychic:conscious-mind/spell1
+    value: "_{Dancing Lights}"
+
+  - set: class/remaster/psychic:conscious-mind/spell2
+    value: "_{Shield}"
+
+  - at: '@class/remaster/psychic:conscious-mind/psi-cantrips'
+    replace:
+      - layout: 2e
+        contents:
+          - h6: "_{Dancing Lights}"
+          - h6: "_{Shield}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/surface'
+    replace:
+      - h6: "_{Imaginary Weapon}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deeper'
+    replace:
+      - h6: "_{Astral Rain}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deepest'
+    replace:
+      - h6: "_{Hologram Cage}"
+
+  - at: '@class/remaster/psychic:conscious-mind/granted-spells'
+    replace:
+      - "_{Dizzying Colors}"
+      - "_{Invisibility}"
+      - "_{Sea of Thought}"
+      - "_{Containment}"
+      - "_{Etheric Shards}"
+      - "_{Scintillating Safeguard}"
+      - "_{Project Image}"
+      - "_{Confusing Colors}"
+      - "_{Resplendent Mansion}"
+
+
+  # spellbook
+
+  - at: '@spellbook/title'
+    replace:
+      - h2: "_{The Tangible Dream}"
+
+  - at: '@class/remaster/psychic:spellbook/cantrips'
+    replace:
+      - paste: cantrip/psychic/dancing-lights
+      - paste: cantrip/psychic/shield
+
+  - at: '@class/remaster/psychic:spellbook/unique-cantrips'
+    add:
+      - g:
+        contents:
+          - paste: cantrip/imaginary-weapon
+          - paste: cantrip/imaginary-weapon/amp
+
+      - g:
+        contents:
+          - paste: cantrip/astral-rain
+          - paste: cantrip/astral-rain/amp
+
+      - g:
+        contents:
+          - paste: cantrip/hologram-cage
+          - paste: cantrip/hologram-cage/amp

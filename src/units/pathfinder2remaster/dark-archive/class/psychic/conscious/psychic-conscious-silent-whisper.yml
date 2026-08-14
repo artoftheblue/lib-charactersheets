@@ -1,0 +1,90 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/psychic/conscious/silent-whisper
+in: remaster/psychic/conscious
+group: "_{Dark Archive}"
+name: "_{The Silent Whisper}"
+
+require:
+  - unit: cantrip/psychic/daze
+  - unit: cantrip/psychic/message
+  - unit: cantrip/forbidden-thought
+  - unit: cantrip/shatter-mind
+  - unit: cantrip/contagious-idea
+
+inc:
+  - set: psychic-conscious
+    value: "_{The Silent Whisper}"
+
+  - at: '@class/remaster/psychic:conscious-mind'
+    replace:
+      - h4: "_{The Silent Whisper}"
+        size: small
+
+  - set: class/remaster/psychic:conscious-mind/spell1
+    value: "_{Daze}"
+
+  - set: class/remaster/psychic:conscious-mind/spell2
+    value: "_{Message}"
+
+  - at: '@class/remaster/psychic:conscious-mind/psi-cantrips'
+    replace:
+      - layout: 2e
+        contents:
+          - h6: "_{Daze}"
+          - h6: "_{Message}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/surface'
+    replace:
+      - h6: "_{Forbidden Thought}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deeper'
+    replace:
+      - h6: "_{Shatter Mind}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deepest'
+    replace:
+      - h6: "_{Contagious Idea}"
+
+  - at: '@class/remaster/psychic:conscious-mind/granted-spells'
+    replace:
+      - "_{Mindlink}"
+      - "_{Stupefy}"
+      - "_{Heroism}"
+      - "_{Telepathy}"
+      - "_{Synaptic Pulse}"
+      - "_{Sending}"
+      - "_{Visions of Danger}"
+      - "_{Uncontrollable Dance}"
+      - "_{Telepathic Demand}"
+
+
+  # spellbook
+
+  - at: '@spellbook/title'
+    replace:
+      - h2: "_{The Silent Whisper}"
+
+  - at: '@class/remaster/psychic:spellbook/cantrips'
+    replace:
+      - paste: cantrip/psychic/daze
+      - paste: cantrip/psychic/message
+
+  - at: '@class/remaster/psychic:spellbook/unique-cantrips'
+    add:
+      - g:
+        contents:
+          - paste: cantrip/forbidden-thought
+          - paste: cantrip/forbidden-thought/amp
+
+      - g:
+        contents:
+          - paste: cantrip/shatter-mind
+          - paste: cantrip/shatter-mind/amp
+
+      - g:
+        contents:
+          - paste: cantrip/contagious-idea
+          - paste: cantrip/contagious-idea/amp

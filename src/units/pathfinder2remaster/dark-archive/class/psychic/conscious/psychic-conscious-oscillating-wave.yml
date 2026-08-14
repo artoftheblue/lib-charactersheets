@@ -1,0 +1,130 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/psychic/conscious/oscillating-wave
+in: remaster/psychic/conscious
+group: "_{Dark Archive}"
+name: "_{The Oscillating Wave}"
+
+require:
+  - unit: cantrip/psychic/produce-flame
+  - unit: cantrip/psychic/ray-of-frost
+  - unit: cantrip/thermal-stasis
+  - unit: cantrip/entropic-wheel
+  - unit: cantrip/redistribute-potential
+
+inc:
+  - set: psychic-conscious
+    value: "_{The Oscillating Wave}"
+
+  - at: '@class/remaster/psychic:class-icon'
+    replace:
+      - nothing:
+
+  - at: '@class/remaster/psychic:conscious-mind'
+    replace:
+      - h4: "_{The Oscillating Wave}"
+        size: small
+      - hr:
+      - row:
+        contents:
+          - spacer:
+          - field: "##:conservation-of-energy"
+            frame: left
+            label: "_{Add Energy}"
+            control: radio
+            value: add-energy
+          - field: "##:conservation-of-energy"
+            frame: none
+            control: radio
+            value: neutral
+          - field: "##:conservation-of-energy"
+            frame: right
+            label: "_{Remove Energy}"
+            control: radio
+            value: remove-energy
+          - spacer:
+      - row:
+        contents:
+          - p:
+            title: "_{Add Energy}"
+            content: "_{Ability deals fire damage}"
+          - flags:
+              - "_{Fire}"
+      - row:
+        contents:
+          - p:
+            title: "_{Remove Energy}"
+            content: "_{Ability deals cold damage}"
+          - flags:
+              - "_{Cold}"
+      - p:
+        title: "_{Mindshift}"
+        content: "_{Add/remove energy instead of making an ability mental.}"
+
+  - set: class/remaster/psychic:conscious-mind/spell1
+    value: "_{Produce Flame}"
+
+  - set: class/remaster/psychic:conscious-mind/spell2
+    value: "_{Ray of Frost}"
+
+  - at: '@class/remaster/psychic:conscious-mind/psi-cantrips'
+    replace:
+      - layout: 2e
+        contents:
+          - h6: "_{Produce Flame}"
+          - h6: "_{Ray of Frost}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/surface'
+    replace:
+      - h6: "_{Thermal Stasis}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deeper'
+    replace:
+      - h6: "_{Entropic Wheel}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deepest'
+    replace:
+      - h6: "_{Redistribute Potential}"
+
+  - at: '@class/remaster/psychic:conscious-mind/granted-spells'
+    replace:
+      - "_{Breathe Fire}"
+      - "_{Blazing Bolt}"
+      - "_{Fireball}"
+      - "_{Ice Storm}"
+      - "_{Howling Blizzard}"
+      - "_{Frozen Fog}"
+      - "_{Volcanic Eruption}"
+      - "_{Arctic Rift}"
+      - "_{Falling Star}"
+
+
+  # spellbook
+
+  - at: '@spellbook/title'
+    replace:
+      - h2: "_{The Oscillating Wave}"
+
+  - at: '@class/remaster/psychic:spellbook/cantrips'
+    replace:
+      - paste: cantrip/psychic/produce-flame
+      - paste: cantrip/psychic/ray-of-frost
+
+  - at: '@class/remaster/psychic:spellbook/unique-cantrips'
+    add:
+      - g:
+        contents:
+          - paste: cantrip/thermal-stasis
+          - paste: cantrip/thermal-stasis/amp
+
+      - g:
+        contents:
+          - paste: cantrip/entropic-wheel
+          - paste: cantrip/entropic-wheel/amp
+
+      - g:
+        contents:
+          - paste: cantrip/redistribute-potential
+          - paste: cantrip/redistribute-potential/amp

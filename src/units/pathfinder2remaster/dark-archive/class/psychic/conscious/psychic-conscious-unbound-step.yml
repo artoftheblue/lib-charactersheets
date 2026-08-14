@@ -1,0 +1,90 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/psychic/conscious/unbound-step
+in: remaster/psychic/conscious
+group: "_{Dark Archive}"
+name: "_{The Unbound Step}"
+
+require:
+  - unit: cantrip/psychic/phase-bolt
+  - unit: cantrip/psychic/warp-step
+  - unit: cantrip/distortion-lens
+  - unit: cantrip/ghostly-shift
+  - unit: cantrip/tesseract-tunnel
+
+inc:
+  - set: psychic-conscious
+    value: "_{The Unbound Step}"
+
+  - at: '@class/remaster/psychic:conscious-mind'
+    replace:
+      - h4: "_{The Unbound Step}"
+        size: small
+
+  - set: class/remaster/psychic:conscious-mind/spell1
+    value: "_{Phase Bolt}"
+
+  - set: class/remaster/psychic:conscious-mind/spell2
+    value: "_{Warp Step}"
+
+  - at: '@class/remaster/psychic:conscious-mind/psi-cantrips'
+    replace:
+      - layout: 2e
+        contents:
+          - h6: "_{Phase Bolt}"
+          - h6: "_{Warp Step}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/surface'
+    replace:
+      - h6: "_{Distortion Lens}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deeper'
+    replace:
+      - h6: "_{Ghostly Shift}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deepest'
+    replace:
+      - h6: "_{Tesseract Tunnel}"
+
+  - at: '@class/remaster/psychic:conscious-mind/granted-spells'
+    replace:
+      - "_{Thoughtful Gift}"
+      - "_{Enlarge}"
+      - "_{Rally Point}"
+      - "_{Translocate}"
+      - "_{Strange Geometry}"
+      - "_{Collective Transposition}"
+      - "_{Momentary Recovery}"
+      - "_{Quandary}"
+      - "_{Bilocation}"
+
+
+  # spellbook
+
+  - at: '@spellbook/title'
+    replace:
+      - h2: "_{The Unbound Step}"
+
+  - at: '@class/remaster/psychic:spellbook/cantrips'
+    replace:
+      - paste: cantrip/psychic/phase-bolt
+      - paste: cantrip/psychic/warp-step
+
+  - at: '@class/remaster/psychic:spellbook/unique-cantrips'
+    add:
+      - g:
+        contents:
+          - paste: cantrip/distortion-lens
+          - paste: cantrip/distortion-lens/amp
+
+      - g:
+        contents:
+          - paste: cantrip/ghostly-shift
+          - paste: cantrip/ghostly-shift/amp
+
+      - g:
+        contents:
+          - paste: cantrip/tesseract-tunnel
+          - paste: cantrip/tesseract-tunnel/amp

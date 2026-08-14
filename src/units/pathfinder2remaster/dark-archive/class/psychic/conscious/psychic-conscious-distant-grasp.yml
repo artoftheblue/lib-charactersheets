@@ -1,0 +1,90 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: remaster/psychic/conscious/distant-grasp
+in: remaster/psychic/conscious
+group: "_{Dark Archive}"
+name: "_{The Distant Grasp}"
+
+require:
+  - unit: cantrip/psychic/mage-hand
+  - unit: cantrip/psychic/telekinetic-projectile
+  - unit: cantrip/telekinetic-rend
+  - unit: cantrip/vector-screen
+  - unit: cantrip/dancing-blade
+
+inc:
+  - set: psychic-conscious
+    value: "_{The Distant Grasp}"
+
+  - at: '@class/remaster/psychic:conscious-mind'
+    replace:
+      - h4: "_{The Distant Grasp}"
+        size: small
+
+  - set: class/remaster/psychic:conscious-mind/spell1
+    value: "_{Mage Hand}"
+
+  - set: class/remaster/psychic:conscious-mind/spell2
+    value: "_{Telekinetic Projectile}"
+
+  - at: '@class/remaster/psychic:conscious-mind/psi-cantrips'
+    replace:
+      - layout: 2e
+        contents:
+          - h6: "_{Mage Hand}"
+          - h6: "_{Telekinetic Projectile}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/surface'
+    replace:
+      - h6: "_{Telekinetic Rend}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deeper'
+    replace:
+      - h6: "_{Vector Screen}"
+
+  - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/deepest'
+    replace:
+      - h6: "_{Dancing Blade}"
+
+  - at: '@class/remaster/psychic:conscious-mind/granted-spells'
+    replace:
+      - "_{Kinetic Ram}"
+      - "_{Telekinetic Manoeuvre}"
+      - "_{Gravity Well}"
+      - "_{Fly}"
+      - "_{Telekinetic Haul}"
+      - "_{Poltergeist's Fury}"
+      - "_{Telekinetic Bombardment}"
+      - "_{Falling Sky}"
+      - "_{Implosion}"
+
+
+  # spellbook
+
+  - at: '@spellbook/title'
+    replace:
+      - h2: "_{The Distant Grasp}"
+
+  - at: '@class/remaster/psychic:spellbook/cantrips'
+    replace:
+      - paste: cantrip/psychic/mage-hand
+      - paste: cantrip/psychic/telekinetic-projectile
+
+  - at: '@class/remaster/psychic:spellbook/unique-cantrips'
+    add:
+      - g:
+        contents:
+          - paste: cantrip/telekinetic-rend
+          - paste: cantrip/telekinetic-rend/amp
+
+      - g:
+        contents:
+          - paste: cantrip/vector-screen
+          - paste: cantrip/vector-screen/amp
+
+      - g:
+        contents:
+          - paste: cantrip/dancing-blade
+          - paste: cantrip/dancing-blade/amp
