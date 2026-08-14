@@ -1,0 +1,55 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: cantrip/vector-screen
+name: "_{Vector Screen}"
+group: "_{Dark Archive}"
+
+inc:
+  - copy: cantrip/vector-screen
+    contents:
+      - article: cantrip/vector-screen
+        title: "_{Vector Screen}"
+        cat: "_{Cantrip} 3"
+        contents:
+          - dl:
+              range: "_{60ft}"
+              area: "_{5ft square}"
+              duration: "_{1rd}"
+
+          - list:
+            hr: true
+            light: true
+            contents:
+              - action: 2
+                contents:
+                  - p: "_{Set up a transparent barrier that seizes small projectiles.}"
+                  - value-block: "-2"
+                    content: "_{Attack with larger ranged weapons.}"
+
+              - level: 5
+                marker: "_{Spell Level}"
+                contents:
+                  - dl:
+                      area: "_{10ft}"
+
+              - level: 6
+                marker: "_{Spell Level}"
+                contents:
+                  - p: "_{Defends against magical blasts}"
+                  - value-block: "-2"
+                    content: "_{Spell attacks}"
+                  - p: "_{Grants cover against ranged attacks}"
+
+  - copy: cantrip/vector-screen/amp
+    contents:
+      - box:
+        contents:
+          - p:
+            title: "_{Amp}"
+          - dl:
+              duration: "_{1 minute}"
+          - action:
+            contents:
+              - p: "_{Dismiss the spell to cast telekinetic projectile and return all caught ammunition at one creature.}"

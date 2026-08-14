@@ -1,0 +1,104 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: cantrip/dancing-blade
+name: "_{Dancing Blade}"
+group: "_{Dark Archive}"
+
+inc:
+  - copy: cantrip/dancing-blade
+    contents:
+      - article: cantrip/dancing-blade
+        title: "_{Dancing Blade}"
+        cat: "_{Cantrip} 5"
+        contents:
+          - dl:
+              range: "_{30ft}"
+              duration: "_{Sustain up to 1 minute}"
+
+          - action: 2
+            contents:
+              - p: "_{Animate a weapon. It strikes in the first turn, then sticks with its target.}"
+
+          - action:
+            contents:
+              - p:
+                title: "_{Sustain}"
+
+              - ul:
+                contents:
+                  - li:
+                    contents:
+                      - p:
+                        title: "_{Change Partners}"
+                        content: "_{Flies to a new target within 30ft.}"
+                  - li:
+                    contents:
+                      - p:
+                        title: "_{Strike}"
+                        content: "_{Use your spell attack roll}"
+
+          - calc:
+            merge-bottom: false
+            output:
+              field: "##:damage"
+              legend: "_{Damage}"
+              border: full
+              width: huge
+              control: compound
+              parts:
+                - subid: dice
+                  eq: "2+%{##:heighten}"
+                - span: "_{d6}"
+                - subid: bonus
+                  eq: "%{##:ability}"
+            inputs:
+              - span: "("
+                size: large
+              - span: "2 +"
+              - field: "##:heighten"
+                label: "_{Heighten +2}"
+                width: small
+              - span: ")"
+                size: large
+              - span: "_{d6} +"
+              - field: "##:ability"
+                ref: true
+                label: "_{Spellcasting Ability Modifier}"
+                width: small
+
+  - copy: cantrip/dancing-blade/amp
+    contents:
+      - box:
+        contents:
+          - p:
+            title: "_{Amp}"
+
+          - calc:
+            output:
+              field: "##:damage"
+              legend: "_{Damage}"
+              border: full
+              width: large
+              prefix: "_{2d6} +"
+            inputs:
+              - field: "##:ability"
+                ref: true
+                label: "_{Spellcasting Ability Modifier}"
+                merge-bottom: false
+
+          - action:
+            contents:
+              - ul:
+                contents:
+                  - li:
+                    contents:
+                      - p:
+                        title: "_{Guard}"
+                        content: "_{+2 AC against melee from the target}"
+                  - li:
+                    contents:
+                      - p:
+                        title: "_{Push}"
+                        content: "_{Use spell attack roll to Push}"

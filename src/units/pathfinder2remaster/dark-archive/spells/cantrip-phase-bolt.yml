@@ -1,0 +1,42 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: cantrip/phase-bolt
+name: "_{Phase Bolt}"
+group: "_{Dark Archive}"
+
+inc:
+  - copy: cantrip/phase-bolt
+    contents:
+      - article: cantrip/phase-bolt
+        title: "_{Phase Bolt}"
+        cat: "_{Cantrip} 1"
+        contents:
+          - dl:
+              range: "_{30ft}"
+
+          - action: 2
+            contents:
+              - p: "_{Make a ranged spell attack against 1 target. Target's circumstance bonus (shield etc) is reduced by 2.}"
+
+          - calc:
+            output:
+              field: "##:damage"
+              legend: "_{Piercing Damage}"
+              control: compound
+              width: huge
+              parts:
+                - subid: dice
+                  suffix: "_{d4} +"
+                  eq: "%{##:spell-level}"
+                - subid: bonus
+                  eq: "%{##:ability}"
+            inputs:
+              - field: "##:spell-level"
+                label: "_{Spell Level}"
+                eq: "ceil(%{level}/2)"
+              - span: "_{d4} +"
+              - field: "##:ability"
+                ref: true
+                label: "_{Spellcasting Ability Modifier}"
