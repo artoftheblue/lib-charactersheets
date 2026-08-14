@@ -15,7 +15,7 @@ require:
   - unit: cantrip/redistribute-potential
 
 inc:
-  - set: subclass
+  - set: psychic-conscious
     value: "_{The Oscillating Wave}"
 
   - at: '@class/dark-archive/psychic:class-icon'
@@ -105,7 +105,7 @@ inc:
 
   - at: '@spellbook/title'
     replace:
-      - h2: "_{The Distant Grasp}"
+      - h2: "_{The Oscillating Wave}"
 
   - at: '@class/dark-archive/psychic:spellbook/cantrips'
     replace:

@@ -2,7 +2,7 @@
 # This file is compliant with the Open Game License (OGL).
 # See the text of the OGL within this repository.
 
-unit: psychic/subconscious/unbound-step
+unit: psychic/subconscious/emotional-acceptance
 in: psychic/subconscious
 group: "_{Dark Archive}"
 name: "_{Emotional Acceptance}"
