@@ -29,7 +29,7 @@ inc:
       class-name: "_{Psychic}"
       subclass: subconscious-conscious
       subclass-name: "_{Subconscious / Conscious}"
-      hp: 8
+      hp: 6
 
       skill: occultism
       occult: trained
