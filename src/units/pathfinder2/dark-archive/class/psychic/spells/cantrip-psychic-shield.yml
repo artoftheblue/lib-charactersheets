@@ -68,5 +68,5 @@ inc:
                     content: "_{Hardness if you drop two shields at once}"
 
                   - value-block: "2 &times;"
-                    content: "_{Hardness if you drop three sheilds at once}"
+                    content: "_{Hardness if you drop three shields at once}"
                   
