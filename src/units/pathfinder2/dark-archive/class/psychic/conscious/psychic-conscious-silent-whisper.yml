@@ -33,8 +33,8 @@ inc:
     replace:
       - layout: 2e
         contents:
-          - h6: "_{Detect Magic}"
-          - h6: "_{Guidance}"
+          - h6: "_{Daze}"
+          - h6: "_{Message}"
 
   - at: '@class/dark-archive/psychic:conscious-mind/unique-cantrip/surface'
     replace:

@@ -52,7 +52,7 @@ inc:
     replace:
       - "_{True Strike}"
       - "_{Augury}"
-      - "_{Organsight}"
+      - "_{Locate}"
       - "_{Clairvoyance}"
       - "_{Prying Eye}"
       - "_{True Seeing}"
