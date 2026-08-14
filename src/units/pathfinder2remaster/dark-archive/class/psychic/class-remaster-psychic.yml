@@ -1,0 +1,425 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: class/remaster/psychic
+in: class
+group: "_{Dark Archive}"
+name: "_{Psychic}"
+
+form:
+  - select: remaster/psychic/subconscious
+    name: "_{Subconscious Mind}"
+    max: 1
+  - select: remaster/psychic/conscious
+    name: "_{Conscious Mind}"
+    max: 1
+
+require:
+  - unit: weapon-spec/slow
+  - unit: option/spellbook
+  - unit: option/spellbook/custom
+  - with: option/reference
+    unit: class/remaster/psychic/reference
+  - deny: archetype/dark-archive/psychic
+  - deny: class/dark-archive/psychic
+
+inc:
+
+  - set: class
+    value: "_{Psychic}"
+  - set: hp-class
+    value: 6
+  - set: class-icon
+    value: psychic
+  - set: subclass-label
+    value: "_{Subconscious / Conscious}"
+
+  - set: psychic-class-dc-proficiency
+    value: trained
+  - set: perception-proficiency
+    value: trained
+
+  - set: unarmoured-proficiency
+    value: trained
+
+  - set: fortitude-proficiency
+    value: trained
+  - set: reflex-proficiency
+    value: trained
+  - set: will-proficiency
+    value: expert
+
+  - set: occultism-proficiency
+    value: trained
+
+  - set: simple-weapons-proficiency
+    value: trained
+  - set: unarmed-attack-proficiency
+    value: trained
+
+  - set: occult-spell-attack-proficiency
+    value: trained
+  - set: occult-spell-dc-proficiency
+    value: trained
+
+  - at: '@class-specialisation'
+    replace:
+      - row:
+        contents:
+          - field: psychic-subconscious
+            label: "_{Subconscious Mind}"
+            width: stretch
+            merge-bottom: true
+          - field: psychic-conscious
+            label: "_{Conscious Mind}"
+            width: stretch
+            merge-bottom: true
+
+  - at: '@advancement'
+    add:
+      - level: 1
+        class-feat: true
+      - level: 1
+        gain: "_{Subconscious Mind}"
+      - level: 1
+        gain: "_{Conscious Mind}"
+      - level: 5
+        gain: "_{Focus point}"
+      - level: 5
+        advance: "_{Reflex saves}"
+        proficiency: expert
+        colour: DEX
+      - level: 7
+        advance: "_{Occult spell attacks and DCs}"
+        proficiency: expert
+      - level: 9
+        advance: "_{Fortitude saves}"
+        proficiency: expert
+        colour: CON
+      - level: 11
+        advance: "_{Perception}"
+        proficiency: expert
+        colour: WIS
+      - level: 11
+        advance: "_{Will saves}"
+        proficiency: master
+        colour: WIS
+      - level: 13
+        advance: "_{Unarmoured defence}"
+        proficiency: expert
+      - level: 15
+        advance: "_{Occult spell attacks and DCs}"
+        proficiency: master
+      - level: 17
+        advance: "_{Will saves}"
+        proficiency: legendary
+        colour: WIS
+      - level: 19
+        gain: "_{Infinite Mind}"
+      - level: 19
+        advance: "_{Occult spell attacks and DCs}"
+        proficiency: legendary
+
+  - at: '@pages'
+    add:
+
+      - page: psychic
+        name: "_{Psychic}"
+        flex: true
+        order: 10
+        contents:
+          - layout: 2l
+            contents:
+              - g:
+                contents:
+                  - zone: '@class/remaster/psychic:class-icon'
+                    contents:
+                      - class-icon: psychic
+                        optional: true
+                  - class-name: "_{Psychic}"
+
+                  - section: "_{Subconscious Mind}"
+                    primary: true
+                    contents:
+                      - zone: '@class/remaster/psychic:subconscious-mind/title'
+                        contents:
+                          - field: 'class/remaster/psychic:conscious-mind'
+                            width: stretch
+                            size: large
+                            merge-bottom: true
+                      - hr:
+                      - g:
+                        pad: true
+                        contents:
+                          - field: class/remaster/psychic:key-ability
+                            frame: right
+                            label: "_{Key ability}"
+                            border: full
+                      - row:
+                        contents:
+                          - h5: "_{Psyche Action}"
+                          - spacer:
+                          - flags:
+                              - "_{Psyche}"
+                      - zone: '@class/remaster/psychic:subconscious-mind/body'
+                        contents:
+                          - article: 'class/remaster/psychic:subconscious-mind/psyche-action'
+                            lines: 3
+                            reduce: 1
+
+                  - section: "_{Conscious Mind}"
+                    primary: true
+                    contents:
+                      - zone: '@class/remaster/psychic:conscious-mind'
+                        contents:
+                          - field: 'class/remaster/psychic:conscious-mind'
+                            width: stretch
+                            size: large
+                            merge-bottom: true
+
+                  - section: "_{Psyche}"
+                    flex: tiny
+                    contents:
+                      - article:
+                        title: "_{Unleash Psyche}"
+                        contents:
+                          - action: free
+                            contents:
+                              - p: "_{At the start of your turn, unleash your psyche. The effect of your unleashed psyche is clearly visible.}"
+                          - layout: indent-l
+                            contents:
+                              - cost: '2'
+                                unit: "_{rounds}"
+                              - p: "_{After the effect ends, you are stupified 1 and cannot use it again straight away}"
+
+                          - hr:
+                            light: true
+
+                          - row:
+                            blk: false
+                            contents:
+                              - p: "_{Can use actions with the psyche trait}"
+                              - spacer:
+                              - flags:
+                                  - "_{Psyche}"
+
+                          - row:
+                            contents:
+                              - calc:
+                                output:
+                                  label: "_{Damage\nBonus}"
+                                inputs:
+                                  - span: "2 &times;"
+                                  - label: "_{Spell\nLevel}"
+                              - vr:
+                              - p: "_{Bonus when you cast a damaging psychic spell:}"
+                              - spacer:
+
+                  - section: "_{Spellcasting}"
+                    id: spellcasting
+                    contents:
+                      - list:
+                        hr: true
+                        light: true
+                        contents:
+                          - g:
+                            contents:
+                              - paste: spellcasting-cantrips
+                                params:
+                                  content: "_{Cast cantrips you know indefinitely.}"
+
+                              - indent:
+                                contents:
+                                  - paste: focus
+                                    contents:
+                                      - p: "_{Add an amp to a psi cantrip.}"
+
+                          - paste: spellcasting-spells
+                            params:
+                              icon: psychic
+                              content: "_{Cast spells you know using spell slots.}"
+                              heighten: "_{Spells must be learned at a higher level to heighten}"
+
+                          - level: 3
+                            contents:
+                              - p: "_{Signature spells can be heightened without learning separately.}"
+
+                          - spells-table:
+                            max: 10
+                            spells-today: true
+                            max-spells-per-day: 2
+                            expanded: "_{Signature Spell}"
+                            at:
+                              - level: 10
+                                max-spells-per-day: 2
+
+                          - g:
+                            contents:
+                              - zone: '@class/remaster/psychic:dcs'
+                                contents:
+                                  - paste: spell-attack
+                                  - paste: spell-dc
+
+                  - tail:
+                  - spacer:
+
+              - g:
+                contents:
+
+                  - section: "_{Psi Cantrips}"
+                    flex: small
+                    contents:
+                      - list:
+                        hr: true
+                        light: true
+                        contents:
+                          - g:
+                            contents:
+                              - zone: '@class/remaster/psychic:conscious-mind/psi-cantrips'
+                                contents:
+                                  - layout: 2e
+                                    contents:
+                                      - field: '##:conscious-mind/psi-cantrip-1'
+                                        width: stretch
+                                        merge-bottom: true
+                                      - field: '##:conscious-mind/psi-cantrip-2'
+                                        width: stretch
+                                        merge-bottom: true
+                              - layout: 2e
+                                contents:
+                                  - hr:
+                                    light: true
+                                  - hr:
+                                    light: true
+                              - spells-list:
+                                min: 0
+                                max: 0
+                                spells: 3
+                                style: spontaneous
+
+                          - g:
+                            contents:
+                              - h5: "_{Unique Psi Cantrips}"
+                              - layout: 3e
+                                merge-bottom: true
+                                vr: true
+                                contents:
+                                  - g:
+                                    contents:
+                                      - label: "_{Surface}"
+                                        align: left
+                                      - zone: '@class/remaster/psychic:conscious-mind/unique-cantrip/surface'
+                                        contents:
+                                          - field: '##:conscious-mind/unique-cantrip/surface'
+                                            width: stretch
+                                            frame: none
+
+                                  - level: 6
+                                    contents:
+                                      - label: "_{Deeper}"
+                                        align: left
+                                      - zone: '@class/remaster/psychic:conscious-mind/unique-cantrip/deeper'
+                                        contents:
+                                          - field: '##:conscious-mind/unique-cantrip/deeper'
+                                            width: stretch
+                                            frame: none
+
+                                  - level: 10
+                                    contents:
+                                      - label: "_{Deepest}"
+                                        align: left
+                                      - zone: '@class/remaster/psychic:conscious-mind/unique-cantrip/deepest'
+                                        contents:
+                                          - field: '##:conscious-mind/unique-cantrip/deepest'
+                                            width: stretch
+                                            frame: none
+
+                  - section: "_{Spells}"
+                    flex: large
+                    contents:
+                      - list:
+                        hr: true
+                        avoid-shade: true
+                        zebra: true
+                        flatten: true
+                        contents:
+                          - spells-list:
+                            min: 1
+                            max: 9
+                            spells: 2
+                            style: spontaneous
+                            special: "_{Conscious}"
+                            special-value:
+                              - zone: '@class/remaster/psychic:conscious-mind/granted-spells'
+                          - spells-list:
+                            min: 10
+                            max: 10
+                            spells: 2
+                            style: spontaneous
+
+                      - paste: class-feats
+                        params:
+                          id: psychic-feats
+                          title: "_{Psychic Feats}"
+                          mark: psychic
+                          extra: 0
+                          lines: 3
+                          decrement: 6
+
+                  - tail:
+
+  - at: '@spellbook/left/header'
+    replace:
+      - spacer:
+      - h4: "_{Psi Cantrips}"
+        size: large
+      - hr:
+        blk: false
+
+  - at: '@spellbook/left'
+    replace:
+      - list:
+        hr: true
+        zebra: true
+        contents:
+          - slots:
+            min: 2
+            max: 2
+            contents:
+              - zone: '@class/remaster/psychic:spellbook/cantrips'
+                contents:
+            placeholder:
+              - paste: spellbook/spell
+                params:
+                  id: psychic/spellbook/cantrip-#{i}
+      - tail:
+      - spacer:
+
+  - at: '@spellbook/middle/header'
+    replace:
+      - spacer:
+      - h4: "_{Unique Cantrips}"
+        size: large
+      - hr:
+        blk: false
+
+  - at: '@spellbook/middle'
+    replace:
+      - list:
+        hr: true
+        zebra: true
+        contents:
+          - slots:
+            min: 3
+            max: 3
+            contents:
+              - zone: '@class/remaster/psychic:spellbook/unique-cantrips'
+                contents:
+            placeholder:
+              - paste: spellbook/spell
+                params:
+                  id: psychic/spellbook/unique-cantrip-#{i}
+
+      - tail:
+      - spacer:

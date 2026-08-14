@@ -141,6 +141,8 @@ require:
     unit: theme/adventurer/class/psychic
   - with: class/dark-archive/thaumaturge
     unit: theme/adventurer/class/thaumaturge
+  - with: class/remaster/psychic
+    unit: theme/adventurer/class/psychic
 
   # Dark Archive: Archetypes
   - with: archetype/dark-archive/psychic
