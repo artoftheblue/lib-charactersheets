@@ -57,11 +57,11 @@ inc:
   - at: '@advancement'
     add:
       - level: 1
-        class-feat: true
-      - level: 1
         gain: "_{Subconscious Mind}"
       - level: 1
         gain: "_{Conscious Mind}"
+      - level: 3
+        advance: "_{Signature Spells}"
       - level: 5
         gain: "_{Focus point}"
       - level: 5
@@ -83,6 +83,9 @@ inc:
         advance: "_{Will saves}"
         proficiency: master
         colour: WIS
+      - level: 11
+        advance: "_{Simple weapons}, _{Unarmed attacks}"
+        proficiency: expert
       - level: 13
         advance: "_{Unarmoured defence}"
         proficiency: expert
