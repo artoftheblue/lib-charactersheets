@@ -30,7 +30,7 @@ inc:
               control: compound
               parts:
                 - subid: dice
-                  eq: "floor(%{##:spell-level}/2)"
+                  eq: "%{##:spell-level}"
                   suffix: "d6 +"
                 - subid: bonus
                   eq: "%{##:ability}"

@@ -48,12 +48,12 @@ inc:
               control: compound
               parts:
                 - subid: dice
-                  eq: "floor(%{##:spell-level}/2)"
+                  eq: "ceil(%{##:spell-level}/2)"
                   suffix: "d4 +"
                 - subid: bonus
-                  eq: "floor(%{##:spell-level}/2)"
+                  eq: "ceil(%{##:spell-level}/2)"
             inputs:
-              - ruby-round-down:
+              - ruby-round-up:
                 contents:
                   - span: "("
                   - field: "##:spell-level"

@@ -31,14 +31,16 @@ inc:
               legend: "_{Damage}"
               border: full
               width: large
+              suffix: "_{d6}"
+              eq: "floor((%{##:spell-level}+1)/2)"
             inputs:
               - field: "##:spell-level"
                 label: "_{Spell Level}"
                 eq: "ceil(%{level}/2)"
-              - span: "+"
-              - field: "##:ability"
-                ref: true
-                label: "_{Spellcasting Ability Modifier}"
+
+          - paste: basic-save
+            params:
+              save: "_{Fortitude}"
 
   - copy: cantrip/telekinetic-rend/amp
     contents:
@@ -50,14 +52,15 @@ inc:
 
           - calc:
             output:
-              field: "##:amp/area"
-              legend: "_{Area}"
+              field: "##:damage"
+              legend: "_{Damage}"
               border: full
-              suffix: "_{sq}"
               width: large
+              suffix: "_{d6}"
+              eq: "floor((%{##:spell-level}+1)/2)"
             inputs:
-              - span: "2 +"
               - field: "##:spell-level"
                 label: "_{Spell Level}"
                 eq: "ceil(%{level}/2)"
-              - span: "&divide; 2"
+
+          - p: "_{At higher rank, also gain a third non-overlapping 5ft burst.}"

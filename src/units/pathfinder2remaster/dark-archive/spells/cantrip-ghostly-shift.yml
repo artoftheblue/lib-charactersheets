@@ -55,9 +55,11 @@ inc:
               legend: "_{Damage}"
               width: large
               suffix: "_{d6}"
-              eq: "floor(%{##:spell-level}/2)"
+              eq: "ceil(%{##:spell-level}/2)"
             inputs:
-              - field: "##:spell-level"
-                label: "_{Spell Level}"
-                eq: "ceil(%{level}/2)"
-              - span: "&divide; 2"
+              - ruby-round-up:
+                contents:
+                  - field: "##:spell-level"
+                    label: "_{Spell Level}"
+                    eq: "ceil(%{level}/2)"
+                  - span: "&divide; 2"

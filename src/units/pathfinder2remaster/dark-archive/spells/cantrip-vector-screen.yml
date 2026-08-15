@@ -15,7 +15,7 @@ inc:
         contents:
           - dl:
               range: "_{60ft}"
-              area: "_{5ft square}"
+              area: "_{10ft line}"
               duration: "_{1rd}"
 
           - list:
@@ -32,7 +32,7 @@ inc:
                 marker: "_{Spell Level}"
                 contents:
                   - dl:
-                      area: "_{10ft}"
+                      area: "_{20ft}"
 
               - level: 6
                 marker: "_{Spell Level}"
@@ -40,7 +40,7 @@ inc:
                   - p: "_{Defends against magical blasts}"
                   - value-block: "-2"
                     content: "_{Spell attacks}"
-                  - p: "_{Grants cover against ranged attacks}"
+                  - p: "_{Grants cover against area effects}"
 
   - copy: cantrip/vector-screen/amp
     contents:
@@ -49,7 +49,7 @@ inc:
           - p:
             title: "_{Amp}"
           - dl:
-              duration: "_{1 minute}"
+              duration: "_{1min}"
           - action:
             contents:
               - p: "_{Dismiss the spell to cast telekinetic projectile and return all caught ammunition at one creature.}"

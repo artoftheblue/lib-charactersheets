@@ -31,23 +31,14 @@ inc:
               field: "##:damage"
               legend: "_{Damage}"
               border: full
-              width: huge
-              control: compound
-              parts:
-                - subid: dice
-                  eq: "%{##:spell-level}"
-                  suffix: "d8 +"
-                - subid: bonus
-                  eq: "%{##:ability}"
+              width: large
+              suffix: "_{d4}"
+              eq: "%{##:spell-level}+1"
             inputs:
-              - span: "("
               - field: "##:spell-level"
                 label: "_{Spell Level}"
                 eq: "ceil(%{level}/2)"
-              - span: "- 1 ) d4 +"
-              - field: "##:ability"
-                label: "_{Spellcasting Ability Modifier}"
-                ref: true
+              - span: "+ 1"
 
           - paste: basic-save
             params:

@@ -76,17 +76,33 @@ inc:
             title: "_{Amp}"
 
           - calc:
+            merge-bottom: false
             output:
               field: "##:damage"
               legend: "_{Damage}"
               border: full
-              width: large
-              prefix: "_{2d6} +"
+              width: huge
+              control: compound
+              parts:
+                - subid: dice
+                  eq: "2+%{##:heighten}"
+                - span: "_{d10}"
+                - subid: bonus
+                  eq: "%{##:ability}"
             inputs:
+              - span: "("
+                size: large
+              - span: "2 +"
+              - field: "##:heighten"
+                label: "_{Heighten +2}"
+                width: small
+              - span: ")"
+                size: large
+              - span: "_{d10} +"
               - field: "##:ability"
                 ref: true
                 label: "_{Spellcasting Ability Modifier}"
-                merge-bottom: false
+                width: small
 
           - action:
             contents:

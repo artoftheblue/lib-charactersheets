@@ -35,8 +35,8 @@ inc:
               control: compound
               parts:
                 - subid: dice
-                  eq: "%{##:spell-level}"
-                  suffix: "d8 +"
+                  eq: "%{##:spell-level}-1"
+                  suffix: "d4 +"
                 - subid: bonus
                   eq: "%{##:ability}"
             inputs:

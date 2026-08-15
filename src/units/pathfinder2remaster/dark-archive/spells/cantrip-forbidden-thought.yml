@@ -26,22 +26,14 @@ inc:
               field: "##:damage"
               legend: "_{Mental Damage}"
               border: full
-              width: huge
-              control: compound
-              parts:
-                - subid: dice
-                  eq: "floor(%{##:spell-level}/2)"
-                  suffix: "d6 +"
-                - subid: bonus
-                  eq: "%{##:ability}"
+              width: large
+              suffix: "_{d6}"
+              eq: "%{##:spell-level}+1"
             inputs:
               - field: "##:spell-level"
                 label: "_{Spell Level}"
-                ref: true
                 eq: "ceil(%{level}/2)"
-              - span: "_{d6} +"
-              - field: "##:ability"
-                label: "_{Spellcasting Ability Modifier"
+              - span: "+ 1"
 
           - paste: basic-save
             params:

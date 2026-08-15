@@ -24,22 +24,24 @@ inc:
             output:
               field: "##:damage"
               legend: "_{Mental Damage}"
+              border: full
               width: huge
               control: compound
               parts:
                 - subid: dice
-                  eq: "floor((%{##:spell-level}-1)/2)"
+                  eq: "%{##:spell-level}-1"
                   suffix: "d4 +"
                 - subid: bonus
                   eq: "%{##:ability}"
             inputs:
+              - span: "("
               - field: "##:spell-level"
                 label: "_{Spell Level}"
-                ref: true
                 eq: "ceil(%{level}/2)"
-              - span: "_{d4} +"
+              - span: "- 1 ) d4 +"
               - field: "##:ability"
-                label: "_{Spellcasting Ability Modifier"
+                label: "_{Spellcasting Ability Modifier}"
+                ref: true
 
           - paste: basic-save
             params:
@@ -59,22 +61,24 @@ inc:
             output:
               field: "##:damage"
               legend: "_{Mental Damage}"
+              border: full
               width: huge
               control: compound
               parts:
                 - subid: dice
-                  eq: "floor((%{##:spell-level}-1)/2)"
+                  eq: "%{##:spell-level}-1"
                   suffix: "d10 +"
                 - subid: bonus
                   eq: "%{##:ability}"
             inputs:
+              - span: "("
               - field: "##:spell-level"
                 label: "_{Spell Level}"
-                ref: true
                 eq: "ceil(%{level}/2)"
-              - span: "_{d10} +"
+              - span: "- 1 ) d10 +"
               - field: "##:ability"
-                label: "_{Spellcasting Ability Modifier"
+                label: "_{Spellcasting Ability Modifier}"
+                ref: true
 
           - row:
             contents:  

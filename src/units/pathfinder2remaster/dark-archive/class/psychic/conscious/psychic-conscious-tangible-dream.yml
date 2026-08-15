@@ -8,7 +8,7 @@ group: "_{Dark Archive}"
 name: "_{The Tangible Dream}"
 
 require:
-  - unit: cantrip/psychic/dancing-lights
+  - unit: cantrip/psychic/figment
   - unit: cantrip/psychic/shield
   - unit: cantrip/imaginary-weapon
   - unit: cantrip/astral-rain
@@ -24,7 +24,7 @@ inc:
         size: small
 
   - set: class/remaster/psychic:conscious-mind/spell1
-    value: "_{Dancing Lights}"
+    value: "_{Figment}"
 
   - set: class/remaster/psychic:conscious-mind/spell2
     value: "_{Shield}"
@@ -33,7 +33,7 @@ inc:
     replace:
       - layout: 2e
         contents:
-          - h6: "_{Dancing Lights}"
+          - h6: "_{Figment}"
           - h6: "_{Shield}"
 
   - at: '@class/remaster/psychic:conscious-mind/unique-cantrip/surface'
@@ -69,7 +69,7 @@ inc:
 
   - at: '@class/remaster/psychic:spellbook/cantrips'
     replace:
-      - paste: cantrip/psychic/dancing-lights
+      - paste: cantrip/psychic/figment
       - paste: cantrip/psychic/shield
 
   - at: '@class/remaster/psychic:spellbook/unique-cantrips'

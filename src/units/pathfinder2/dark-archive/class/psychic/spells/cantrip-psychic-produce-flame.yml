@@ -58,9 +58,7 @@ inc:
                   - field: "##:amp/spell-level"
                     label: "_{Spell Level}"
                     eq: "ceil(%{level}/2)"
-                  - span: "d10/d12 +"
-                  - field: "##:amp/bonus"
-                    label: "_{Spell Level}"
+                  - span: "d10/d12"
 
               - row:
                 contents:

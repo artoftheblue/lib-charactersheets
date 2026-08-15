@@ -45,27 +45,13 @@ inc:
               field: "##:damage"
               legend: "_{Damage}"
               border: full
-              width: huge
-              control: compound
-              parts:
-                - subid: dice
-                  eq: "2+%{##:heighten}"
-                - span: "_{d6}"
-                - subid: bonus
-                  eq: "%{##:ability}"
+              width: large
+              suffix: "_{d6}"
+              eq: "3+%{##:heighten}"
             inputs:
-              - span: "("
-                size: large
-              - span: "2 +"
+              - span: "3 +"
               - field: "##:heighten"
                 label: "_{Heighten +2}"
-                width: small
-              - span: ")"
-                size: large
-              - span: "_{d6} +"
-              - field: "##:ability"
-                ref: true
-                label: "_{Spellcasting Ability Modifier}"
                 width: small
 
   - copy: cantrip/dancing-blade/amp
@@ -76,17 +62,19 @@ inc:
             title: "_{Amp}"
 
           - calc:
+            merge-bottom: false
             output:
               field: "##:damage"
               legend: "_{Damage}"
               border: full
               width: large
-              prefix: "_{2d6} +"
+              suffix: "_{d10}"
+              eq: "3+%{##:heighten}"
             inputs:
-              - field: "##:ability"
-                ref: true
-                label: "_{Spellcasting Ability Modifier}"
-                merge-bottom: false
+              - span: "3 +"
+              - field: "##:heighten"
+                label: "_{Heighten +2}"
+                width: small
 
           - action:
             contents:
