@@ -31,10 +31,11 @@ inc:
             contents:
               - p:
                 title: "_{Amp}"
-                content: "_{Create a flashing display with all 4 lights in one square.}"
+                content: "_{Create a flashing display with all 4 lights in one square. Each creature in a 5ft emanation must save.}"
 
-              - paste: save
+              - paste: inline-save
                 params:
+                  save: "_{Fortitude}"
                   success: "_{Dazzled for 1rd, then immune for 1 min}"
-                  failure: "_{Dazzled for 1rd}"
-                  critical_failure: "_{Dazzled for 1rd, fascinated 1rd}"
+                  failure: "_{Dazzled for 1rd; re-save each turn while adjacent}"
+                  critical_failure: "_{As failure, plus fascinated for 1rd}"

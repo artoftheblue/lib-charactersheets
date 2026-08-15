@@ -1,0 +1,39 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: cantrip/psychic/figment
+name: "_{Figment}"
+group: "_{Dark Archive}"
+
+inc:
+  - copy: cantrip/psychic/figment
+    contents:
+      - article: cantrip/psychic/figment
+        title: "_{Figment}"
+        cat: "_{Cantrip} 1"
+        contents:
+          - dl:
+              range: "_{60ft}"
+              duration: "_{sustained}"
+
+          - action: 2
+            contents:
+              - p: "_{Create a simple illusory sound or vision. Sounds can't include intelligible words or elaborate music. Visions are up to 5ft cube and crude if viewed from within 15ft.}"
+
+              - action:
+                contents:
+                  - p:
+                    title: "_{Sustain}"
+                    content: "_{Move the sound or vision up to 15ft, then attempt to Create a Diversion. Creatures who disbelieved the illusion are unaffected by the diversion.}"
+
+          - value-block: "+2"
+            content: "_{Deception to Create a Diversion when you cast or sustain}"
+
+          - box:
+            contents:
+              - p:
+                title: "_{Amp}"
+                content: "_{Choose an unoccupied square in range. The illusion there provides flanking for a single melee attack before the start of your next turn.}"
+
+              - p: "_{Sustaining the spell extends the flanking illusion's duration and lets you move it to any unoccupied square in range. It provides no benefit against creatures who disbelieved the figment.}"
