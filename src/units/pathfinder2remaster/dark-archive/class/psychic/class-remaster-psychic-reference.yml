@@ -3,10 +3,10 @@
 # See the ORC Notice within this repository.
 
 # - Oscillating Wave's granted spell list reworked around matched cold/fire pairs
-# - True Strike -> Sure Strike,
+# - True Strike -> Sure Strike
 # - Prying Eye -> Scouting Eye
 # - True Seeing -> Truesight
-# - Touch of Idiocy -> Stupefy,
+# - Touch of Idiocy -> Stupefy
 # - Mirror Image -> Invisibility
 # - Resilient Sphere -> Containment
 # - Blade Barrier -> Scintillating Safeguard 
@@ -17,6 +17,14 @@
 # - Maze -> Quandary
 # - The Distant Grasp: Levitate -> Gravity Well
 # - Metamagic -> Spellshape
+# - Vector Screen: 5ft square -> a 10ft line
+# - Astral Rain: 2d4 + AC -> flat 4d4
+# - Shatter Mind: 2d4 + AC -> flat 3d4
+# - Dancing Blade: 2d6 + AC -> flat 3d6 
+# - Forbidden Thought: 1d6 + AC -> flat 2d6
+# - Imaginary Weapon: 1d8 + ability mod + B/S -> flat 2d6 force damage
+# - Ray of Frost -> Frostbite: 1d10 cold -> 3d4 cold
+# - Tangible Dream: dancing lights + shield -> figment + shield
 
 unit: class/remaster/psychic/reference
 name: "_{Psychic Reference}"
