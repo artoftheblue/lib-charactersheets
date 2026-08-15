@@ -11,14 +11,16 @@ inc:
     contents:
       - article: cantrip/foresee-the-path
         title: "_{Foresee the Path}"
-        cat: "_{Cantrip} 1"
+        cat: "_{Cantrip} 5"
         contents:
           - dl:
               range: "_{60ft}"
+              target: "_{1 ally and 1 enemy}"
+              duration: "_{Sustain up to 1 minute}"
 
           - action:
             contents:
-              - p: "_{One a minute, pick an ally and make a Perception check against an enemy's Will or Deception DC, or another DC of the GM's choosing.}"
+              - p: "_{Once a minute, pick an ally and make a Perception check against an enemy's Will or Deception DC, whichever is higher, or another DC of the GM's choosing.}"
 
           - paste: save
             params:

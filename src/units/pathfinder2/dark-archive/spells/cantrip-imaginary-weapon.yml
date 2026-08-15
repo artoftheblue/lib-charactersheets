@@ -23,7 +23,7 @@ inc:
               - flags:
                   - "_{Bludgeoning}"
                   - "_{Slashing}"
-              
+
           - calc:
             merge-bottom: false
             output:
@@ -60,7 +60,7 @@ inc:
 
           - calc:
             output:
-              field: "##:damage"
+              field: "##:amp/damage"
               legend: "_{Damage}"
               border: full
               width: huge

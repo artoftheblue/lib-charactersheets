@@ -20,32 +20,20 @@ inc:
             contents:
               - p: "_{Make a melee attack.}"
 
-              - flags:
-                  - "_{Bludgeoning}"
-                  - "_{Slashing}"
-
           - calc:
             merge-bottom: false
             output:
               field: "##:damage"
-              legend: "_{Damage}"
+              legend: "_{Force Damage}"
               border: full
-              width: huge
-              control: compound
-              parts:
-                - subid: dice
-                  eq: "%{##:spell-level}"
-                  suffix: "d8 +"
-                - subid: bonus
-                  eq: "%{##:ability}"
+              width: large
+              suffix: "_{d6}"
+              eq: "%{##:spell-level}+1"
             inputs:
               - field: "##:spell-level"
                 label: "_{Spell Level}"
                 eq: "ceil(%{level}/2)"
-              - span: "d8 +"
-              - field: "##:ability"
-                label: "_{Spellcasting Ability Modifier}"
-                ref: true
+              - span: "+ 1"
 
   - copy: cantrip/imaginary-weapon/amp
     contents:
@@ -60,32 +48,14 @@ inc:
 
           - calc:
             output:
-              field: "##:damage"
-              legend: "_{Damage}"
+              field: "##:amp/damage"
+              legend: "_{Force Damage}"
               border: full
-              width: huge
-              control: compound
-              parts:
-                - subid: dice
-                  eq: "(%{##:spell-level}*2)-1"
-                  suffix: "d8 +"
-                - subid: bonus
-                  eq: "%{##:ability}"
+              width: large
+              suffix: "_{d6}"
+              eq: "%{##:spell-level}*2"
             inputs:
-              - span: "["
-                size: large
-              - span: "("
               - field: "##:spell-level"
                 label: "_{Spell Level}"
                 eq: "ceil(%{level}/2)"
-              - span: "&times; 2) - 1"
-              - span: "]"
-                size: large
-              - span: "d8"
-          - row:
-            contents:
-              - spacer:
-              - span: "+"
-              - field: "##:ability"
-                label: "_{Spellcasting Ability Modifier}"
-                ref: true
+              - span: "&times; 2"

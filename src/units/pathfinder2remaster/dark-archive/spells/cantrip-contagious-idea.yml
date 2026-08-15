@@ -62,7 +62,7 @@ inc:
 
           - calc:
             output:
-              field: "##:temp-hp"
+              field: "##:amp/temp-hp"
               legend: "_{Temp HP}"
               width: large
               suffix: "_{hp}"

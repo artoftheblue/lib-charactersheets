@@ -15,6 +15,7 @@ inc:
         contents:
           - dl:
               range: "_{30ft}"
+              duration: "_{Sustain up to 1 minute}"
 
           - action:
             contents:

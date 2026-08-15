@@ -43,20 +43,20 @@ inc:
         contents:
           - p:
             title: "_{Amp}"
-            content: "_{Affect two adjacent or overlapping 20ft bursts.}"
+            content: "_{Affect two adjacent or overlapping 10ft bursts.}"
 
           - dl:
               duration: "_{1min}"
 
           - calc:
             output:
-              field: "##:damage"
+              field: "##:amp/damage"
               legend: "_{Damage}"
               width: large
               suffix: "_{d6}"
-              eq: "%{##:spell-level}+1"
+              eq: "(%{##:spell-level}*2)-4"
             inputs:
               - field: "##:spell-level"
                 label: "_{Spell Level}"
                 eq: "ceil(%{level}/2)"
-              - span: "+ 1"
+              - span: "&times; 2 - 4"

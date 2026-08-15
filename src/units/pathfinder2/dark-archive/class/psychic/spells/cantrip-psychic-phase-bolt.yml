@@ -52,7 +52,7 @@ inc:
                   
               - calc:
                 output:
-                  field: "##:damage"
+                  field: "##:amp/damage"
                   legend: "_{Piercing Damage}"
                   control: compound
                   width: huge

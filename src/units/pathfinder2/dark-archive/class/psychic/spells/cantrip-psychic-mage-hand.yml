@@ -29,16 +29,16 @@ inc:
               - "_{Range}"
             rows:
               - sl: 1
-                lift: "1 _{bulk}"
+                lift: "L"
                 range: "_{30ft}"
               - sl: 3
-                lift: "2 _{bulk}"
+                lift: "1 _{bulk}"
                 range: ""
               - sl: 5
                 lift: ""
                 range: "_{60ft}"
               - sl: 7
-                lift: "3 _{bulk}"
+                lift: "2 _{bulk}"
                 range: ""
             template:
               - span: "#{sl}"

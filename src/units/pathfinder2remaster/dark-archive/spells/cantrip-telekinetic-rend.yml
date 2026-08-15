@@ -15,11 +15,15 @@ inc:
         contents:
           - dl:
               range: "_{60ft}"
-              area: "2 &times; _{5ft squares}"
+              area: "_{2 non-overlapping 5ft bursts}"
 
           - action: 2
             contents:
-              - p: "_{Hurl an object. Make a spell attack roll, and deal bludgeoning, piercing, or slashing damage as appropriate for the object.}"
+              - p: "_{Deal damage to all creatures in area. A creature large enough to be in more than one burst takes damage only once.}"
+
+              - flags:
+                  - "_{Bludgeoning}"
+                  - "_{Slashing}"
 
           - calc:
             output:

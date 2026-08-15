@@ -19,11 +19,11 @@ inc:
 
           - action: 2
             contents:
-              - p: "_{Creatures in the area or who enter the area this turn make a save or take damage}"
+              - p: "_{Creatures in the area or who enter the area before your next turn make a save or take damage}"
 
               - flags:
                   - "_{Bludgeoning}"
-                  - "_{Slashing}"
+                  - "_{Piercing}"
 
           - calc:
             merge-bottom: false

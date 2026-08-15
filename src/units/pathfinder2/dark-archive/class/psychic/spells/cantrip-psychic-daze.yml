@@ -45,20 +45,20 @@ inc:
                 
               - calc:
                 output:
-                  field: '##:damage'
+                  field: '##:amp/damage'
                   legend: "_{Mental Damage}"
                   width: large
                   suffix: "_{d10}"
-                  eq: "2*floor(%{##:spell-level}/2)"
+                  eq: "1+2*floor((%{##:spell-level}-1)/2)"
                 inputs:
-                  - span: "2 &times;"
+                  - span: "1 + 2 &times;"
                   - ruby-round-down:
                     contents:
                       - span: "("
                       - field: "##:spell-level"
                         label: "_{Spell Level}"
                         eq: "ceil(%{level}/2)"
-                      - span: "&divide; 2 )"
+                      - span: "&minus;1) &divide; 2"
 
               - p: "_{Weakness 1 mental, -1 Will saves}"
                 icon: save-fail

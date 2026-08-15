@@ -49,6 +49,7 @@ inc:
             contents:
               - p:
                 title: "_{Amp}"
+                content: "_{Also deals 1 fire splash damage; you're immune to it.}"
 
               - calc:
                 output:

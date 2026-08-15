@@ -33,7 +33,7 @@ inc:
             contents:
               - p:
                 title: "_{Amp}"
-                content: "_{When you detect the presence of magic on an enemy or hazard, [b]+1[/b] to saves against it.}"
+                content: "_{When you detect the presence of magic on an enemy or hazard, [b]+1[/b] to saves against it for 3rd.}"
               - paste: heighten-spell
                 params:
                   level: 7

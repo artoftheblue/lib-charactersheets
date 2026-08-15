@@ -51,10 +51,11 @@ inc:
             contents:
               - p:
                 title: "_{Amp}"
-                
+                content: "_{Gain temp HP equal to half the damage dealt (after resistances); lose it after 1 min.}"
+
               - calc:
                 output:
-                  field: "##:damage"
+                  field: "##:amp/damage"
                   legend: "_{Damage}"
                   control: compound
                   width: huge

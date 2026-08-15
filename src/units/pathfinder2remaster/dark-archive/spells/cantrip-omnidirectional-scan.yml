@@ -15,6 +15,7 @@ inc:
         contents:
           - dl:
               area: "_{30ft emanation}"
+              duration: "_{1rd}"
 
           - action:
             contents:
