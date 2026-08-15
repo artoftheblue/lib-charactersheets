@@ -30,9 +30,9 @@ inc:
               parts:
                 - subid: dice
                   suffix: "_{d4}"
-                  eq: "#{##:spell-level}"
+                  eq: "%{##:spell-level}"
                 - subid: bonus
-                  eq: "#{##:ability}"
+                  eq: "%{##:ability}"
             inputs:
               - field: "##:spell-level"
                 label: "_{Spell Level}"
@@ -61,9 +61,9 @@ inc:
                   parts:
                     - subid: dice
                       suffix: "_{d10}"
-                      eq: "#{##:spell-level}"
+                      eq: "%{##:spell-level}"
                     - subid: bonus
-                      eq: "#{##:ability}"
+                      eq: "%{##:ability}"
                 inputs:
                   - field: "##:spell-level"
                     label: "_{Spell Level}"

@@ -19,7 +19,7 @@ inc:
             contents:
               - p: "_{Detect the presence of magic, excluding items you know about.}"
               - p: "_{You're aware of any creature in the area affected by a spell or carrying a magic item.}"
-              - p: "_{You knowthe main location of magic within any magical hazard in the area.}"
+              - p: "_{You know the main location of magic within any magical hazard in the area.}"
           - paste: heighten-spell
             params:
               level: 3
