@@ -23,5 +23,5 @@ inc:
       - action:
         title: "_{Recall the Teachings}"
         contents:
-          - p: "_{Until the start of your next turn, you count as having prepared to Aid all allies iwthin 30ft.}"
+          - p: "_{Until the start of your next turn, you count as having prepared to Aid all allies within 30ft.}"
           - p: "_{If you Aid an ally, roll an occultism check for it.}"
