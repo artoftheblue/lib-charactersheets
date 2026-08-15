@@ -28,7 +28,7 @@ inc:
               legend: "_{Damage}"
               width: large
               suffix: "_{d4}"
-              eq: "&{##:spell-level}-1"
+              eq: "%{##:spell-level}-1"
             inputs:
               - field: "##:spell-level"
                 label: "_{Spell Level}"

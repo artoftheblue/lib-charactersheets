@@ -41,7 +41,7 @@ inc:
                 eq: "ceil(%{level}/2)"
               - span: "_{d6} +"
               - field: "##:ability"
-                label: "_{Spellcasting Ability Modifier"
+                label: "_{Spellcasting Ability Modifier}"
 
           - paste: basic-save
             params:

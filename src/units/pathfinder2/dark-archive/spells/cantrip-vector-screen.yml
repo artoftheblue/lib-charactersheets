@@ -24,7 +24,7 @@ inc:
             contents:
               - action: 2
                 contents:
-                  - p: "_{Set up a transparent barrier that siezes small projectiles.}"
+                  - p: "_{Set up a transparent barrier that seizes small projectiles.}"
                   - value-block: "-2"
                     content: "_{Attack with larger ranged weapons.}"
 
