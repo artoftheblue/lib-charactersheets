@@ -46,6 +46,9 @@ inc:
       reflex: expert
       will: trained
 
+  - set: class/alchemist/throw-bomb-proficiency
+    value: trained
+
   - at: '@familiar/key-attribute'
     replace:
       - field: familiar-key-attribute-mod
@@ -88,6 +91,8 @@ inc:
       - level: 17
         advance: "_{Abundant Vials}"
 
+      - level: 9
+        advance: "_{Alchemical Expertise}"
       - level: 9
         advance: "_{Double Brew}"
 

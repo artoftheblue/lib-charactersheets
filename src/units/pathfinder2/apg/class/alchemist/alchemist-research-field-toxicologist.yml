@@ -43,7 +43,7 @@ inc:
       - level: 15
         contents:
           - h5: "_{Greater Field Discovery}"
-          - p: "_{Apply two poisons to the same weapon, provided they were prepared with perpetual infusions.}"
+          - p: "_{Apply two poisons to the same weapon if prepared with perpetual infusions.}"
           - row:
             contents:
               - calc:
@@ -63,7 +63,7 @@ inc:
           
   - at: '@alchemist/formulas'
     replace:
-      - table:
+      - table: "##:formulas"
         field_frame: none
         width: stretch
         merge-bottom: true

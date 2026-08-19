@@ -27,13 +27,13 @@ inc:
                   - action:
                     contents:
                       - p: "_{Apply a poison to a weapon.}"
-                  - p: "_{Your infused poisons can affect creatures immune to poison, dealing acid damage instead of poison damage.}"
+                  - p: "_{Infused poisons affect poison-immune creatures, dealing acid instead of poison damage.}"
 
               - g:
                 contents:
                   - h5: "_{Field Vials}"
                   - p: "_{Your versatile vials are poison instead of acid.}"
-                  - p: "_{You can apply a vial to a weapon as an injury poison that deals the vial's initial damage.}"
+                  - p: "_{Apply a vial to a weapon as an injury poison dealing the vial's initial damage.}"
 
       - level: 5
         contents:
@@ -54,12 +54,12 @@ inc:
       - level: 11
         contents:
           - h5: "_{Advanced Vials}"
-          - p: "_{When you damage a creature with a vial used as an injury poison, deal persistent poison damage equal to its splash damage.}"
+          - p: "_{Damaging with a vial-poisoned weapon also deals persistent poison damage equal to its splash damage.}"
 
       - level: 13
         contents:
           - h5: "_{Greater Field Discovery}"
-          - p: "_{When a creature fails its save against your infused injury poison, a second creature next to it is exposed to the poison.}"
+          - p: "_{A creature failing its save against your infused injury poison exposes an adjacent creature too.}"
           
   - at: '@alchemist/research-field/formulas'
     replace:

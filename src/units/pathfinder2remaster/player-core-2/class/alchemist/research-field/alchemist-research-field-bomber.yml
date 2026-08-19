@@ -61,7 +61,7 @@ inc:
       - level: 11
         contents:
           - h5: "_{Advanced Vials}"
-          - p: "_{Versatile vials can be adamantine, cold iron, dawnsilver, or any material you're wearing or wielding.}"
+          - p: "_{Versatile vials can be adamantine, cold iron, dawnsilver, or any material you wear/wield.}"
 
       - level: 13
         contents:

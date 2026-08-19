@@ -6,3 +6,15 @@ unit: feat/alchemist/smoke-bomb
 in: feat/alchemist
 name: "_{Smoke Bomb}"
 group: "_{Core Rulebook}"
+
+inc:
+  - copy: feat/alchemist/smoke-bomb
+    contents:
+      - article:
+        title: "_{Smoke Bomb}"
+        cat: "_{Feat}"
+        contents:
+          - dl:
+              frequency: "_{Once per round}"
+              trigger: "_{You use Quick Alchemy to craft an alchemical bomb of a lower level than your advanced alchemy level.}"
+          - p: "_{The bomb also creates a 10ft-burst cloud of smoke, concealing creatures within it from each other. Lasts 1 minute or until dispersed by a strong wind.}"

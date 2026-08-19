@@ -46,6 +46,13 @@ inc:
   - set: medium-armour-proficiency
     value: trained
 
+  - set: simple-weapons-proficiency
+    value: trained
+  - set: unarmed-attack-proficiency
+    value: trained
+  - set: class/alchemist/throw-bomb-proficiency
+    value: trained
+
   - set: fortitude-proficiency
     value: expert
   - set: reflex-proficiency

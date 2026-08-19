@@ -5,7 +5,7 @@
 unit: feat/alchemist/tenacious-toxins
 in: feat/alchemist
 name: "_{Tenacious Toxins}"
-group: "_{Core Rulebook}"
+group: "_{Advanced Player's Guide}"
 
 inc:
   - copy: feat/alchemist/tenacious-toxins

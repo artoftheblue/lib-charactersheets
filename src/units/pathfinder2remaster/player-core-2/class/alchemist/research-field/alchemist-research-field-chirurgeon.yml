@@ -42,6 +42,7 @@ inc:
                 contents:
                   - h5: "_{Field Discovery}"
                   - p: "_{A creature that drinks a healing elixir gains temporary hit points.}"
+                  - p: "_{Lasts for 1 minute.}"
 
               - g:
                 contents:
@@ -63,12 +64,12 @@ inc:
       - level: 11
         contents:
           - h5: "_{Advanced Vials}"
-          - p: "_{When healing a creature at half its maximum hit points or fewer, the coagulant trait doesn't apply.}"
+          - p: "_{Healing a creature at half HP or less ignores the coagulant trait.}"
 
       - level: 13
         contents:
           - h5: "_{Greater Field Discovery}"
-          - p: "_{When you use Quick Alchemy to create any type of elixir of life, the creature healed regains the maximum hit points possible instead of rolling.}"
+          - p: "_{Quick Alchemy elixirs of life heal max HP instead of rolling.}"
           
   - at: '@alchemist/research-field/formulas'
     replace:

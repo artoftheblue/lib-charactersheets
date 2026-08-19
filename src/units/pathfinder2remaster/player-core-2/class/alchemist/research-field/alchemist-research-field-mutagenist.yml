@@ -83,6 +83,7 @@ inc:
         contents:
           - h5: "_{Greater Field Discovery}"
           - p: "_{Drink a second polymorph mutagen to get the benefits and setbacks of both at once.}"
+          - p: "_{A third mutagen loses the benefit (not drawback) of one earlier mutagen; a non-mutagen polymorph loses both mutagens' benefits.}"
           
   - at: '@alchemist/research-field/formulas'
     replace:

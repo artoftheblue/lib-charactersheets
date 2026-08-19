@@ -5,7 +5,7 @@
 unit: feat/alchemist/chemical-contagion
 in: feat/alchemist
 name: "_{Chemical Contagion}"
-group: "_{Core Rulebook}"
+group: "_{Advanced Player's Guide}"
 
 inc:
   - copy: feat/alchemist/chemical-contagion
@@ -14,6 +14,8 @@ inc:
         title: "_{Chemical Contagion}"
         cat: "_{Feat}"
         contents:
-          - dl:
-              range: "_{30ft}"
-          - p: "_{When a target critically fails their initial saving throw against your poison, an adjacent creature is exposed as well.}"
+          - action: reaction
+            contents:
+              - dl:
+                  trigger: "_{A creature within 30ft critically fails its initial save against a poison you created.}"
+              - p: "_{An adjacent creature is exposed to the triggering poison.}"

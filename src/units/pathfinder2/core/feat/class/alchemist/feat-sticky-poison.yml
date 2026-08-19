@@ -5,7 +5,7 @@
 unit: feat/alchemist/sticky-poison
 in: feat/alchemist
 name: "_{Sticky Poison}"
-group: "_{Core Rulebook}"
+group: "_{Advanced Player's Guide}"
 
 inc:
   - copy: feat/alchemist/sticky-poison

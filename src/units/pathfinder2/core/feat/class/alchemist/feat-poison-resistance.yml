@@ -4,7 +4,7 @@
 
 unit: feat/alchemist/poison-resistance
 name: "_{Poison Resistance}"
-group: "_{Advanced Player's Guide}"
+group: "_{Core Rulebook}"
 
 inc:
   - copy: feat/alchemist/poison-resistance
