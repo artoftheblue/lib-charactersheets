@@ -1,0 +1,40 @@
+# Copyright 2025 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: cantrip/bard/remaster/courageous-anthem
+name: "_{Courageous Anthem}"
+group: "_{Player Core}"
+
+inc:
+  - at: '@actions'
+    add:
+      - action:
+        contents:
+          - row:
+            contents:
+              - p:
+                title: "_{Courageous Anthem}"
+                content: "_{Status bonus to attack, damage and saves against fear for allies within 60ft.}"
+              - field: bard-inspire-courage-bonus
+                label: "_{Bonus}"
+                control: value
+                width: small
+                value: "+1"
+
+  - copy: cantrip/bard/remaster/courageous-anthem
+    contents:
+      - article: cantrip/bard/remaster/courageous-anthem
+        title: "_{Courageous Anthem}"
+        cat: "_{Cantrip} 1"
+        contents:
+          - dl:
+              area: "_{60ft emanation}"
+              duration: "_{1rd}"
+          - action:
+            contents:
+              - value-block: "+1"
+                content: "_{To attack, damage and saves against fear for allies.}"
+          - paste: book-ref
+            params:
+              page-ref: "_{PC p370}"

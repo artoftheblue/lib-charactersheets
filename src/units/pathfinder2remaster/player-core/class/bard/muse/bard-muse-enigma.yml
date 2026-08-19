@@ -12,18 +12,8 @@ require:
   - unit: spell/sure-strike
 
 inc:
-  - set: subclass
-    value: "_{Enigma}"
-
-  - at: '@bard/muse'
-    replace:
-      - h4: "_{Enigma}"
-        size: small
-
-  - at: '@bard/muse/bonus-feat'
-    replace:
-      - paste: feat/bard/bardic-lore
-
-  - at: '@spellbook/middle/first'
-    add:
-      - paste: spell/sure-strike
+  - paste: bard-muse
+    params:
+      name: "_{Enigma}"
+      feat: feat/bard/bardic-lore
+      spell: spell/sure-strike

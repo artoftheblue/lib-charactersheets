@@ -21,6 +21,7 @@ require:
   - deny: archetype/bard
   - deny: archetype/remaster/bard
 
+  - unit: class/remaster/bard/defs
   - unit: weapon-spec/slow
   - unit: option/spellbook
   - unit: option/spellbook/custom
@@ -44,9 +45,10 @@ inc:
 
       spells: trained
       unarmoured: trained
-      light-armour: trained      
+      light-armour: trained
       unarmed: trained
       simple-weapons: trained
+      martial-weapons: trained
 
       perception: expert
       occultism: trained
@@ -237,11 +239,13 @@ inc:
                         params:
                           id: spell-attack
                           legend: "_{Spell\nAttack}"
+                          attribute: CHA
 
                       - paste: spell-dc
                         params:
                           id: spell-dc
                           legend: "_{Spell\nSave DC}"
+                          attribute: CHA
 
                   - section: "_{Compositions}"
                     contents:

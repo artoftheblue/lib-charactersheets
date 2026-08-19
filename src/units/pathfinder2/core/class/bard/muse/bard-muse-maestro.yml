@@ -12,18 +12,8 @@ require:
   - unit: spell/soothe
 
 inc:
-  - set: subclass
-    value: "_{Maestro}"
-
-  - at: '@bard/muse'
-    replace:
-      - h4: "_{Maestro}"
-        size: small
-        
-  - at: '@bard/muse/bonus-feat'
-    replace:
-      - paste: feat/bard/lingering-composition
-
-  - at: '@spellbook/middle/first'
-    add:
-      - paste: spell/soothe
+  - paste: bard-muse
+    params:
+      name: "_{Maestro}"
+      feat: feat/bard/lingering-composition
+      spell: spell/soothe

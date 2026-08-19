@@ -12,18 +12,8 @@ require:
   - unit: spell/phantasmal-minion
   
 inc:
-  - set: subclass
-    value: "_{Polymath}"
-
-  - at: '@bard/muse'
-    replace:
-      - h4: "_{Polymath}"
-        size: small
-        
-  - at: '@bard/muse/bonus-feat'
-    replace:
-      - paste: feat/bard/versatile-performance
-
-  - at: '@spellbook/middle/first'
-    add:
-      - paste: spell/phantasmal-minion
+  - paste: bard-muse
+    params:
+      name: "_{Polymath}"
+      feat: feat/bard/versatile-performance
+      spell: spell/phantasmal-minion

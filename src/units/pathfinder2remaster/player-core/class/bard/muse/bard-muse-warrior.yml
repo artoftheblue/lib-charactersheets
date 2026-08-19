@@ -12,18 +12,8 @@ require:
   - unit: spell/fear
 
 inc:
-  - set: subclass
-    value: "_{Warrior}"
-
-  - at: '@bard/muse'
-    replace:
-      - h4: "_{Warrior}"
-        size: small
-
-  - at: '@bard/muse/bonus-feat'
-    replace:
-      - paste: feat/bard/remaster/martial-performance
-
-  - at: '@spellbook/middle/first'
-    add:
-      - paste: spell/fear
+  - paste: bard-muse
+    params:
+      name: "_{Warrior}"
+      feat: feat/bard/remaster/martial-performance
+      spell: spell/fear

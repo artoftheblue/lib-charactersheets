@@ -1,0 +1,30 @@
+# Copyright 2025 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: class/bard/defs
+group: "_{Core Rulebook}"
+name: "_{Bard}"
+
+inc:
+  - copy: bard-muse
+    params:
+      name: ""
+      feat: ""
+      spell: ""
+    contents:
+      - set: subclass
+        value: "#{name}"
+
+      - at: '@bard/muse'
+        replace:
+          - h4: "#{name}"
+            size: small
+
+      - at: '@bard/muse/bonus-feat'
+        replace:
+          - paste: "#{feat}"
+
+      - at: '@spellbook/middle/first'
+        add:
+          - paste: "#{spell}"

@@ -18,6 +18,7 @@ form:
 
 require:
   - deny: archetype/bard
+  - unit: class/bard/defs
   - unit: weapon-spec/slow
   - unit: option/spellbook
   - unit: option/spellbook/custom
@@ -59,7 +60,12 @@ inc:
     value: trained
   - set: will-proficiency
     value: expert
-    
+
+  - set: unarmed-attack-proficiency
+    value: trained
+  - set: simple-weapons-proficiency
+    value: trained
+
   - set: unarmoured-proficiency
     value: trained
   - set: light-armour-proficiency
