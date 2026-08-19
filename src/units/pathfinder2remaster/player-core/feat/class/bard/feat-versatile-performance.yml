@@ -1,0 +1,17 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: feat/bard/versatile-performance
+group: "_{Player Core}"
+name: "_{Versatile Performance}"
+
+inc:
+  - copy: feat/bard/versatile-performance
+    contents:
+      - article:
+        title: "_{Versatile Performance}"
+        cat: "_{Feat}"
+        contents:
+          - p: "_{Can use Performance in place of Diplomacy to make an impression, or Intimidation to demoralise. Can use an acting Performance in place of Deception to impersonate.}"
+          - p: "_{Can also use Performance proficiency to meet skill feat prerequisites for Deception, Diplomacy or Intimidation.}"

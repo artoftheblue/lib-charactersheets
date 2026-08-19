@@ -1,0 +1,35 @@
+# Copyright 2026 Marcus Downing
+# This file is licensed under the ORC License.
+# See the ORC Notice within this repository.
+
+unit: focus/bard/counter-performance
+name: "_{Counter Performance}"
+group: "_{Player Core}"
+
+inc:
+  - at: '@focus-spells'
+    add:
+      - action: reaction
+        contents:
+          - p:
+            title: "_{Counter Performance}"
+            content: "_{Make a performance to counter an auditory or visual effect. You and allies within 60ft can take that check in place of a saving throw.}"
+
+  - copy: focus/bard/counter-performance
+    contents:
+      - article: focus/bard/counter-performance
+        title: "_{Counter Performance}"
+        cat: "_{Focus} 1"
+        contents:
+          - action: reaction
+            contents:
+              - flags:
+                  - "_{Concentrate}"
+                  - "_{Fortune}"
+              - dl:
+                  trigger: "_{You or an ally within 60ft rolls a saving throw against an auditory or visual effect}"
+                  area: "_{60ft emanation}"
+              - p: "_{Roll a performance check to counter the effect. You and allies can take that result in place of a saving throw.}"
+          - paste: book-ref
+            params:
+              page-ref: "_{PC p369}"
