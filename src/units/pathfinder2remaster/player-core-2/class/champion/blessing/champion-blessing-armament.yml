@@ -66,4 +66,4 @@ inc:
                             contents:
                               - p:
                                 title: "_{Vitalizing}"
-                                content: "_{Crit: you or an ally within 10ft regains HP = twice the weapon's damage dice.}"
+                                content: "_{On a critical hit, you or an ally within 10ft regains HP equal to twice the weapon's damage dice.}"
