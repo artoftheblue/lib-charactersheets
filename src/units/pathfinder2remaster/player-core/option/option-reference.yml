@@ -449,6 +449,9 @@ inc:
                                   unarmed:
                                     name: "_{Unarmed}"
                                     desc: "_{Use your body rather than a weapon.}"
+                                  venomous:
+                                    name: "_{Venomous}"
+                                    desc: "_{These weapons inject poison into every hit.}"
                                   versatile:
                                     name: "_{Versatile}"
                                     desc: "_{Can deal a different damage type.}"
