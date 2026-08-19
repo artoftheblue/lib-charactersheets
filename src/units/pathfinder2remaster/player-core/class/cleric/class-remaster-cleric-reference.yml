@@ -62,7 +62,7 @@ inc:
       - concentrate
       - spellshape
       - fortune
-      - incapacitation
+      - manipulate
 
   - at: '@reference/weapon-traits'
     add:

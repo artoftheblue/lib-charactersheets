@@ -4,7 +4,7 @@
 
 unit: focus/cleric/protectors-sacrifice
 name: "_{Protector's Sacrifice}"
-group: "_{Advanced Player's Guide}"
+group: "_{Core Rulebook}"
 
 inc:
   - copy: focus/cleric/protectors-sacrifice

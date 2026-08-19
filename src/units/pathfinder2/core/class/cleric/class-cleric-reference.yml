@@ -54,8 +54,7 @@ inc:
     add:
       - concentrate
       - metamagic
-      - fortune
-      - incapacitation
+      - manipulate
 
   - at: '@reference/weapon-traits'
     add:
