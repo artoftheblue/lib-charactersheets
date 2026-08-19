@@ -40,7 +40,7 @@ inc:
         contents:
           - p:
             title: "_{Destructive Vengeance}"
-            content: "_{When an enemy damages you, drag it toward oblivion, dealing spirit damage in exchange for taking more yourself.}"
+            content: "_{When an enemy damages you, drag it towards oblivion, dealing spirit damage in exchange for taking more yourself.}"
 
   - at: '@reference/actions'
     add:
@@ -48,7 +48,7 @@ inc:
         contents:
           - p:
             title: "_{Destructive Vengeance}"
-            content: "_{When an enemy damages you, drag it toward oblivion, dealing spirit damage in exchange for taking more yourself.}"
+            content: "_{When an enemy damages you, drag it towards oblivion, dealing spirit damage in exchange for taking more yourself.}"
 
   - at: '@champion/reaction'
     replace:
