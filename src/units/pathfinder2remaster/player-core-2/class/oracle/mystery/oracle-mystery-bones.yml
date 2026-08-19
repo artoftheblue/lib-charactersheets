@@ -62,7 +62,7 @@ inc:
                   range: "_{30ft}"
                   target: "_{1 living creature}"
                   save: "_{Fortitude}"
-              - p: "_{You gain temporary Hit Points equal to the total amount of HP the target loses, including the HP lost from becoming drained.}"
+              - p: "_{Gain temp HP equal to the target's total HP lost, including from becoming drained.}"
               - calc:
                 output:
                   field: "##:soul-siphon/damage"
@@ -70,10 +70,10 @@ inc:
                   width: large
                   suffix: "_{d4}"
                   icon: d4
-                  eq: "%{focus-level}"
+                  eq: "%{focus-rank}"
                 inputs:
                   - field:
-                    ref: focus-level
+                    ref: focus-rank
                     label: "_{Focus Level}"
               - paste: save
                 params:
@@ -92,16 +92,16 @@ inc:
             contents:
               - dl:
                   duration: "_{1 minute}"
-              - p: "_{You ossify your physical form, mimicking the durability of bone.}"
+              - p: "_{Your form ossifies, gaining bone's durability.}"
               - calc:
                 output:
                   field: "##:armor-of-bones/resistance"
                   legend: "_{Resistance to\ncold, electricity, fire,\npiercing, slashing}"
                   width: large
-                  eq: "%{focus-level}"
+                  eq: "%{focus-rank}"
                 inputs:
                   - field:
-                    ref: focus-level
+                    ref: focus-rank
                     label: "_{Focus Level}"
 
   - at: '@oracle/revelation-spell/greater'
@@ -117,13 +117,13 @@ inc:
                   target: "_{1 undead creature}"
                   save: "_{Will}"
                   duration: "_{10 minutes}"
-              - p: "_{You attempt to wrest control of a target undead, or force it to recognize you as its master. If the target is controlled by another creature, that controller attempts the save to retain control; otherwise, the target must attempt the save.}"
+              - p: "_{Wrest control of a target undead. If controlled by another creature, that controller saves to retain control; otherwise the target saves.}"
               - paste: save
                 params:
                   critical_success: "_{Unaffected.}"
                   success: "_{Stunned 1 and confused for 1 round.}"
-                  failure: "_{Controlled by you and follows your orders. It can attempt a new save at the end of each of its turns; on a success, the spell ends and it becomes stunned 1 and confused for 1 round.}"
-                  critical_failure: "_{As failure, but a new save is only allowed if you give an order against its nature.}"
+                  failure: "_{Controlled by you; new save each turn ends the spell on a success (then stunned 1, confused 1 round).}"
+                  critical_failure: "_{As failure, but new saves only if you order against its nature.}"
 
   - at: '@oracle/mystery/curse-title'
     replace:
@@ -147,7 +147,7 @@ inc:
             contents:
               - p:
                 title: "_{Cursebound 1}"
-                content: "_{You can be hurt by both vitality and void damage even if one or the other normally has no effect on you. Any immunity or resistance you have to vitality or void is suppressed.}"
+                content: "_{Vitality and void damage both affect you regardless of normal immunity; such immunity/resistance is suppressed.}"
               - value-block: "2"
                 content: "_{Weakness to vitality and void damage}"
           - g:

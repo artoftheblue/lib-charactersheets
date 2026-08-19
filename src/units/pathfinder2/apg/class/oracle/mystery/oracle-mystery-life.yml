@@ -29,7 +29,7 @@ inc:
       - p: "_{Hit points per level increases to 10 + CON.}"
 
   - set: oracle/mystery/cantrip
-    value: "_{Stablise}"
+    value: "_{Stabilise}"
   - set: oracle/mystery/initial-revelation
     value: "_{Life Link}"
   - set: oracle/mystery/advanced-revelation
@@ -91,7 +91,7 @@ inc:
               - dl:
                   range: "_{30ft}"
                   target: "_{1 creature}"
-              - p: "_{Suspend the effect of an affiction for 1 hour. Can only be used once a day.}"
+              - p: "_{Suspend an affliction's effect for 1 hour. Once per day.}"
               - calc:
                 output:
                   field: "##:daily-affliction/healing"
@@ -137,11 +137,11 @@ inc:
                     contents:
                       - action:
                         contents:
-                          - p: "_{Touch a living creature to heal. Another creature can touch you get the same effect. Can use once per minute.}"
-                      - p: "_{An undead creature instead takes 3d4 positive damage each time they touch you.}"
+                          - p: "_{Touch a living creature to heal (or let one touch you). Once per minute.}"
+                      - p: "_{Undead instead take 3d4 positive damage when touching you.}"
                       - calc:
                         output:
-                          field: "##:lif-giving-form/healing"
+                          field: "##:life-giving-form/healing"
                           legend: "_{Healing}"
                           width: large
                           suffix: "_{d8}"
@@ -152,10 +152,6 @@ inc:
                             label: "_{Focus Level}"
                             ref: focus-level
                           - span: "&times; _{1d8}"
-
-  - at: '@oracle/revelation-spell/diverse-mystery'
-    replace:
-      - nothing:
 
   # CURSE
   - at: '@oracle/curse'
@@ -184,10 +180,10 @@ inc:
   - at: '@oracle/curse/moderate'
     replace:
       - p: "_{Cannot be healed by others' magic. If unconscious, can be healed to 1hp.}"
-      - p: "_{When you cast Heal on living creatures, roll d12s rather than d8s.}"
+      - p: "_{Heal on living creatures rolls d12s instead of d8s.}"
       - hr:
         light: true
-      - p: "_{On casting any non-cantrip spell, heal one target of that spell or the nearest creature.}"
+      - p: "_{Casting a non-cantrip spell also heals a target of it, or the nearest creature.}"
       - g:
         pad: true
         contents:
@@ -206,7 +202,7 @@ inc:
     replace:
       - dl:
           range: "_{30ft}"
-      - p: "_{On taking 2 actions to cast a 5th level or higher spell, heal all those around you.}"
+      - p: "_{Spend 2 actions casting a 5th+ level spell to also heal those around you.}"
       - g:
         pad: true
         contents:

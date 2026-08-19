@@ -77,8 +77,16 @@ inc:
           - article:
             title: "_{Armour of Bones}"
             contents:
-              - value-block: 2
-                content: "_{Resistance to electricity, fire, piercing and slashing}"
+              - calc:
+                output:
+                  field: "##:armour-of-bones/resistance"
+                  legend: "_{Resistance to\ncold, electricity, fire,\npiercing, slashing}"
+                  width: large
+                  eq: "%{focus-level}"
+                inputs:
+                  - field:
+                    ref: focus-level
+                    label: "_{Focus Level}"
 
   - at: '@oracle/revelation-spell/greater'
     replace:

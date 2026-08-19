@@ -62,7 +62,7 @@ inc:
                   range: "_{Touch}"
                   target: "_{1 living creature}"
                   save: "_{Will}"
-              - p: "_{You touch a creature and force them to see and feel the ancestors surrounding you.}"
+              - p: "_{Force the target to see and feel your surrounding ancestors.}"
               - calc:
                 output:
                   field: "##:ancestral-touch/damage"
@@ -70,10 +70,10 @@ inc:
                   width: large
                   suffix: "_{d4}"
                   icon: d4
-                  eq: "%{focus-level}+1"
+                  eq: "%{focus-rank}+1"
                 inputs:
                   - field:
-                    ref: focus-level
+                    ref: focus-rank
                     label: "_{Focus Level}"
                   - span: "+1"
               - paste: save
@@ -93,7 +93,7 @@ inc:
             contents:
               - dl:
                   trigger: "_{You are about to attempt a Will save.}"
-              - p: "_{Your ancestor protects you against those who would bend your will. You roll the triggering save twice and use the better result.}"
+              - p: "_{Roll the triggering Will save twice; use the better result.}"
 
   - at: '@oracle/revelation-spell/greater'
     replace:
@@ -105,8 +105,8 @@ inc:
             contents:
               - dl:
                   duration: "_{Sustained up to 1 minute}"
-              - p: "_{You take the form of your ancestral spirits, becoming invisible and quasi-corporeal. You gain resistance 10 to all damage (except force, spirit, and damage from Strikes with the ghost touch property rune), doubled against non-magical damage or Strikes that include precision damage.}"
-              - p: "_{You gain a fly Speed equal to your land Speed; when Flying, moving upward isn't difficult terrain for you. You can't move through solid objects, but you can float through tiny gaps. You can't Cast Spells (but you can Sustain spells), activate items, or use actions that have the attack or manipulate trait.}"
+              - p: "_{Become invisible and quasi-corporeal. Resistance 10 to all damage (except force, spirit, ghost touch Strikes), doubled vs. non-magical damage or precision Strikes.}"
+              - p: "_{Fly Speed equal to land Speed (moving upward isn't difficult terrain). Can float through tiny gaps but not solid objects. Can't Cast Spells (Sustain is fine), activate items, or use attack/manipulate actions.}"
 
   - at: '@oracle/mystery/curse-title'
     replace:

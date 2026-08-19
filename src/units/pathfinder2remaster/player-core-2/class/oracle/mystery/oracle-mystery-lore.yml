@@ -73,7 +73,7 @@ inc:
                   range: "_{30ft}"
                   target: "_{1 creature}"
                   save: "_{Basic Will}"
-              - p: "_{You probe the target's mind to glean knowledge. If the target fails the save, you sort through the stolen memories to attempt a single check to Recall Knowledge. Choose a skill that has the Recall Knowledge action, and use the target's skill modifier for the check.}"
+              - p: "_{Probe the target's mind. On a failed save, use its skill modifier for one Recall Knowledge check (any skill with that action).}"
               - calc:
                 output:
                   field: "##:brain-drain/damage"
@@ -81,10 +81,10 @@ inc:
                   width: large
                   suffix: "_{d8}"
                   icon: d8
-                  eq: "%{focus-level}"
+                  eq: "%{focus-rank}"
                 inputs:
                   - field:
-                    ref: focus-level
+                    ref: focus-rank
                     label: "_{Focus Level}"
 
   - at: '@oracle/revelation-spell/advanced'
@@ -97,7 +97,7 @@ inc:
             contents:
               - dl:
                   duration: "_{1 minute}"
-              - p: "_{You sift through the multiverse's divine knowledge, seeking out tidbits related to a particular subject. Choose one Lore skill. You temporarily gain the same proficiency rank in that Lore skill as your proficiency rank for your oracle spellcasting.}"
+              - p: "_{Choose one Lore skill; you temporarily match your oracle spellcasting proficiency rank in it.}"
 
   - at: '@oracle/revelation-spell/greater'
     replace:
@@ -112,11 +112,11 @@ inc:
                   target: "_{Up to 6 creatures}"
                   save: "_{Will}"
                   duration: "_{Until the start of your next turn}"
-              - p: "_{You utter a powerful secret at odds with the fundamental nature of the target creatures. Choose a specific resistance or weakness with a numerical value that you believe one or more of the targets have due to Recall Knowledge or previous experience with the targets, such as resistance to fire or weakness to silver. If the information is incorrect for a given target, the spell has no effect on that target.}"
+              - p: "_{Choose a specific resistance or weakness (with a value) you believe the targets have, from Recall Knowledge or experience. Wrong for a target = no effect on it.}"
               - paste: save
                 params:
                   critical_success: "_{Unaffected.}"
-                  success: "_{If you chose a weakness, 1 damage of that type (triggering the weakness); if you chose a resistance, the creature loses that resistance until the end of your next turn.}"
+                  success: "_{Weakness chosen: 1 damage of that type (triggers it). Resistance chosen: lost until the end of your next turn.}"
                   failure: "_{As success, and the creature becomes frightened 1.}"
                   critical_failure: "_{As failure, but the creature becomes frightened 3.}"
 
@@ -132,7 +132,7 @@ inc:
           - "_{Curse}"
           - "_{Divine}"
           - "_{Oracle}"
-      - p: "_{While cursebound, unasked-for knowledge floods your mind, giving a status penalty to Perception checks and Will saves. At cursebound 4, you also can't speak, use linguistic effects, or otherwise communicate, and are stupefied 1.}"
+      - p: "_{While cursebound: status penalty to Perception checks and Will saves. At cursebound 4: also can't communicate and stupefied 1.}"
       - row:
         contents:
           - calc:

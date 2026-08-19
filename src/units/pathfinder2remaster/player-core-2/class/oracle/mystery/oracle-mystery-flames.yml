@@ -61,7 +61,7 @@ inc:
               - dl:
                   area: "_{10-foot emanation}"
                   duration: "_{1 minute}"
-              - p: "_{You surround yourself with a combustible aura. Each time a creature within the emanation takes fire damage, it catches on fire.}"
+              - p: "_{A combustible aura surrounds you; creatures in it that take fire damage catch fire.}"
               - calc:
                 output:
                   field: "##:incendiary-aura/damage"
@@ -69,12 +69,12 @@ inc:
                   width: large
                   suffix: "_{d4}"
                   icon: d4
-                  eq: "floor((%{focus-level}-1)/2)+2"
+                  eq: "floor((%{focus-rank}-1)/2)+2"
                 inputs:
                   - field:
-                    ref: focus-level
+                    ref: focus-rank
                     label: "_{Focus Level}"
-              - p: "_{Heightened (+2): the emanation's radius also increases by 5 feet.}"
+              - p: "_{Heightened (+2): radius +5ft.}"
 
   - at: '@oracle/revelation-spell/advanced'
     replace:
@@ -88,7 +88,7 @@ inc:
                   range: "_{30ft}"
                   area: "_{Up to two 5-foot bursts that don't overlap}"
                   save: "_{Basic Reflex}"
-              - p: "_{You call forth a storm of whirling flames, engulfing all creatures in that area.}"
+              - p: "_{Whirling flames engulf creatures in the area.}"
               - calc:
                 output:
                   field: "##:whirling-flames/damage"
@@ -96,10 +96,10 @@ inc:
                   width: large
                   suffix: "_{d6}"
                   icon: d6
-                  eq: "floor((%{focus-level}-3)/2)*3+5"
+                  eq: "floor((%{focus-rank}-3)/2)*3+5"
                 inputs:
                   - field:
-                    ref: focus-level
+                    ref: focus-rank
                     label: "_{Focus Level}"
               - p: "_{Heightened (+2): you can add another nonoverlapping 5-foot burst to the area.}"
 
@@ -113,8 +113,8 @@ inc:
             contents:
               - dl:
                   duration: "_{1 minute}"
-              - p: "_{You call upon an endless barrage of flames, a series of explosions bursting around you like miniature suns. You cast Ignition as part of casting Flaming Fusillade. For the duration, Ignition's casting time is reduced from 2 actions to 1.}"
-              - p: "_{Heightened (9th): For the duration, you also gain a status bonus to damage dealt by Ignition equal to Flaming Fusillade's spell rank.}"
+              - p: "_{Miniature-sun explosions burst around you. You cast Ignition as part of this spell; for the duration, Ignition costs 1 action instead of 2.}"
+              - p: "_{Heightened (9th): Ignition also gains a status bonus to damage equal to this spell's rank, for the duration.}"
 
   - at: '@oracle/mystery/curse-title'
     replace:
@@ -129,7 +129,7 @@ inc:
           - "_{Divine}"
           - "_{Fire}"
           - "_{Oracle}"
-      - p: "_{While cursebound, you catch fire, taking persistent fire damage; the flames shed light like a torch, or flameless heat if they can't burn (such as underwater). They subside when you begin Refocusing or fall unconscious, and resume if that Refocus is interrupted or you regain consciousness.}"
+      - p: "_{While cursebound: on fire, taking persistent fire damage (flameless heat if it can't burn, e.g. underwater). Subsides while Refocusing or unconscious; resumes if interrupted or you wake.}"
       - row:
         contents:
           - calc:

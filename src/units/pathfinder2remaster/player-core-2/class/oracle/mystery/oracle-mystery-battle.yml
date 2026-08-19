@@ -60,8 +60,8 @@ inc:
             contents:
               - dl:
                   duration: "_{Sustained up to 1 minute; see text}"
-              - p: "_{The serenity of violence fills your mind, giving you a heightened sense of knowing exactly where your weapons need to be.}"
-              - p: "_{For the duration, your proficiency with martial weapons is equal to your proficiency with simple weapons. You automatically Sustain this spell as a free action the first time you hit with a weapon Strike each round.}"
+              - p: "_{A heightened battle sense fills your mind.}"
+              - p: "_{Martial weapon proficiency equals simple weapon proficiency for the duration. Auto-Sustains (free) the first time you hit with a weapon Strike each round.}"
 
   - at: '@oracle/revelation-spell/advanced'
     replace:
@@ -73,10 +73,10 @@ inc:
             contents:
               - dl:
                   trigger: "_{You are about to attempt a saving throw, but you haven't rolled yet}"
-              - p: "_{You're difficult to deter in battle.}"
+              - p: "_{React before rolling.}"
               - value-block: "+2"
                 content: "_{Status bonus to the triggering save}"
-              - p: "_{If the triggering save is against an incapacitation effect, it treats you as if you were 2 levels higher.}"
+              - p: "_{Vs. incapacitation effects: treated as 2 levels higher.}"
 
   - at: '@oracle/revelation-spell/greater'
     replace:
@@ -88,9 +88,9 @@ inc:
             contents:
               - dl:
                   duration: "_{1 minute}"
-              - p: "_{Time seems to slow for you, allowing you to strike your opponents mid-move.}"
-              - p: "_{You gain the Reactive Strike ability, and you immediately gain a second reaction that you can use only to use Reactive Strike. At the start of each of your subsequent turns when you regain your actions, you gain an additional reaction that can be used only to attempt a Reactive Strike.}"
-              - p: "_{Lashing out at a defenseless enemy invigorates you with the thrill of combat, granting you temporary Hit Points whenever you successfully hit with a Reactive Strike, lasting for the spell's duration.}"
+              - p: "_{Time slows, letting you strike mid-move.}"
+              - p: "_{Gain Reactive Strike, plus an extra reaction usable only for it (renewed each of your turns).}"
+              - p: "_{Gain temp HP (below) whenever a Reactive Strike hits, lasting for the spell's duration.}"
               - row:
                 contents:
                   - calc:
@@ -98,11 +98,11 @@ inc:
                       field: oracle-mystery-battle-revel-in-retribution-temp-hp
                       legend: "_{Temporary HP}"
                       width: large
-                      eq: "%{focus-level}-1"
+                      eq: "%{focus-rank}-1"
                     inputs:
                       - field:
                         label: "_{Focus Level}"
-                        ref: focus-level
+                        ref: focus-rank
                       - span: "- 1"
 
   - at: '@oracle/mystery/curse-title'
@@ -125,7 +125,7 @@ inc:
             contents:
               - p:
                 title: "_{Cursebound 1}"
-                content: "_{Any immunity or resistance you have to spells is suppressed. This applies only to spells, not other magical abilities.}"
+                content: "_{Immunity/resistance to spells (not other magic) is suppressed.}"
               - value-block: "2"
                 content: "_{Weakness to any damage dealt by a spell}"
           - g:

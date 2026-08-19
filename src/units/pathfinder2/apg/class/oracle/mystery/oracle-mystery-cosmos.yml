@@ -68,12 +68,12 @@ inc:
                   legend: "_{Fire Damage}"
                   border: full
                   width: large
-                  eq: "%{focus-level}*4"
+                  suffix: "_{d4}"
+                  eq: "%{focus-level}"
                 inputs:
                   - field:
                     label: "_{Spell Level}"
                     ref: focus-level
-                  - span: "&times; d4"
               - p: "_{Targets must make a Reflex save:}"
               - paste: save
                 params:
@@ -97,8 +97,18 @@ inc:
                       range: "_{30ft}"
                       target: "_{1 creature}"
                       duration: "_{1 minute}"
-                  - value-block: "_{3d6}"
-                    content: "_{Cold damage}"
+                  - calc:
+                    output:
+                      field: "##:interstellar-void/damage"
+                      legend: "_{Cold Damage}"
+                      border: full
+                      width: large
+                      suffix: "_{d6}"
+                      eq: "%{focus-level}"
+                    inputs:
+                      - field:
+                        label: "_{Focus Level}"
+                        ref: focus-level
                   - p: "_{Target makes a basic Fortitude save. Target is fatigued.}"
                   - p:
                     title: "_{Fatigued}"

@@ -157,19 +157,19 @@ inc:
 
   - copy: oracle/cursebound-description
     contents:
-      - p: "_{Using a cursebound ability makes you cursebound 1, or increases it by 1 if you're already cursebound, to a maximum of 2.}"
+      - p: "_{Cursebound ability: cursebound 1, or +1 if already cursebound (max 2).}"
       - level: 11
         contents:
-          - p: "_{Your cursebound maximum increases to 3.}"
+          - p: "_{Max increases to 3.}"
       - level: 17
         contents:
-          - p: "_{Your cursebound maximum increases to 4.}"
-      - p: "_{Nothing but Refocusing mitigates, reduces, or removes this.}"
+          - p: "_{Max increases to 4.}"
+      - p: "_{Only Refocus reduces this.}"
       - paste: 10mins
         contents:
           - p:
             title: "_{Refocus}"
-            content: "_{Reduces your cursebound value by 1 and restores a Focus Point.}"
+            content: "_{-1 cursebound; restores a Focus Point.}"
 
   - at: '@pages'
     add:
@@ -233,8 +233,8 @@ inc:
                       - paste: spellcasting-spontaneous
                         params:
                           spells-icon: oracle
-                          cantrips-text: "_{Cast cantrips you know from the divine spell list indefinitely.}"
-                          spells-text: "_{Cast spells you know from the divine spell list using spell slots.}"
+                          cantrips-text: "_{Cast cantrips you know indefinitely.}"
+                          spells-text: "_{Cast spells you know using spell slots.}"
 
                       - spells-table:
                         spell-level-label: "_{Spell\nRank}"
@@ -312,7 +312,7 @@ inc:
                             contents:
                               - flags:
                                   - "_{Cursebound}"
-                              - p: "_{Revelation spells are focus spells. Casting one is a cursebound action for you.}"
+                              - p: "_{Revelation spells are cursebound focus spells.}"
                                 optional: true
                       - layout: 2e
                         contents:
@@ -323,13 +323,13 @@ inc:
                                 light: true
                                 contents:
                                   - field: oracle-revelation-spell-initial
-                                    label: "_{Initial Revelation}"
+                                    label: "_{Initial}"
                                     width: stretch
                                     merge-bottom: true
                                   - selectable: "##:revelation/advanced"
                                     contents:
                                       - field: oracle-revelation-spell-advanced
-                                        label: "_{Advanced Revelation}"
+                                        label: "_{Advanced}"
                                         width: stretch
                                         merge-bottom: true
                           - g:
@@ -341,7 +341,7 @@ inc:
                                   - selectable: "##:revelation/greater"
                                     contents:
                                       - field: oracle-revelation-spell-greater
-                                        label: "_{Greater Revelation}"
+                                        label: "_{Greater}"
                                         width: stretch
                                         merge-bottom: true
                                   - selectable: "##:revelation/diverse"
@@ -422,12 +422,12 @@ inc:
                 contents:
                   - flags:
                       - "_{Cursebound}"
-                  - p: "_{Revelation spells are focus spells. Casting one is a cursebound action for you.}"
+                  - p: "_{Revelation spells are cursebound focus spells.}"
                     optional: true
 
           - g:
             contents:
-              - h6: "_{Initial Revelation}"
+              - h6: "_{Initial}"
                 blk: false
               - zone: '@oracle/revelation-spell/initial'
                 contents:
@@ -438,7 +438,7 @@ inc:
 
           - g:
             contents:
-              - h6: "_{Advanced Revelation}"
+              - h6: "_{Advanced}"
                 blk: false
               - zone: '@oracle/revelation-spell/advanced'
                 contents:
@@ -449,7 +449,7 @@ inc:
 
           - g:
             contents:
-              - h6: "_{Greater Revelation}"
+              - h6: "_{Greater}"
                 blk: false
               - zone: '@oracle/revelation-spell/greater'
                 contents:

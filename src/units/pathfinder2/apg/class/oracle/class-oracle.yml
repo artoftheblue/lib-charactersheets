@@ -298,10 +298,10 @@ inc:
                                         contents:
                                           - flags:
                                               - "_{Cursebound}"
-                                          - p: "_{Casting a revelation spell increases the severity of your curse.}"
+                                          - p: "_{Casting a revelation spell worsens your curse.}"
                                             optional: true
                                   - field: oracle/mystery/initial-revelation
-                                    label: "_{Initial Revelation}"
+                                    label: "_{Initial}"
                                     width: stretch
                                     merge-bottom: true
                                   - field: oracle/mystery/domain-spell
@@ -311,13 +311,13 @@ inc:
                                   - selectable: "##:revelation/advanced"
                                     contents:
                                       - field: oracle/mystery/advanced-revelation
-                                        label: "_{Advanced Revelation}"
+                                        label: "_{Advanced}"
                                         width: stretch
                                         merge-bottom: true
                                   - selectable: "##:revelation/greater"
                                     contents:
                                       - field: oracle/mystery/greater-revelation
-                                        label: "_{Greater Revelation}"
+                                        label: "_{Greater}"
                                         width: stretch
                                         merge-bottom: true
                                   - selectable: "##:revelation/diverse"
@@ -349,8 +349,6 @@ inc:
                             min: 1
                             max: 9
                             spells: 4
-                            contents:
-                              - "_{Inspire Courage}"
                           - spells-list:
                             style: spontaneous
                             flex: tiny
@@ -393,13 +391,13 @@ inc:
                 contents:
                   - flags:
                       - "_{Cursebound}"
-                  - p: "_{Casting a revelation spell increases the severity of your curse.}"
+                  - p: "_{Casting a revelation spell worsens your curse.}"
                     optional: true
               - zone: '@oracle/spellbook/focus-header'
 
           - g:
             contents:
-              - h6: "_{Initial Revelation}"
+              - h6: "_{Initial}"
                 blk: false
               - zone: '@oracle/revelation-spell/initial'
                 contents:
@@ -419,7 +417,7 @@ inc:
 
           - g:
             contents:
-              - h6: "_{Advanced Revelation}"
+              - h6: "_{Advanced}"
                 blk: false
               - zone: '@oracle/revelation-spell/advanced'
                 contents:
@@ -430,7 +428,7 @@ inc:
 
           - g:
             contents:
-              - h6: "_{Greater Revelation}"
+              - h6: "_{Greater}"
                 blk: false
               - zone: '@oracle/revelation-spell/greater'
                 contents:

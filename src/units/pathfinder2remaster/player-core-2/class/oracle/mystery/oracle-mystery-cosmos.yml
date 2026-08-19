@@ -69,10 +69,10 @@ inc:
                   border: full
                   width: large
                   suffix: "_{d4}"
-                  eq: "%{focus-level}+1"
+                  eq: "%{focus-rank}+1"
                 inputs:
                   - field:
-                    ref: focus-level
+                    ref: focus-rank
                     label: "_{Focus Level}"
                   - span: "+1"
               - paste: save
@@ -95,7 +95,7 @@ inc:
                   target: "_{1 creature}"
                   duration: "_{Sustained up to 1 minute}"
                   save: "_{Fortitude}"
-              - p: "_{Cloak the target in the frigid depths of outer space, chilling it to the bone. The target is fatigued for as long as the effect persists.}"
+              - p: "_{Cloak the target in frigid void cold; fatigued for the duration.}"
               - calc:
                 output:
                   field: oracle-mystery-cosmos-interstellar-void-damage
@@ -103,10 +103,10 @@ inc:
                   border: full
                   width: large
                   suffix: "_{d6}"
-                  eq: "%{focus-level}"
+                  eq: "%{focus-rank}"
                 inputs:
                   - field:
-                    ref: focus-level
+                    ref: focus-rank
                     label: "_{Focus Level}"
               - paste: basic-save
                 params:
@@ -124,7 +124,7 @@ inc:
               - dl:
                   range: "_{30ft}"
                   duration: "_{10 minutes}"
-              - p: "_{Summon a 10ft-wide bridge of radiant, shimmering moonlight starting on the ground at a point within range, extending as a horizontal plane, in a straight line or at up to a 45&deg; angle up or down, for up to 120ft. The bridge has AC 10, Hardness 30, and 60 Hit Points, and is immune to all damage except force, spirit, and damage from Strikes with the ghost touch property rune. You and your allies can cross it normally; other creatures simply pass through it. It blocks physical, ethereal, and incorporeal attacks from crossing through it, from above or below. You can Dismiss the spell.}"
+              - p: "_{Summon a 10ft-wide moonlight bridge, up to 120ft, straight or up to 45&deg; up/down. AC 10, Hardness 30, 60 HP; immune except force, spirit, ghost touch Strikes. You and allies cross normally, others pass through; blocks physical/ethereal/incorporeal attacks through it. Dismissible.}"
 
   - at: '@oracle/mystery/curse-title'
     replace:

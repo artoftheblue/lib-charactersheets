@@ -62,8 +62,8 @@ inc:
                   range: "_{30 feet}"
                   target: "_{1 creature other than you}"
                   duration: "_{1 minute}"
-              - p: "_{You forge a connection of life energy between you and your target, distributing harm between both of you. When you first Cast the Spell, the target recovers 1d4 Hit Points.}"
-              - p: "_{The first time each round the target takes damage, reduce the damage it takes (to a minimum of 0), and you lose that many Hit Points, or the total damage dealt, if less; this damage ignores any immunities or resistances you have and can't otherwise be mitigated in any way. The spell ends immediately if you fall unconscious. You can Dismiss the spell.}"
+              - p: "_{Links you and the target: on cast, target heals 1d4 HP.}"
+              - p: "_{The first damage the target takes each round is reduced (min 0); you lose that much HP, unmitigated. Ends if you fall unconscious. Dismissible.}"
               - advancement:
                 index: "_{Focus Level}"
                 elide: true
@@ -106,7 +106,7 @@ inc:
               - dl:
                   range: "_{30 feet}"
                   target: "_{1 creature}"
-              - p: "_{With a surge of healing energy, you push back against an affliction threatening the target and grant a small amount of healing. You attempt to counteract any one affliction you are aware the target has, suspending its effects for 1 hour on a success rather than removing it. The target is then temporarily immune to delay affliction for 1 day. You don't need to have identified the name of the specific affliction, but you do need to be aware of it.}"
+              - p: "_{Counteract one affliction you're aware the target has (name not required), suspending it for 1 hour on a success instead of removing it, plus minor healing. Target then immune for 1 day.}"
               - row:
                 contents:
                   - calc:
@@ -116,11 +116,11 @@ inc:
                       width: large
                       suffix: "_{d8}"
                       icon: d8
-                      eq: "%{focus-level}"
+                      eq: "%{focus-rank}"
                     inputs:
                       - field:
                         label: "_{Focus Level}"
-                        ref: focus-level
+                        ref: focus-rank
                       - span: "&times; _{1d8}"
                   - vr:
                   - calc:
@@ -128,11 +128,11 @@ inc:
                       field: "##:delay-affliction/afflictions"
                       legend: "_{Afflictions suspended}"
                       width: large
-                      eq: "%{focus-level}-2"
+                      eq: "%{focus-rank}-2"
                     inputs:
                       - field:
                         label: "_{Focus Level}"
-                        ref: focus-level
+                        ref: focus-rank
                       - span: "- 2"
 
   - at: '@oracle/revelation-spell/greater'
@@ -145,7 +145,7 @@ inc:
             contents:
               - dl:
                   duration: "_{1 minute}"
-              - p: "_{You transcend your physical form, becoming a beacon of healing energy. Your body exudes bright light like a torch, and your unarmed Strikes deal an extra 1d4 vitality damage. This is a vitality healing effect; you can't heal yourself with life-giving form. You can Dismiss this spell.}"
+              - p: "_{Become a beacon of healing: bright light like a torch, unarmed Strikes deal +1d4 vitality damage. A vitality healing effect - can't heal yourself. Dismissible.}"
               - list:
                 hr: true
                 light: true
@@ -158,17 +158,17 @@ inc:
                           field: "##:life-giving-form/resistance"
                           legend: "_{Resistance/ Weakness}"
                           width: large
-                          eq: "%{focus-level}-1"
+                          eq: "%{focus-rank}-1"
                         inputs:
                           - field:
                             label: "_{Focus Level}"
-                            ref: focus-level
+                            ref: focus-rank
                           - span: "- 1"
                   - g:
                     contents:
                       - action:
                         contents:
-                          - p: "_{Touch a living creature to restore Hit Points to it, or allow a creature that touches you to gain the same healing. Either way, the creature becomes temporarily immune to this healing for 1 minute.}"
+                          - p: "_{Touch a living creature (or let one touch you) to restore HP; then immune to this healing for 1 minute.}"
                       - calc:
                         output:
                           field: "##:life-giving-form/healing"
@@ -176,26 +176,26 @@ inc:
                           width: large
                           suffix: "_{d8}"
                           icon: d8
-                          eq: "%{focus-level}"
+                          eq: "%{focus-rank}"
                         inputs:
                           - field:
                             label: "_{Focus Level}"
-                            ref: focus-level
+                            ref: focus-rank
                           - span: "&times; _{1d8}"
                   - g:
                     contents:
-                      - p: "_{A creature harmed by vitality damage (such as an undead) that touches you or damages you with an unarmed attack or non-reach melee weapon instead takes vitality damage, and it doesn't become temporarily immune.}"
+                      - p: "_{Creatures harmed by vitality damage (e.g. undead) that touch you or hit you with unarmed/non-reach melee take vitality damage instead, without becoming immune.}"
                       - calc:
                         output:
                           field: "##:life-giving-form/reactive-damage"
                           legend: "_{Vitality damage}"
                           width: large
                           prefix: "_{3d4} +"
-                          eq: "%{focus-level}-6"
+                          eq: "%{focus-rank}-6"
                         inputs:
                           - field:
                             label: "_{Focus Level}"
-                            ref: focus-level
+                            ref: focus-rank
 
   - at: '@oracle/mystery/curse-title'
     replace:
@@ -209,7 +209,7 @@ inc:
           - "_{Curse}"
           - "_{Divine}"
           - "_{Oracle}"
-      - p: "_{Magical healing you receive takes a status penalty to the HP recovered equal to your level (minimum 1) times your cursebound value.}"
+      - p: "_{Magical healing you receive is reduced by your level (min 1) x cursebound value.}"
       - row:
         contents:
           - calc:

@@ -13,7 +13,7 @@ inc:
 
   - set: oracle-mystery
     value: "_{Battle}"
-  - set: society-proficiency
+  - set: athletics-proficiency
     value: trained
 
   - set: medium-armour-proficiency

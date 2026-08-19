@@ -49,6 +49,7 @@ inc:
               - dl:
                   range: "_{Touch}"
                   target: "_{1 creature}"
+                  save: "_{Fortitude}"
               - calc:
                 output:
                   field: "##:tempest-touch/damage"
@@ -66,12 +67,11 @@ inc:
                   - field:
                     label: "_{Focus level}"
                     ref: focus-level
-              - p: "_{Target must attempt a Fortitude save}"
               - paste: save
                 params:
                   critical_success: "_{No effect}"
-                  success: "_{Half damage, -5ft penalty to speed until the end of your next turn}"
-                  failure: "_{Full damage, -10ft penalty to speed until the end of your next turn}"
+                  success: "_{Half damage, -5ft Speed until your next turn}"
+                  failure: "_{Full damage, -10ft Speed until your next turn}"
                   critical_failure: "_{Double damage}"
 
   - at: '@oracle/revelation-spell/advanced'
@@ -84,7 +84,8 @@ inc:
               - dl:
                   range: "_{100ft}"
                   area: "_{20ft burst}"
-              
+                  save: "_{Fortitude}"
+
               - paste: heighten
                 params:
                   level: "3"
@@ -92,7 +93,7 @@ inc:
               - calc:
                 output:
                   field: "##:thunderburst/damage"
-                  legend: "_{Bludgeoning/ Cold Damage}"
+                  legend: "_{Bludgeoning/ Sonic Damage}"
                   width: gargantuan
                   control: compound
                   parts:
@@ -109,13 +110,13 @@ inc:
                     ref: true
                   - span: "&times; 2d6"
 
-              - p: "_{Targets must attempt a Fortitude save}"
               - paste: save
                 params:
                   critical_success: "_{No effect}"
                   success: "_{Half damage}"
                   failure: "_{Full damage, deafened for 1 minute}"
                   critical_failure: "_{Double damage, deafened for 1 hour}"
+              - p: "_{Heightened (+2): area +5ft.}"
 
   - at: '@oracle/revelation-spell/greater'
     replace:
@@ -124,7 +125,23 @@ inc:
           - article:
             title: "_{Tempest Form}"
             contents:
-              - p: "_{}"
+              - dl:
+                  duration: "_{Sustained up to 1 minute}"
+              - p: "_{Become air, water, or mist: amorphous, unarmoured AC, resistance 10 physical, immune to precision. No spells/attack/manipulate except this spell's.}"
+              - list:
+                hr: true
+                light: true
+                contents:
+                  - p:
+                    title: "_{Air}"
+                    content: "_{Fly 20ft, invisible in air. 2-action: gust of wind.}"
+                  - p:
+                    title: "_{Mist}"
+                    content: "_{Fly 20ft, hard to see through; attackers through you are concealed.}"
+                  - p:
+                    title: "_{Water}"
+                    content: "_{Swim 20ft, invisible in water. 1-action: lose invisibility; melee attacks take 1d6 electricity.}"
+              - p: "_{Heightened (+2): resistance +5; water form's electricity damage +1.}"
 
   - at: '@oracle/spellbook/focus-header'
     add:
@@ -143,22 +160,37 @@ inc:
       - p: "_{Fires within aura are extinguished by the tempest.}"
       - value-block: "2"
         content: "_{Weakness to electricity.}"
-      - p: "_{Equivalent to wearing metal for the purposes of effects.}"
+      - p: "_{Treated as wearing metal.}"
 
   - at: '@oracle/curse/moderate'
     replace:
       - dl:
           "Aura": "_{10ft}"
-      # - value-block: "_{10ft}"
-      #   content: "_{Storm aura.}"
-      - value-block: "2"
-        content: "_{Weakness to electricity.}"
       - value-block: "_{-2}"
         content: "_{Ranged weapon attack rolls.}"
-      - hr:
-        light: true
-      - value-block: "2"
-        content: "_{Resistance to fire.}"
+      - row:
+        contents:
+          - calc:
+            output:
+              field: "##:curse/moderate/electricity-weakness"
+              legend: "_{Weakness to\nelectricity}"
+              width: large
+              eq: "max(5,floor(%{level}/2))"
+            inputs:
+              - field:
+                ref: level
+                label: "_{Level}"
+          - vr:
+          - calc:
+            output:
+              field: "##:curse/moderate/fire-resistance"
+              legend: "_{Resistance to\nfire}"
+              width: large
+              eq: "max(5,floor(%{level}/2))"
+            inputs:
+              - field:
+                ref: level
+                label: "_{Level}"
 
   - at: '@oracle/curse/major'
     replace:
@@ -166,6 +198,6 @@ inc:
           "Aura": "_{15ft}"
       # - value-block: "_{15ft}"
       #   content: "_{Storm aura.}"
-      - p: "_{Aura is difficult terrain for Large or smaller creatures, and Huge or smaller flying creatures.}"
+      - p: "_{Aura is difficult terrain for Large-or-smaller creatures and Huge-or-smaller fliers.}"
       - value-block: "_{1d6}"
         content: "_{Damage to any creature that touches you.}"
