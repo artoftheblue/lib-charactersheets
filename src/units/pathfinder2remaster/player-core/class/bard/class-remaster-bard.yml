@@ -28,7 +28,7 @@ require:
 
   - with: option/reference
     unit: class/remaster/bard/reference
-  - unit: cantrip/bard/inspire-courage
+  - unit: cantrip/bard/remaster/courageous-anthem
   - unit: focus/bard/counter-performance
   - with: option/level-up
     unit: option/level-up/spell-retraining
@@ -169,7 +169,7 @@ inc:
                 contents:
                   - zone: '@bard/composition-cantrips'
                     contents:
-                      - paste: cantrip/bard/inspire-courage
+                      - paste: cantrip/bard/remaster/courageous-anthem
                 placeholder:
                   paste: spellbook/spell
                   params:
