@@ -370,6 +370,9 @@ inc:
                                   concentrate:
                                     name: "_{Concentrate}"
                                     desc: "_{Cannot use this during rage. Includes all spells with a verbal component.}"
+                                  cursebound:
+                                    name: "_{Cursebound}"
+                                    desc: "_{Spells with this trait increase the severity of your curse. You can't cast a cursebound spell if you don't have an oracular curse.}"
                                   finisher:
                                     name: "_{Finisher}"
                                     desc: "_{Requires panache, which you lose after use. Can't use attack actions again this turn.}"
