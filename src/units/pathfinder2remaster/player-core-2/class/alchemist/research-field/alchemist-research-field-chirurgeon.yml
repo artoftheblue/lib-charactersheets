@@ -64,7 +64,7 @@ inc:
       - level: 11
         contents:
           - h5: "_{Advanced Vials}"
-          - p: "_{Healing a creature at half HP or less ignores the coagulant trait.}"
+          - p: "_{Healing a creature at half HP or less ignores [trait]coagulant[/trait].}"
 
       - level: 13
         contents:
@@ -123,7 +123,7 @@ inc:
                       - field: 'formula-book-elixir-#{j}'
                         width: stretch
                         align: left
-                        legend: "_{elixir}"
+                        legend: "_{Elixir}"
                       - field: 'formula-book-elixir-#{j}-level'
                         label: "_{Level}"
 

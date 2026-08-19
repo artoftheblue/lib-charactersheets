@@ -61,7 +61,7 @@ inc:
         contents:
           - h5: "_{Greater Field Discovery}"
           - p: "_{Gain the benefits and drawbacks of two mutagens at once.}"
-          - p: "_{A third mutagen loses the benefit (not drawback) of one. A polymorph effect loses the benefits (not drawbacks) of all mutagens.}"
+          - p: "_{A third mutagen removes the benefit of one earlier mutagen while keeping its drawback. A non-mutagen polymorph effect removes the benefits of all mutagens while keeping their drawbacks.}"
 
   - at: '@alchemist/formulas'
     replace:

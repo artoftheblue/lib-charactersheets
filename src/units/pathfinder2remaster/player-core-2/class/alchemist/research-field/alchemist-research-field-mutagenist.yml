@@ -82,8 +82,8 @@ inc:
       - level: 13
         contents:
           - h5: "_{Greater Field Discovery}"
-          - p: "_{Drink a second polymorph mutagen to get the benefits and setbacks of both at once.}"
-          - p: "_{A third mutagen loses the benefit (not drawback) of one earlier mutagen; a non-mutagen polymorph loses both mutagens' benefits.}"
+          - p: "_{Drink a second polymorph mutagen to get the benefits and drawbacks of both at once.}"
+          - p: "_{A third mutagen removes the benefit of one earlier mutagen while keeping its drawback. A non-mutagen polymorph effect removes the benefits of both mutagens while keeping their drawbacks.}"
           
   - at: '@alchemist/research-field/formulas'
     replace:

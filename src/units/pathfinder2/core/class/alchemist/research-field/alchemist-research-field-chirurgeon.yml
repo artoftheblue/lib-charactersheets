@@ -46,7 +46,7 @@ inc:
         field_frame: none
         width: stretch
         columns:
-          - label: "_{elixir}"
+          - label: "_{Elixir}"
             align: left
           - "_{Level}"
           - "_{Type}"
@@ -58,7 +58,7 @@ inc:
         template:
           - field: alchemist-elixir-#{i}
             width: stretch
-            label: "_{elixir}"
+            label: "_{Elixir}"
           - field: alchemist-elixir-#{i}-level
             width: small
 
@@ -91,7 +91,7 @@ inc:
                       - field: 'formula-book-elixir-#{j}'
                         width: stretch
                         align: left
-                        legend: "_{elixir}"
+                        legend: "_{Elixir}"
                       - field: 'formula-book-elixir-#{j}-level'
                         label: "_{Level}"
                   

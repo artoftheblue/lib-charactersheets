@@ -17,4 +17,4 @@ inc:
           - dl:
               frequency: "_{Once per round}"
               trigger: "_{You use Quick Alchemy to craft an alchemical bomb of a lower level than your advanced alchemy level.}"
-          - p: "_{The bomb also creates a 10ft-burst cloud of smoke, concealing creatures within it from each other. Lasts 1 minute or until dispersed by a strong wind.}"
+          - p: "_{The bomb also creates a 10ft-burst cloud of smoke, concealing creatures within it from each other. Lasts for 1 minute or until dissipated by a strong wind.}"
