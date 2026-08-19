@@ -59,13 +59,13 @@ inc:
 
   - at: '@untamed-form/attacks'
     add:
-      name: "_{Bite}"
-      icon: d6
-      damage: "_{1d6}"
-      type: "_{Piercing}"
-  - flags:
-      - "_{Brawling}"
-      - "_{Unarmed}"
+      - name: "_{Bite}"
+        icon: d6
+        damage: "_{1d6}"
+        type: "_{Piercing}"
+        flags:
+          - "_{Brawling}"
+          - "_{Unarmed}"
 
   # - at: '@untamed-form/attacks'
   #   add:
@@ -234,4 +234,4 @@ inc:
 
   - at: '@anathema'
     replace:
-      - li: "_{Becoming fully domesticated by the temptations of civilization}"
+      - li: "_{Fully domesticating yourself to civilization}"

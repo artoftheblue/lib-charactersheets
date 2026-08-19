@@ -22,7 +22,7 @@ inc:
     replace:
       - section: "_{Leshy Familiar}"
         contents:
-          - p: "_{You gain a leshy familiar, a Tiny plant that embodies one of the many spirits of nature.}"
+          - p: "_{Gain a leshy familiar: a Tiny plant embodying a nature spirit.}"
 
   - at: '@focus-spells'
     add:

@@ -234,14 +234,14 @@ inc:
                                 title: "_{Animal Empathy}"
                                 cat: "_{Feat}"
                                 contents:
-                                  - p: "_{Communicate with creatures on a rudimentary level. You can use Diplomacy to Make an Impression on animals and to make very simple Requests of them.}"
+                                  - p: "_{Rudimentary communication with creatures: use Diplomacy to Make an Impression or simple Requests.}"
                           - selectable: "##:feat/plant-empathy"
                             contents:
                               - article: feat/druid/plant-empathy
                                 title: "_{Plant Empathy}"
                                 cat: "_{Feat}"
                                 contents:
-                                  - p: "_{Communicate with plants and fungus on a rudimentary level. You can ask questions and use Diplomacy on plants and fungus.}"
+                                  - p: "_{Rudimentary communication with plants/fungus: ask questions, use Diplomacy on them.}"
 
                   - tail:
                   - spacer:

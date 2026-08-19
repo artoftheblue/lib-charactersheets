@@ -27,7 +27,7 @@ inc:
         title: "_{Leshy Familiar}"
         cat: "_{Feat}"
         contents:
-          - p: "_{You gain a leshy familiar with your choice of the plant or fungus familiar ability, which doesn't count against your usual limit of familiar abilities.}"
+          - p: "_{Gain a leshy familiar with a plant or fungus familiar ability, not counting against your usual limit.}"
 
   - at: '@focus-spells'
     add:
