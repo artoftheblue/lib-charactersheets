@@ -25,6 +25,7 @@ inc:
                       field: champion-touch-of-corruption-damage
                       legend: "_{Damage\nLiving}"
                       suffix: "d6"
+                      icon: d6
                       width: huge
                       eq: "%{focus-level}"
                     inputs:
@@ -47,4 +48,4 @@ inc:
                       - field:
                         ref: focus-level
                         label: "_{Focus Level}"
-                  - p: "_{Undead target: also +2 status to damage rolls for 1 round.}"
+                  - p: "_{If you're the undead target, also gain +2 to damage rolls for 1 round.}"

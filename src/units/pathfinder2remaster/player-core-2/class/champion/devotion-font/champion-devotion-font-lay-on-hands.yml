@@ -34,6 +34,7 @@ inc:
               field: champion-lay-on-hands-damage
               legend: "_{Damage\nUndead}"
               suffix: "d6"
+              icon: d6
               width: large
               eq: "%{focus-rank}"
             inputs:
@@ -41,5 +42,7 @@ inc:
               - field:
                 ref: focus-rank
                 label: "_{Focus Level}"
-      - p: "_{Undead target: basic Fortitude save, -2 status to AC for 1 round on a failure.}"
+      - p: "_{If you heal an ally other than yourself, they also gain +2 to AC for 1 round.}"
+        size: small
+      - p: "_{Undead target: basic Fortitude save, -2 to AC for 1 round on a failure.}"
         size: small

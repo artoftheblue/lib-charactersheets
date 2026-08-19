@@ -40,6 +40,7 @@ inc:
                       field: champion-lay-on-hands-damage
                       legend: "_{Damage\nUndead}"
                       suffix: "d6"
+                      icon: d6
                       width: huge
                       eq: "%{focus-level}"
                     inputs:

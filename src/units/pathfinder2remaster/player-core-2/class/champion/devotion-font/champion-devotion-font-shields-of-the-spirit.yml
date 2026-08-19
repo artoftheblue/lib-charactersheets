@@ -15,12 +15,13 @@ inc:
     replace:
       - p:
         title: "_{Shields of the Spirit}"
-        content: "_{When you Raise your Shield, Allies in your champion's aura gain a +1 status bonus to AC, and enemies that attack them take spirit damage, even on a miss.}"
+        content: "_{Requires a shield. When you Raise your Shield, allies in your champion's aura (not you) gain a +1 status bonus to AC, and enemies that attack them take spirit damage, even on a miss. The shields last until the start of your next turn or until you stop Raising your Shield, whichever comes first.}"
       - calc:
         output:
           field: champion-shields-of-the-spirit-damage
           legend: "_{Spirit\nDamage}"
           suffix: "d4"
+          icon: d4
           width: large
           eq: "1+floor((%{focus-rank}-1)/2)"
         inputs:
