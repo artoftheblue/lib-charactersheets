@@ -351,11 +351,11 @@ inc:
                                   - selectable: "##:divine-font/healing-hands"
                                     contents:
                                       - p:
-                                        title: "_{Healing hands}"
+                                        title: "_{Healing Hands}"
                                   - selectable: "##:divine-font/harming-hands"
                                     contents:
                                       - p:
-                                        title: "_{Harming hands}"
+                                        title: "_{Harming Hands}"
                                   - span: "_{d10}"
 
                               - row:
@@ -373,7 +373,7 @@ inc:
                                   - calc:
                                     output:
                                       field: "##:divine-font/communal-healing/hp"
-                                      label: "_{Heal Self}"
+                                      label: "_{Healing}"
                                       eq: "%{focus-level}"
                                     inputs:
                                       - field:
@@ -389,8 +389,8 @@ inc:
                               - selectable: "##:divine-font/turn-undead"
                                 contents:
                                   - p:
-                                    title: "_{Turn undead}"
-                                    content: "_{Undead who critically fail are fleeing 1}"      
+                                    title: "_{Turn Undead}"
+                                    content: "_{Undead who critically fail are fleeing for 1 round.}"
   
                   - tail:
                   - spacer:

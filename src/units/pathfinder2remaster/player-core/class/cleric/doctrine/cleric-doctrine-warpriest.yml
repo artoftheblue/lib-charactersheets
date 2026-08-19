@@ -18,9 +18,12 @@ inc:
     value: trained
   - set: medium-armour-proficiency
     value: trained
-    
+
   - set: fortitude-proficiency
     value: expert
+
+  - set: shield-block
+    value: true
 
   - at: '@cleric-doctrine'
     replace:
@@ -32,7 +35,7 @@ inc:
             contents:
               - level: 1
                 contents:
-                  - p: "_{Increase the damage die of your deity's favoured weapon by one step (at least d6).}"
+                  - p: "_{Increase the damage die of your deity's favoured weapon by one step, to a minimum of d6.}"
                   - layout: indent-l
                     contents:
                       - g:
@@ -63,7 +66,7 @@ inc:
             contents:
               - level: 7
                 contents:
-                  - p: "_{Cleric's favoured weapon}, _{Martial weapons}, _{Simple weapons}, _{Unarmed attack}"
+                  - p: "_{Deity's favoured weapon}, _{Martial weapons}, _{Simple weapons}, _{Unarmed attack}"
                     icon: proficiency-expert
                   - p: "_{Gain the critical specialisation effect for your deity's favoured weapon. Use your spell DC if necessary.}"
                   - field: cleric-deity-weapon-critical

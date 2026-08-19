@@ -14,12 +14,13 @@ inc:
         cat: "_{Focus} 1"
         contents:
           - dl:
+              trigger: "_{An ally within 30ft takes damage.}"
               range: "_{30ft}"
           - paste: focus
             contents:
               - action: reaction
                 contents:
-                  - p: "_{When an ally takes damage, take some of the damage instead.}"
+                  - p: "_{Take some of the damage instead.}"
                   - calc:
                     output:
                       field: "##:damage"
