@@ -133,6 +133,9 @@ inc:
       - level: 13
         advance: "_{Light armour}, _{Medium armour}, _{Heavy armour}, _{Unarmoured defence}"
         proficiency: master
+      - level: 13
+        advance: "_{Simple weapons}, _{Martial weapons}, _{Unarmed attacks}"
+        proficiency: master
       - level: 17
         advance: "_{Champion class DC}, _{Spell attack modifier}, _{Spell DC}"
         proficiency: master
@@ -203,6 +206,9 @@ inc:
                         border: full
                         prefix: "_{d}"
                         width: large
+                        format: int
+                        damage-die: true
+                        icon: damage
 
                   - section: "_{Class DC}"
                     contents:

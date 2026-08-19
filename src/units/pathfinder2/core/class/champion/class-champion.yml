@@ -117,6 +117,9 @@ inc:
       - level: 13
         advance: "_{Light armour}, _{Medium armour}, _{Heavy armour}, _{Unarmoured defence}"
         proficiency: master
+      - level: 13
+        advance: "_{Simple weapons}, _{Martial weapons}, _{Unarmed attacks}"
+        proficiency: master
       - level: 17
         advance: "_{Champion class DC}, _{Divine spell attacks}, _{Divine spell DCs}"
         proficiency: master
@@ -169,7 +172,11 @@ inc:
                         width: stretch
                       - field: champion-deific-weapon-die
                         label: "_{Weapon Die}"
+                        border: full
                         prefix: "_{d}"
+                        format: int
+                        damage-die: true
+                        icon: damage
 
                   - section: "_{Class DC}"
                     contents:
