@@ -18,6 +18,7 @@ require:
   - unit: defs/calcs
   - unit: defs/actions
   - unit: defs/reference
+  - unit: defs/skill-actions
   - unit: defs/spells
     
   - with: core/metric

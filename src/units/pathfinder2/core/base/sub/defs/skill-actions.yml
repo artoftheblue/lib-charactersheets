@@ -1,0 +1,32 @@
+# Copyright 2026 Dyslexic Character Sheets
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: defs/skill-actions
+group: "_{Core Rulebook}"
+
+inc:
+
+  - copy: skill-action/earn-income
+    params:
+      skill: "_{Lore skill}"
+      ability: INT
+    contents:
+      - indent: left
+        contents:
+          - p:
+            title: "_{Earn Income} (#{skill})"
+            content: "_{GM sets the hidden DC of the check.}"
+            colour: "#{ability}"
+
+  - copy: skill-action/identify-magic
+    params:
+      skill:
+      ability:
+    contents:
+      - paste: 10mins
+        contents:
+          - p:
+            title: "_{Identify Magic} (#{skill})"
+            content: "_{Take 10 minutes to identify a magical item, location or effect.}"
+            colour: "#{ability}"
