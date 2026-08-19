@@ -59,7 +59,9 @@ inc:
             contents:
               - action: reaction
                 contents:
-                  - p: "_{An enemy damages your ally within 15 feet of you. The enemy must choose one:}"
+                  - dl:
+                      trigger: "_{An enemy damages your ally within 15 feet of you.}"
+                  - p: "_{The enemy must choose one:}"
                   - ul:
                     contents:
                       - li: "_{Your ally takes no damage from the triggering effect.}"

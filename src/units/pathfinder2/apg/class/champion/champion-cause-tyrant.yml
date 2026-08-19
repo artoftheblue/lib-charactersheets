@@ -93,7 +93,9 @@ inc:
             contents:
               - action: reaction
                 contents:
-                  - p: "_{Enemy within 15ft damages you: command it to kneel.}"
+                  - dl:
+                      trigger: "_{An enemy within 15ft damages you.}"
+                  - p: "_{Command it to kneel.}"
                   - ul:
                     contents:
                       - li:
@@ -126,7 +128,7 @@ inc:
                       - level-marker: "#{level}"
                         marker: ""
                       - value: "#{damage}"
-                  - p: "_{Your Strikes deal extra evil/negative damage next turn.}"
+                  - p: "_{Your Strikes deal extra evil/negative damage until the end of your next turn.}"
                   - table:
                     flip: true
                     rows:

@@ -100,7 +100,9 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{When an enemy damages your ally within 15 feet of you, the ally gains resistance. If the enemy is within reach, make a melee strike.}"
+                      - dl:
+                          trigger: "_{An enemy damages your ally within 15 feet of you.}"
+                      - p: "_{The ally gains resistance. If the enemy is within reach, make a melee strike.}"
                       - calc:
                         output:
                           field: paladin-retributive-strike-damage

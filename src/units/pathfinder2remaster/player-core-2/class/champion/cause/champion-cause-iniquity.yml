@@ -62,7 +62,9 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{An enemy in your aura damages you: increase the damage you take, and deal the same amount of spirit damage back.}"
+                      - dl:
+                          trigger: "_{An enemy in your aura damages you.}"
+                      - p: "_{Increase the damage you take, and deal the same amount of spirit damage back.}"
                       - table:
                         flip: true
                         rows:
@@ -87,7 +89,7 @@ inc:
                           - level-marker: "#{level}"
                             marker: ""
                           - value: "#{damage}"
-                      - p: "_{Also, until your next turn, Strikes against that creature deal extra spirit damage.}"
+                      - p: "_{Also, Strikes against that creature deal extra spirit damage until the end of your next turn.}"
                       - table:
                         flip: true
                         rows:

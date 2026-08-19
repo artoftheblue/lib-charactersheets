@@ -91,7 +91,9 @@ inc:
             contents:
               - action: reaction
                 contents:
-                  - p: "_{When an enemy within 15ft damages you, you may reduce that damage.}"
+                  - dl:
+                      trigger: "_{An enemy within 15ft damages you.}"
+                  - p: "_{You may reduce that damage.}"
                   - calc:
                     output:
                       field: desecrator-selfish-shield-resistance
@@ -104,7 +106,7 @@ inc:
                         ref: level
                         label: "_{Level}"
                       - span: "&divide; 2)"
-                  - p: "_{Strikes against that enemy do extra evil or negative damage for your next turn.}"
+                  - p: "_{Strikes against that enemy deal extra evil or negative damage until the end of your next turn.}"
                   - table:
                     flip: true
                     rows:
@@ -149,4 +151,4 @@ inc:
               - level: 11
                 contents:
                   - h5: "_{Exalt}"
-                  - p: "_{All enemies within 15ft take -1 to attack you until your next turn.}"
+                  - p: "_{All enemies within 15ft take -1 to attack you until the start of your next turn.}"

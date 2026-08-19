@@ -60,7 +60,9 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{An enemy within 15ft damages your ally: ally gains resistance, and if the enemy is in reach, melee Strike it.}"
+                      - dl:
+                          trigger: "_{An enemy within 15ft damages your ally.}"
+                      - p: "_{Your ally gains resistance, and if the enemy is in reach, you make a melee Strike against it.}"
                       - calc:
                         output:
                           field: champion-justice-retributive-strike-resistance

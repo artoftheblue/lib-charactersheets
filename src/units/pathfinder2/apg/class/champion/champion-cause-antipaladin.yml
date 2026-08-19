@@ -92,7 +92,9 @@ inc:
             contents:
               - action: reaction
                 contents:
-                  - p: "_{When an enemy within 15ft damages you, you may take extra damage to also deal that damage in return.}"
+                  - dl:
+                      trigger: "_{An enemy within 15ft damages you.}"
+                  - p: "_{You may take extra damage to also deal that damage in return.}"
                   - table:
                     flip: true
                     rows:
@@ -118,7 +120,7 @@ inc:
                         marker: ""
                       - value: "#{damage}"
 
-                  - p: "_{Your strikes against that enemy do extra evil or negative damage on your next turn.}"
+                  - p: "_{Your strikes against that enemy deal extra evil or negative damage until the end of your next turn.}"
                   - table:
                     flip: true
                     rows:

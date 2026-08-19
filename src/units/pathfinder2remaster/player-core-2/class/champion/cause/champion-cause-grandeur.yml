@@ -62,7 +62,9 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{An enemy within 15ft damages your ally: light flashes out, your ally gains resistance to that damage, and the attacker is affected by revealing light for 1 round.}"
+                      - dl:
+                          trigger: "_{An enemy within 15ft damages your ally.}"
+                      - p: "_{Light flashes out. Your ally gains resistance to that damage, and the attacker is affected by revealing light for 1 round.}"
                       - calc:
                         output:
                           field: champion-grandeur-flash-of-grandeur-resistance

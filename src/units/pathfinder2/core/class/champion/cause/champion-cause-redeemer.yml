@@ -93,7 +93,9 @@ inc:
             contents:
               - action: reaction
                 contents:
-                  - p: "_{When an enemy damages your ally within 15 feet of you, force the enemy to hesitate. They must choose:}"
+                  - dl:
+                      trigger: "_{An enemy damages your ally within 15 feet of you.}"
+                  - p: "_{Force the enemy to hesitate. They must choose:}"
                   - ul:
                     contents:
                       - li: "_{Your ally is unharmed}"

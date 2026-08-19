@@ -57,7 +57,9 @@ inc:
             contents:
               - action: reaction
                 contents:
-                  - p: "_{An enemy within 15ft damages, grabs, or grapples your ally: they gain resistance and choose one:}"
+                  - dl:
+                      trigger: "_{An enemy within 15ft damages, grabs, or grapples your ally.}"
+                  - p: "_{They gain resistance and choose one:}"
                   - ul:
                     contents:
                       - li: "_{[b]New Save[/b]: attempt a new save against the triggering effect.}"

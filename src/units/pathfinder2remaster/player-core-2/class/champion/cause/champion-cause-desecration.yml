@@ -58,7 +58,9 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{An enemy in your aura damages you: gain resistance to that damage, regardless of type.}"
+                      - dl:
+                          trigger: "_{An enemy in your aura damages you.}"
+                      - p: "_{Gain resistance to that damage, regardless of type.}"
                       - calc:
                         output:
                           field: champion-desecration-selfish-shield-resistance
@@ -72,7 +74,7 @@ inc:
                             ref: level
                             label: "_{Level}"
                           - span: "&divide; 2)"
-                      - p: "_{Until your next turn, Strikes against that creature deal extra spirit damage.}"
+                      - p: "_{Strikes against that creature deal extra spirit damage until the end of your next turn.}"
                       - table:
                         flip: true
                         rows:
@@ -123,4 +125,4 @@ inc:
                     pad: true
                     contents:
                       - h5: "_{Exalted Reaction}"
-                      - p: "_{Each enemy in your aura takes -1 status to attack rolls against you until your next turn.}"
+                      - p: "_{Each enemy in your aura takes -1 status to attack rolls against you until the start of your next turn.}"

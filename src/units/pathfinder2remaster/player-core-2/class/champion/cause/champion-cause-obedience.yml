@@ -60,7 +60,9 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{An enemy in your aura damages you: command it to kneel. It chooses one:}"
+                      - dl:
+                          trigger: "_{An enemy in your aura damages you.}"
+                      - p: "_{Command it to kneel. It chooses one:}"
                       - ul:
                         contents:
                           - li:
@@ -93,7 +95,7 @@ inc:
                           - level-marker: "#{level}"
                             marker: ""
                           - value: "#{damage}"
-                      - p: "_{Either way, Strikes against it deal extra spirit damage until your next turn.}"
+                      - p: "_{Either way, Strikes against it deal extra spirit damage until the end of your next turn.}"
                       - table:
                         flip: true
                         rows:
