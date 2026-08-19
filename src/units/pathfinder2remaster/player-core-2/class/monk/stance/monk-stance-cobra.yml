@@ -112,5 +112,7 @@ inc:
   - at: '@reference/weapon-traits'
     add:
       - agile
+      - deadly
       - finesse
       - unarmed
+      - venomous

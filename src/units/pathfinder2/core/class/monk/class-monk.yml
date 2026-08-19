@@ -13,8 +13,8 @@ form:
     max: 3
   - select: feat/monk
     name: "_{Monk Feats}"
-    max: 8
-    levels: [ 2, 4, 6, 8, 10, 14, 16, 18, 20 ]
+    max: 11
+    levels: [ 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
 
 require:
   - unit: class/monk/defs

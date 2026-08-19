@@ -14,14 +14,14 @@ inc:
       - g:
         name: "_{Dragon Stance}"
         contents:
-          - selectable: monk/stance/crane
+          - selectable: monk/stance/dragon
             contents:
               - paste: monk/stance
                 params:
                   id: dragon
                   title: "_{Dragon Stance}"
                 contents:
-                  - p: "_{Ignore the first square of difficult terrain when you Step unarmoured.}"
+                  - p: "_{Ignore the first square of difficult terrain when you Stride unarmoured.}"
 
           - paste: monk/stance-attack/str
             params:

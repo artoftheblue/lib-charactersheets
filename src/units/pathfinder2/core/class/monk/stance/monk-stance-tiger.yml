@@ -116,7 +116,7 @@ inc:
               - p:
                 title: "_{Tiger Claw Attack}"
                 content: "_{Unarmed attack that deals slashing damage.}"
-              - field: lashing-branch-damage
+              - field: tiger-claw-damage
                 label: "_{Damage}"
                 control: value
                 value: "d8"

@@ -39,6 +39,9 @@ inc:
                   - "_{Finesse}"
                   - "_{Nonlethal}"
                   - "_{Unarmed}"
+              - p: "_{While flanking:}"
+              - flags:
+                  - "_{Trip}"
 
           - selectable: monk/stance/wolf/drag
             contents:

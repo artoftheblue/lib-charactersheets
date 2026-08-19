@@ -26,7 +26,7 @@ inc:
 
           - paste: monk/stance-attack/dex
             params:
-              id: tiger-claw
+              id: wolf-jaw
               name: "_{Wolf Jaw Attack}"
               dmg: "_{d8}"
               type: "_{P}"

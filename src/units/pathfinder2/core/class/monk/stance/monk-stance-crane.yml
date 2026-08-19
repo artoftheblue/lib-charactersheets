@@ -72,7 +72,7 @@ inc:
         contents:
           - p:
             title: "_{Crane Stance}"
-            content: "_{Raise your arms in imitation of a crane's wings. Gain a +1 to AC and make crane wing attacks.}"
+            content: "_{Arms become crane wings: +1 AC, crane wing attacks.}"
       - action:
         order: 3
         contents:
@@ -92,7 +92,7 @@ inc:
         contents:
           - p:
             title: "_{Crane Stance}"
-            content: "_{Raise your arms in imitation of a crane's wings. Gain a +1 to AC and make crane wing attacks.}"
+            content: "_{Arms become crane wings: +1 AC, crane wing attacks.}"
 
   - at: '@reference/weapon-traits'
     add:

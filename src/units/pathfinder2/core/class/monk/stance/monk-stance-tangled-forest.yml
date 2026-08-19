@@ -22,12 +22,12 @@ inc:
                   id: tangled-forest
                   title: "_{Tangled Forest Stance}"
                 contents:
-                  - p: "_{Make enemies that move away from you attempt a Reflex save, Acrobatics or Athletics check against your class DC or be immobilised this round.}"
+                  - p: "_{Enemies moving away from you: Reflex save or Acrobatics/Athletics check vs your class DC, or immobilised this round.}"
 
           - paste: monk/stance-attack/dex
             params:
-              id: falling-stone
-              name: "_{Falling Stone Attack}"
+              id: lashing-branch
+              name: "_{Lashing Branch Attack}"
               dmg: "_{d8}"
               type: "_{S}"
             contents:
@@ -43,7 +43,7 @@ inc:
                 title: "_{Tangled Forest Rake}"
                 cat: "_{Feat}"
                 contents:
-                  - action:
+                  - action: 1
                     contents:
                       - p: "_{Make a lashing branch attack. If it deals damage, force the enemy to move 5ft into a space within your reach.}"
 
