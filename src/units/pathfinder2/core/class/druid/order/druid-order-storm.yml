@@ -42,22 +42,19 @@ inc:
                   legend: "_{Damage}"
                   width: large
                   suffix: "_{d12}"
+                  icon: d12
                   eq: "%{focus-level}"
                 inputs:
                   - label: "_{Focus Level}"
 
-              - p: "_{Target must make a Reflex save or be clumsy 2 and take persistent electricity damage.}"
+              - p: "_{On a failed save, target is also clumsy 2 for 1 round and takes persistent electricity damage.}"
               - row:
                 contents:
-                  - calc:
-                    output:
-                      field: tempest-surge-clumsy-duration
-                      legend: "_{Duration}"
-                      width: large
-                      suffix: "_{rds}"
-                      eq: "%{focus-level}"
-                    inputs:
-                      - label: "_{Focus Level}"
+                  - field: tempest-surge-clumsy-duration
+                    label: "_{Duration}"
+                    width: large
+                    control: value
+                    value: "_{1rd}"
                   - spacer:
                   - calc:
                     output:
