@@ -14,7 +14,7 @@ inc:
           _{You are a master of artistry, a scholar of hidden secrets, and a captivating
           persuader. Using powerful performances, you influence minds and elevate
           souls to new levels of heroics. You might use your powers to become a
-          charismatic leader, or perhaps you might instead be a counselor, manipulator, scholar,
+          charismatic leader, or perhaps you might instead be a counsellor, manipulator, scholar,
           scoundrel, or virtuoso. While your versatility leads some to consider you a beguiling ne’erdo-
           well and a jack-of-all-trades, it’s dangerous to dismiss you as a master of none.}
         size: large
@@ -22,7 +22,7 @@ inc:
         title: "_{During combat encounters...}"
         optional: true
         content: >
-          _{You use magical performances to alter the odds in favor of your allies. You confidently
+          _{You use magical performances to alter the odds in favour of your allies. You confidently
           alternate between attacks, healing, and helpful spells as needed.}
       - p:
         title: "_{During social encounters...}"
