@@ -17,7 +17,7 @@ form:
     levels: [ 1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
 
 require:
-  # - unit: option/animal-companion
+  - unit: option/animal-companion
 
   - deny: class/ranger
   - deny: archetype/ranger
@@ -148,7 +148,7 @@ inc:
         contents:
           - paste: juggernaut
             params:
-              title: "_{Wanderer's Endurance}"
+              title: "_{Warden's Endurance}"
       - level: 15
         contents:
           - paste: improved-evasion
@@ -225,13 +225,13 @@ inc:
                     contents:
                       - level: 5
                         contents:
-                          - p: "_{Gain access to the critical specialisation effects of your weapons and unarmed attacks when attacking your hunted prey.}"
+                          - p: "_{Critical specialisation effects of your weapons/unarmed attacks vs your hunted prey.}"
 
                   - section: "_{Trackless Journey}"
                     contents:
                       - level: 5
                         contents:
-                          - p: "_{Gain the benefit of the Cover Tracks action at all times. Anyone tracking you must make a Survival check against your Survival DC.}"
+                          - p: "_{Cover Tracks benefit always active; trackers need a Survival check vs your Survival DC.}"
 
                   - section: "_{Nature's Edge}"
                     contents:
@@ -304,7 +304,7 @@ inc:
         contents:
           - p:
             title: "_{Hunt Prey}"
-            content: "_{Pick a single target you can see or hear. Get a bonus to Perception and Track your prey.}"
+            content: "_{Pick a target you can see/hear: bonus to Perception and to Track it.}"
 
   - at: '@perception-misc'
     add:

@@ -2,18 +2,18 @@
 # This file is compliant with the Open Game License (OGL).
 # See the text of the OGL within this repository.
 
-unit: feat/fighter/running-reload
+unit: feat/ranger/running-reload
+in: feat/ranger
+group: "_{Core Rulebook}"
 name: "_{Running Reload}"
-group: "_{Advanced Player's Guide}"
 
 inc:
-  - copy: feat/fighter/running-reload
+  - copy: feat/ranger/running-reload
     contents:
       - article:
         title: "_{Running Reload}"
         cat: "_{Feat}"
         contents:
-          - action:
+          - action: 2
             contents:
-              - p: "_{Stride and reload in one action.}"
-        
+              - p: "_{Stride, Step, or Sneak, then Interact to reload.}"
