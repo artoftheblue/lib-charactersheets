@@ -4,7 +4,7 @@
 
 unit: focus/druid/heal-animal
 name: "_{Heal Animal}"
-group: "_{Advanced Player's Guide}"
+group: "_{Core Rulebook}"
 
 inc:
   - copy: focus/druid/heal-animal
