@@ -140,6 +140,13 @@ inc:
         label: "#{spell-level}"
         max: "#{spell-num}"
 
+  - at: '@key-ability-field'
+    replace:
+      - field: key-ability
+        label: "_{CHA}"
+        underlay: "_{CHA}"
+        ref: CHA
+
   - at: '@saving-throws'
     add:
       - level: 9

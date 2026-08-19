@@ -3,7 +3,7 @@
 # See the text of the OGL within this repository.
 
 unit: feat/bard/loremasters-etude
-group: "_{Advanced Player's Guide}"
+group: "_{Core Rulebook}"
 name: "_{Loremaster's Etude}"
 
 inc:
@@ -17,7 +17,10 @@ inc:
             contents:
               - action: free
                 contents:
+                  - flags:
+                      - "_{Fortune}"
                   - dl:
+                      trigger: "_{You or an ally within range attempts a Recall Knowledge check}"
                       range: "_{30ft}"
                       target: "_{You or the triggering ally}"
-                  - p: "_{Roll a Recall Knowledge check twice and use the better result.}"
+                  - p: "_{Roll the triggering check twice and use the better result.}"

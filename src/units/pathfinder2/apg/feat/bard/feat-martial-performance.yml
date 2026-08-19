@@ -3,14 +3,15 @@
 # See the text of the OGL within this repository.
 
 unit: feat/bard/apg/martial-performance
-group: "_{Core Rulebook}"
-name: "_{Advanced Player's Guide}"
+group: "_{Advanced Player's Guide}"
+name: "_{Martial Performance}"
 
 inc:
   - copy: feat/bard/apg/martial-performance
     contents:
       - article:
         title: "_{Martial Performance}"
+        cat: "_{Feat}"
         contents:
           - p: "_{Trained with martial weapons}"
             icon: proficiency-trained

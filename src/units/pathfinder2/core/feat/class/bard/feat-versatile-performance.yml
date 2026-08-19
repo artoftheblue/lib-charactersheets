@@ -4,7 +4,7 @@
 
 unit: feat/bard/versatile-performance
 group: "_{Core Rulebook}"
-name: "_{Bardic Lore}"
+name: "_{Versatile Performance}"
 
 inc:
   - copy: feat/bard/versatile-performance
@@ -14,3 +14,4 @@ inc:
         cat: "_{Feat}"
         contents:
           - p: "_{Can use Performance in place of Diplomacy to make an impression, or Intimidation to demoralise. Can use an acting Performance in place of Deception to impersonate.}"
+          - p: "_{Can also use Performance proficiency to meet skill feat prerequisites for Deception, Diplomacy or Intimidation.}"

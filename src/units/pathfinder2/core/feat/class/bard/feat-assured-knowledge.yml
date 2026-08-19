@@ -13,4 +13,5 @@ inc:
         title: "_{Assured Knowledge}"
         cat: "_{Feat}"
         contents:
-          - p: "_{May use 10 + proficiency bonus (inc level, but no other bonuses) rather than roll Recall Knowledge.}"
+          - p: "_{Can forgo rolling Recall Knowledge to instead receive 10 + proficiency bonus, with no other bonuses or penalties.}"
+          - p: "_{Meets the expert prerequisite for Automatic Knowledge skill feats.}"

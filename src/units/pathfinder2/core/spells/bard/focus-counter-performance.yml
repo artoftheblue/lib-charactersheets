@@ -13,7 +13,7 @@ inc:
         contents:
           - p:
             title: "_{Counter Performance}"
-            content: "_{Make a performance to counter an auditory or visual effect. You and allies within 30ft can take that check in place of a saving throw.}"
+            content: "_{Make a performance to counter an auditory or visual effect. You and allies within 60ft can take that check in place of a saving throw.}"
 
   - copy: focus/bard/counter-performance
     contents:
@@ -21,11 +21,15 @@ inc:
         title: "_{Counter Performance}"
         cat: "_{Focus} 1"
         contents:
-          - dl:
-              range: "_{60ft}"
           - action: reaction
             contents:
-              - p: "_{Roll a performance check to counter an auditory or visual effect. You and allies can take that result in place of a saving throw.}"
+              - flags:
+                  - "_{Concentrate}"
+                  - "_{Fortune}"
+              - dl:
+                  trigger: "_{You or an ally within 60ft rolls a saving throw against an auditory or visual effect}"
+                  area: "_{60ft emanation}"
+              - p: "_{Roll a performance check to counter the effect. You and allies can take that result in place of a saving throw.}"
           - paste: book-ref
             params:
               page-ref: "_{CRB p386}"

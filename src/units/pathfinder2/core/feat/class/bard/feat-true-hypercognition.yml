@@ -3,7 +3,7 @@
 # See the text of the OGL within this repository.
 
 unit: feat/bard/true-hypercognition
-group: "_{Advanced Player's Guide}"
+group: "_{Core Rulebook}"
 name: "_{True Hypercognition}"
 
 inc:
@@ -16,3 +16,4 @@ inc:
           - action:
             contents:
               - p: "_{Instantly Recall Knowledge up to five times.}"
+              - p: "_{Can't trigger special abilities or free actions that would normally trigger on Recall Knowledge.}"
