@@ -38,13 +38,13 @@ inc:
         contents:
           - table: "##:wild-shapes"
             rows:
-              - duration: "10 mins"
-                class: "Pest form"
-              - duration: "1 min"
-                class: "Other shapes"
+              - duration: "_{10 mins}"
+                class: "_{Pest Form}"
+              - duration: "_{1 min}"
+                class: "_{Other Shapes}"
             columns:
-              - "Duration"
-              - "Wild Shapes"
+              - "_{Duration}"
+              - "_{Wild Shapes}"
             template:
               - field: druid-wild-shape-duration
                 frame: none

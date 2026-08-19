@@ -43,13 +43,13 @@ inc:
         contents:
           - table: "##:untamed-forms"
             rows:
-              - duration: "10 mins"
-                class: "Pest form"
-              - duration: "1 min"
-                class: "Other shapes"
+              - duration: "_{10 mins}"
+                class: "_{Pest Form}"
+              - duration: "_{1 min}"
+                class: "_{Other Shapes}"
             columns:
-              - "Duration"
-              - "Untamed Shapes"
+              - "_{Duration}"
+              - "_{Untamed Shapes}"
             template:
               - field: druid-untamed-form-duration
                 frame: none
