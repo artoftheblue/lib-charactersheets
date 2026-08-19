@@ -102,6 +102,8 @@ inc:
                           - p:
                             icon: free-action
                             content: "_{[b]Escape[/b]: attempt to escape.}"
+                  - p: "_{If your ally can move, they can also Step as a free action, even if they didn't need to escape.}"
+                    size: small
                   - calc:
                     output:
                       field: paladin-liberating-step-resistance

@@ -60,7 +60,7 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{An enemy damages your ally within 15 feet of you. Your ally gains resistance to that damage, and if the enemy is within reach, you make a melee Strike against it.}"
+                      - p: "_{An enemy within 15ft damages your ally: ally gains resistance, and if the enemy is in reach, melee Strike it.}"
                       - calc:
                         output:
                           field: champion-justice-retributive-strike-resistance
@@ -80,7 +80,7 @@ inc:
                     pad: true
                     contents:
                       - h5: "_{Relentless Reaction}"
-                      - p: "_{If your Strike hits, the target also takes persistent spirit damage (a holy effect):}"
+                      - p: "_{If your Strike hits, the target also takes persistent spirit damage:}"
                       - calc:
                         output:
                           field: champion-divine-smite-justice
@@ -100,4 +100,4 @@ inc:
                     pad: true
                     contents:
                       - h5: "_{Exalted Reaction}"
-                      - p: "_{Each ally in your champion's aura with the target in their melee reach can spend a reaction to Strike the target at a -5 penalty.}"
+                      - p: "_{Each ally in your aura with the target in melee reach can spend a reaction to Strike it at -5.}"

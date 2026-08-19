@@ -9,8 +9,8 @@ group: "_{Advanced Player's Guide}"
 name: "_{Desecrator}"
 badge: "_{Neutral Evil}"
 
-# require:
-#   - unit: champion/devotion-spell/lay-on-hands
+require:
+  - unit: champion/devotion-spell/touch-of-corruption
 
 inc:
   - set: class
@@ -132,7 +132,7 @@ inc:
                     contents:
                       - calc:
                         output:
-                          field: champion-divine-smite-glimpse-of-redemption
+                          field: champion-divine-smite-selfish-shield
                           legend: "_{Resistance}"
                           width: large
                           eq: "%{CHA}+floor(%{level}/2)"

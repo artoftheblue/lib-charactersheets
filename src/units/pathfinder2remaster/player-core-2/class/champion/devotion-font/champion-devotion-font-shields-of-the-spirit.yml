@@ -22,9 +22,9 @@ inc:
           legend: "_{Spirit\nDamage}"
           suffix: "d4"
           width: large
-          eq: "1+floor((%{focus-level}-1)/2)"
+          eq: "1+floor((%{focus-rank}-1)/2)"
         inputs:
           - span: "1 +"
           - field:
-            ref: focus-level
+            ref: focus-rank
             label: "_{Focus Level}"

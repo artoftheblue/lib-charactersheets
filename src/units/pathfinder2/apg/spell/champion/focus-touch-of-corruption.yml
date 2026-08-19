@@ -1,0 +1,50 @@
+# Copyright 2025 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: focus/champion/apg/touch-of-corruption
+name: "_{Touch of Corruption}"
+group: "_{Advanced Player's Guide}"
+
+inc:
+  - copy: focus/champion/apg/touch-of-corruption
+    contents:
+      - article: focus/champion/apg/touch-of-corruption
+        title: "_{Touch of Corruption}"
+        cat: "_{Focus} 1"
+        contents:
+          - dl:
+              range: "_{Touch}"
+              target: "_{1 undead (willing) or living creature}"
+          - paste: focus
+            contents:
+              - action: 1
+                contents:
+                  - calc:
+                    output:
+                      field: champion-touch-of-corruption-damage
+                      legend: "_{Damage\nLiving}"
+                      suffix: "d6"
+                      width: huge
+                      eq: "%{focus-level}"
+                    inputs:
+                      - span: "_{1d6} &times;"
+                      - field:
+                        ref: focus-level
+                        label: "_{Focus Level}"
+                  - p: "_{Fortitude save or -2 AC for 1 round.}"
+
+                  - hr:
+                    light: true
+                  - calc:
+                    output:
+                      field: champion-touch-of-corruption-healing
+                      legend: "_{Heal\nUndead}"
+                      width: huge
+                      eq: "6*%{focus-level}"
+                    inputs:
+                      - span: "6 &times;"
+                      - field:
+                        ref: focus-level
+                        label: "_{Focus Level}"
+                  - p: "_{Undead target: also +2 status to damage rolls for 1 round.}"

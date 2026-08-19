@@ -9,8 +9,8 @@ group: "_{Advanced Player's Guide}"
 name: "_{Antipaladin}"
 badge: "_{Chaotic Evil}"
 
-# require:
-#   - unit: champion/devotion-spell/lay-on-hands
+require:
+  - unit: champion/devotion-spell/touch-of-corruption
 
 inc:
   - set: class
@@ -147,7 +147,7 @@ inc:
                     contents:
                       - calc:
                         output:
-                          field: champion-divine-smite-glimpse-of-redemption
+                          field: champion-divine-smite-destructive-vengeance
                           legend: "_{Persistent\nDamage}"
                           width: large
                           eq: "%{CHA}"
@@ -160,4 +160,4 @@ inc:
               - level: 11
                 contents:
                   - h5: "_{Exalt}"
-                  - p: "_{Other enemies withing 15 feet take half the damage.}"
+                  - p: "_{Other enemies within 15 feet take half the damage.}"

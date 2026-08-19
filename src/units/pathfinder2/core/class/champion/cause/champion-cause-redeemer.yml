@@ -97,7 +97,7 @@ inc:
                   - ul:
                     contents:
                       - li: "_{Your ally is unharmed}"
-                      - li: "_{Your ally gains resistance, and the foe is enfeebled 2 until the end of their turn}"
+                      - li: "_{Your ally gains resistance, and the foe is enfeebled 2 until the end of its next turn}"
                   - calc:
                     output:
                       field: paladin-glimpse-of-redemption-resistance

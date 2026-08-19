@@ -24,3 +24,4 @@ inc:
           - field: champion-shield-ally-bt
             label: "_{Broken\nThreshold}"
             suffix: "hp"
+            eq: "floor(%{champion-shield-ally-hp}/2)"

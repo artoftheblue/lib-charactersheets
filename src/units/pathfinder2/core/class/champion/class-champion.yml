@@ -33,7 +33,9 @@ inc:
     
   - set: champion-class-dc-proficiency
     value: trained
-  - set: divine-spell-proficiency
+  - set: divine-spell-attack-proficiency
+    value: trained
+  - set: divine-spell-dc-proficiency
     value: trained
   - set: perception-proficiency
     value: trained
@@ -98,7 +100,7 @@ inc:
         advance: "_{Light armour}, _{Medium armour}, _{Heavy armour}, _{Unarmoured defence}"
         proficiency: expert
       - level: 9
-        advance: "_{Champion class DC}"
+        advance: "_{Champion class DC}, _{Divine spell attacks}, _{Divine spell DCs}"
         proficiency: expert
       - level: 9
         advance: "_{Reflex saves}"
@@ -116,7 +118,7 @@ inc:
         advance: "_{Light armour}, _{Medium armour}, _{Heavy armour}, _{Unarmoured defence}"
         proficiency: master
       - level: 17
-        advance: "_{Champion class DC}"
+        advance: "_{Champion class DC}, _{Divine spell attacks}, _{Divine spell DCs}"
         proficiency: master
       - level: 17
         advance: "_{Light armour}, _{Medium armour}, _{Heavy armour}, _{Unarmoured defence}"
@@ -228,7 +230,7 @@ inc:
                     contents:
                       - action: reaction
                         contents:
-                          - p: "_{While you have your shield raised, reduce damage from an attack that hits you by your shield's Hardness. You and the shield each take any remaining damage.}"
+                          - p: "_{While raised, your shield reduces a hit's damage by its Hardness; you and the shield split any remainder.}"
 
                   - section: "_{Hero's Defiance}"
                     flex: small

@@ -62,7 +62,7 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{An enemy in your champion's aura damages you. Bloodshed begets bloodshed as you drag your enemy toward oblivion. You increase the damage you take, and deal the same amount of spirit damage to the triggering enemy.}"
+                      - p: "_{An enemy in your aura damages you: increase the damage you take, and deal the same amount of spirit damage back.}"
                       - table:
                         flip: true
                         rows:
@@ -87,7 +87,7 @@ inc:
                           - level-marker: "#{level}"
                             marker: ""
                           - value: "#{damage}"
-                      - p: "_{In addition, until the end of your next turn, your Strikes against the triggering creature deal extra spirit damage.}"
+                      - p: "_{Also, until your next turn, Strikes against that creature deal extra spirit damage.}"
                       - table:
                         flip: true
                         rows:
@@ -113,7 +113,7 @@ inc:
                     pad: true
                     contents:
                       - h5: "_{Relentless Reaction}"
-                      - p: "_{An enemy damaged by the initial reaction's damage also takes persistent spirit damage (an unholy effect). This applies only to the damage the reaction itself deals, not the damage you deal with subsequent Strikes:}"
+                      - p: "_{The enemy also takes persistent spirit damage (unholy) from the reaction only, not from subsequent Strikes:}"
                       - calc:
                         output:
                           field: champion-divine-smite-iniquity
@@ -133,4 +133,4 @@ inc:
                     pad: true
                     contents:
                       - h5: "_{Exalted Reaction}"
-                      - p: "_{Each enemy in your champion's aura other than the triggering creature takes half the damage you deal to the triggering enemy.}"
+                      - p: "_{Each other enemy in your aura takes half the damage you deal to the triggering enemy.}"

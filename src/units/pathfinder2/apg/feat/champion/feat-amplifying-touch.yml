@@ -13,4 +13,4 @@ inc:
         title: "_{Amplifying Touch}"
         cat: "_{Feat}"
         contents:
-          - p: "_{An ally you heal with lay on hands get +1 to attack rolls, +1 good damage.}"
+          - p: "_{An ally you heal with lay on hands gets a +1 to attack rolls and deals +1 good damage on all their Strikes until the end of their next turn.}"

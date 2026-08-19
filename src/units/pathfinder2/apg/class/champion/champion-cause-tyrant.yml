@@ -9,8 +9,8 @@ group: "_{Advanced Player's Guide}"
 name: "_{Tyrant}"
 badge: "_{Lawful Evil}"
 
-# require:
-#   - unit: champion/devotion-spell/lay-on-hands
+require:
+  - unit: champion/devotion-spell/touch-of-corruption
 
 inc:
   - set: class
@@ -52,16 +52,16 @@ inc:
                   - h5: "_{Tenets}"
                   - ul:
                     contents:
-                      - li: "_{Never willingly commit a purely good act, such as giving out of charity, casting a good spell or using a good item.}"
-                      - li: "_{Never put another's needs before you own, or put your own needs before your deity's.}"
+                      - li: "_{Never commit a purely good act (charity, using good spells/items).}"
+                      - li: "_{Never put others before yourself, or yourself before your deity.}"
                       - li: "_{Let no one lesser than you wield power over you or lead you.}"
-                      - li: "_{Mercilessly enforce established hierarchies of masters and servants. Topple or sieze control of illegitimate hierarchies, such as democratic governments or the arrogant echelons of the celestial planes, and fill power vacuums by taking that power for yourself.}"
+                      - li: "_{Enforce legitimate hierarchies; topple illegitimate ones (democracies, celestial echelons) and seize the power yourself.}"
                       - li: "_{Bind the weak to serve you.}"
                   - h5: "_{Anathema}"
                   - paste: anathema
                     params:
                       merge-bottom: false
-                  - p: "_{If you violate your code of conduct, you lose your focus pool and divine ally until you demonstrate repentance.}"
+                  - p: "_{Violating your code costs your focus pool and divine ally until you repent.}"
 
   - at: '@advancement'
     add:
@@ -93,7 +93,7 @@ inc:
             contents:
               - action: reaction
                 contents:
-                  - p: "_{When an enemy within 15ft damages you, command them enemy to kneel before you in obedience.}"
+                  - p: "_{Enemy within 15ft damages you: command it to kneel.}"
                   - ul:
                     contents:
                       - li:
@@ -126,16 +126,35 @@ inc:
                       - level-marker: "#{level}"
                         marker: ""
                       - value: "#{damage}"
+                  - p: "_{Your Strikes deal extra evil/negative damage next turn.}"
+                  - table:
+                    flip: true
+                    rows:
+                      - level: 1
+                        damage: "+1"
+                      - level: 9
+                        damage: "+2"
+                      - level: 16
+                        damage: "+3"
+                    columns:
+                      - label: "_{Level}"
+                        rotate: true
+                      - label: "_{Damage}"
+                        rotate: true
+                    template:
+                      - level-marker: "#{level}"
+                        marker: ""
+                      - value: "#{damage}"
               - level: 9
                 contents:
                   - h5: "_{Divine Smite}"
-                  - p: "_{An enemy who refuses your command also takes persistent evil damage:}"
+                  - p: "_{Refusal also deals persistent evil damage:}"
                   - g:
                     pad: true
                     contents:
                       - calc:
                         output:
-                          field: champion-divine-smite-glimpse-of-redemption
+                          field: champion-divine-smite-iron-command
                           legend: "_{Persistent\nDamage}"
                           width: large
                           eq: "%{CHA}"

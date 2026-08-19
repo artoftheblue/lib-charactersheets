@@ -60,7 +60,7 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{An enemy in your champion's aura damages you. You command your enemy to kneel before you in obedience. The enemy must choose one:}"
+                      - p: "_{An enemy in your aura damages you: command it to kneel. It chooses one:}"
                       - ul:
                         contents:
                           - li:
@@ -93,7 +93,7 @@ inc:
                           - level-marker: "#{level}"
                             marker: ""
                           - value: "#{damage}"
-                      - p: "_{Regardless of which option the enemy chose, your Strikes against it deal extra spirit damage until the end of your next turn.}"
+                      - p: "_{Either way, Strikes against it deal extra spirit damage until your next turn.}"
                       - table:
                         flip: true
                         rows:
@@ -139,4 +139,4 @@ inc:
                     pad: true
                     contents:
                       - h5: "_{Exalted Reaction}"
-                      - p: "_{Each enemy in your champion's aura other than the triggering creature must also either drop prone or take mental damage (each enemy chooses), taking only minimum damage that can't be adjusted by anything that changes your Iron Command.}"
+                      - p: "_{Each other enemy in your aura also drops prone or takes minimum mental damage (its choice), unaffected by anything that changes your Iron Command.}"

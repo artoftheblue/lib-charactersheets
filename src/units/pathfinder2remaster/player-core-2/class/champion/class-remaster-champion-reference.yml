@@ -6,8 +6,7 @@
 # Divine Ally -> Blessing of the Devoted (Blessed Armament/Shield/Swiftness) 
 # Steed -> Faithful Steed
 # Divine Smite and Exalt -> Relentless Reaction and Exalted Reaction
-# 15-foot Champion's Aura now exists offically
-# new cause: Grandeur
+# 15-foot Champion's Aura now exists officially
 # Juggernaut -> Sacred Body
 # add new Devotion Spells: Shields of the Spirit and Touch of the Void
 
@@ -61,6 +60,7 @@ inc:
   - at: '@reference/action-traits'
     add:
       - flourish
+      - sanctified
 
   - at: '@reference/weapon-traits'
     add:

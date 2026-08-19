@@ -23,11 +23,11 @@ inc:
               field: champion-lay-on-hands-healing
               legend: "_{Heal\nAlly}"
               width: large
-              eq: "6*%{focus-level}"
+              eq: "6*%{focus-rank}"
             inputs:
               - span: "6 &times;"
               - field:
-                ref: focus-level
+                ref: focus-rank
                 label: "_{Focus Level}"
           - calc:
             output:
@@ -35,11 +35,11 @@ inc:
               legend: "_{Damage\nUndead}"
               suffix: "d6"
               width: large
-              eq: "%{focus-level}"
+              eq: "%{focus-rank}"
             inputs:
               - span: "_{1d6} &times;"
               - field:
-                ref: focus-level
+                ref: focus-rank
                 label: "_{Focus Level}"
       - p: "_{Undead target: basic Fortitude save, -2 status to AC for 1 round on a failure.}"
         size: small

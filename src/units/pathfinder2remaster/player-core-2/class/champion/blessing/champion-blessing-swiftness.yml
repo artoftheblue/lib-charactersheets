@@ -22,7 +22,7 @@ inc:
                 hr: true
                 light: true
                 contents:
-                  - p: "_{You or your mount gains a +5-foot status bonus to Speed. An ally in your champion's auta triggering an enemy's reaction gains a +2 status bonus to all defences against it.}"
+                  - p: "_{You or your mount gains a +5-foot status bonus to Speed. An ally in your champion's aura triggering an enemy's reaction gains a +2 status bonus to all defences against it.}"
                   - field: champion-blessed-swiftness-speed
                     control: value
                     label: "_{Speed Bonus}"

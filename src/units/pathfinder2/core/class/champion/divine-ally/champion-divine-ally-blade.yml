@@ -18,6 +18,9 @@ inc:
         legend: "_{Blade Ally}"
         width: stretch
 
+      - p: "_{You also gain the weapon's critical specialisation effect.}"
+        size: small
+
       - h5: "_{Rune}"
       - list:
         hr: true
@@ -32,7 +35,7 @@ inc:
                 label: "_{Disrupting}"
               - indent:
                 contents:
-                  - p: "_{Deals 1d6 extra damage to undead. On a critical hit, an undead target is enfeebled 1 this round.}"
+                  - p: "_{Deals 1d6 extra positive damage to undead. On a critical hit, the undead is also enfeebled 1 until the end of your next turn.}"
                   
           - g:
             contents:
@@ -66,3 +69,14 @@ inc:
               - action:
                 contents:
                   - p: "_{Takes the shape of another melee weapon.}"
+
+          - g:
+            contents:
+              - field: champion-blade-ally-rune
+                control: radio
+                frame: right
+                value: fearsome
+                label: "_{Fearsome}"
+              - indent:
+                contents:
+                  - p: "_{Evil champions only. On a critical hit, the target becomes frightened 1.}"

@@ -97,4 +97,4 @@ inc:
               - level: 11
                 contents:
                   - h5: "_{Exalted Reaction}"
-                  - p: "_{If the enemy refuses, you can choose to grant the resistance to yourself and all allies in your champion's aura, including the triggering ally. If you do, the resistance is reduced by 2 for all.}"
+                  - p: "_{If the enemy refuses damage, you can instead grant the resistance to yourself and all allies in your aura (including the triggering ally), reduced by 2.}"

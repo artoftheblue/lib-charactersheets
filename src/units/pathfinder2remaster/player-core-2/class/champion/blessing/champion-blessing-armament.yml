@@ -22,7 +22,7 @@ inc:
                 hr: true
                 light: true
                 contents:
-                  - p: "_{Select one weapon or handwraps of mighty blows. You gain that armament's critical specialisation effect, and you grant it a property rune of your choice from the list below. During your daily preparations, you can change the spirit to inhabit a different armament, grant a different rune, or both.}"
+                  - p: "_{Select a weapon/handwraps: gain its critical specialisation, grant it a property rune from below. Daily prep: change armament, rune, or both.}"
                   - field: champion-blessed-armament-weapon
                     label: "_{Weapon or Handwraps}"
                     width: stretch
@@ -66,4 +66,4 @@ inc:
                             contents:
                               - p:
                                 title: "_{Vitalizing}"
-                                content: "_{On a critical hit, you or an ally within 10 feet regains Hit Points equal to twice the weapon's number of damage dice.}"
+                                content: "_{Crit: you or an ally within 10ft regains HP = twice the weapon's damage dice.}"

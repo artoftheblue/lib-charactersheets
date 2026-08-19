@@ -4,7 +4,7 @@
 
 unit: feat/champion/greater-mercy
 name: "_{Greater Mercy}"
-group: "_{Advanced Player's Guide}"
+group: "_{Core Rulebook}"
 
 inc:
   - copy: feat/champion/greater-mercy

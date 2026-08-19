@@ -22,8 +22,8 @@ inc:
 
   - at: '@edicts'
     add:
-      - li: "_{Subvert or corrupt everything in your path that is pure or holy.}"
-      - li: "_{Sow doubt among those holding ideals of purity or holiness.}"
+      - li: "_{Subvert or corrupt anything pure or holy in your path.}"
+      - li: "_{Sow doubt among believers in purity or holiness.}"
 
   - at: '@advancement'
     add:
@@ -58,7 +58,7 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{An enemy in your champion's aura damages you. Your self-interest keeps you safe: you gain resistance against the triggering damage, regardless of damage type.}"
+                      - p: "_{An enemy in your aura damages you: gain resistance to that damage, regardless of type.}"
                       - calc:
                         output:
                           field: champion-desecration-selfish-shield-resistance
@@ -72,7 +72,7 @@ inc:
                             ref: level
                             label: "_{Level}"
                           - span: "&divide; 2)"
-                      - p: "_{Until the end of your next turn, your Strikes against the triggering creature deal extra spirit damage.}"
+                      - p: "_{Until your next turn, Strikes against that creature deal extra spirit damage.}"
                       - table:
                         flip: true
                         rows:
@@ -98,7 +98,7 @@ inc:
                     pad: true
                     contents:
                       - h5: "_{Relentless Reaction}"
-                      - p: "_{If your Charisma modifier is +3 or greater, your resistance against the triggering damage instead equals your Charisma modifier plus half your level.}"
+                      - p: "_{If CHA modifier is +3 or greater, resistance instead equals CHA modifier + half level.}"
                       - calc:
                         output:
                           field: champion-desecration-selfish-shield-resistance-relentless
@@ -123,4 +123,4 @@ inc:
                     pad: true
                     contents:
                       - h5: "_{Exalted Reaction}"
-                      - p: "_{Each enemy in your champion's aura takes a -1 status penalty to attack rolls against you until the start of your next turn.}"
+                      - p: "_{Each enemy in your aura takes -1 status to attack rolls against you until your next turn.}"

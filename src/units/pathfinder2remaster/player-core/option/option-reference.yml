@@ -366,6 +366,9 @@ inc:
                                   rage:
                                     name: "_{Rage}"
                                     desc: "_{Must be raging to use this ability.}"
+                                  sanctified:
+                                    name: "_{Sanctified}"
+                                    desc: "_{Gains the holy or unholy trait to match your own sanctification, if you have one.}"
                                   secret:
                                     name: "_{Secret}"
                                     desc: "_{The GM rolls this check in secret.}"

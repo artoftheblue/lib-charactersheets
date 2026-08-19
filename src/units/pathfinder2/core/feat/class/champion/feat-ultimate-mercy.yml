@@ -1,0 +1,16 @@
+# Copyright 2025 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: feat/champion/ultimate-mercy
+name: "_{Ultimate Mercy}"
+group: "_{Core Rulebook}"
+
+inc:
+  - copy: feat/champion/ultimate-mercy
+    contents:
+      - article:
+        title: "_{Ultimate Mercy}"
+        cat: "_{Feat}"
+        contents:
+          - p: "_{When you use Mercy, you can cast Lay On Hands on a creature that died since your last turn to return it to life. The target returns to life with 1 hit point and becomes wounded 1. You can't use Ultimate Mercy if the triggering effect was disintegrate or a death effect.}"

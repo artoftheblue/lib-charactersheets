@@ -13,4 +13,4 @@ inc:
         title: "_{Rejuvenating Touch}"
         cat: "_{Feat}"
         contents:
-          - p: "_{An ally you heal with lay on hands get 10 temporary Hit Points at the start of their turn during each of the next 10 rounds. This ends if the ally is knocked unconscious.}"
+          - p: "_{An ally you heal with lay on hands gets 10 temporary Hit Points at the start of their turn during each of the next 10 rounds. This ends if the ally is knocked unconscious.}"

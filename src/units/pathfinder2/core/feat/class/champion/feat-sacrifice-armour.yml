@@ -18,12 +18,13 @@ inc:
               - p: "_{When hit by a Strike that deals physical damage, reduce that damage at the cost of your armour.}"
           - calc:
             output:
-              field: 
+              field: champion-sacrifice-armour-reduction
               legend: "_{Damage Reduction}"
               width: large
               border: full
+              eq: "%{champion-sacrifice-armour-armour-level}*2"
             inputs:
-              - field:
+              - field: champion-sacrifice-armour-armour-level
                 ref: true
                 label: "_{Armour Level}"
               - span: "&times; 2"

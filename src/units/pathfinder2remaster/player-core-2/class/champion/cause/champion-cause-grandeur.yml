@@ -22,7 +22,7 @@ inc:
 
   - at: '@edicts'
     add:
-      - li: "_{Provide a shining example for others, enjoy and share the beauty around you.}"
+      - li: "_{Be a shining example; enjoy and share beauty around you.}"
       - li: "_{Keep yourself tidy and well groomed.}"
 
   - at: '@anathema'
@@ -62,7 +62,7 @@ inc:
                   - g:
                     pad: true
                     contents:
-                      - p: "_{An enemy damages your ally within 15 feet of you. Imperious divine light flashes out from you to surround your foe. Your ally gains resistance to all damage against the triggering damage, and for 1 round the attacker is affected by revealing light.}"
+                      - p: "_{An enemy within 15ft damages your ally: light flashes out, your ally gains resistance to that damage, and the attacker is affected by revealing light for 1 round.}"
                       - calc:
                         output:
                           field: champion-grandeur-flash-of-grandeur-resistance
@@ -82,7 +82,7 @@ inc:
                     pad: true
                     contents:
                       - h5: "_{Relentless Reaction}"
-                      - p: "_{The enemy also takes persistent spirit damage (a holy effect), and can't recover from it while affected by the revealing light from Flash of Grandeur:}"
+                      - p: "_{Enemy also takes persistent spirit damage (holy); can't recover while affected by the revealing light:}"
                       - calc:
                         output:
                           field: champion-divine-smite-grandeur
@@ -102,4 +102,4 @@ inc:
                     pad: true
                     contents:
                       - h5: "_{Exalted Reaction}"
-                      - p: "_{Each other enemy in your champion's aura is also affected by the revealing light spell for 1 round.}"
+                      - p: "_{Each other enemy in your aura is also affected by revealing light for 1 round.}"

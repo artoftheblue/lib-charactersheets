@@ -13,4 +13,4 @@ inc:
         title: "_{Resilient Touch}"
         cat: "_{Feat}"
         contents:
-          - p: "_{An ally you heal with lay on hands get +1 to saving throws until the end of their next turn.}"
+          - p: "_{An ally you heal with lay on hands gets a +1 status bonus to saving throws until the end of their next turn.}"

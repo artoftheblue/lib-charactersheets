@@ -1,0 +1,16 @@
+# Copyright 2025 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: feat/champion/affliction-mercy
+name: "_{Affliction Mercy}"
+group: "_{Core Rulebook}"
+
+inc:
+  - copy: feat/champion/affliction-mercy
+    contents:
+      - article:
+        title: "_{Affliction Mercy}"
+        cat: "_{Feat}"
+        contents:
+          - p: "_{When you use Mercy, you can instead attempt to counteract a curse, disease, or poison.}"

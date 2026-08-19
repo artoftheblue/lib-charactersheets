@@ -14,3 +14,4 @@ inc:
         cat: "_{Feat}"
         contents:
           - p: "_{When you use Mercy, you can instead attempt to counteract the confused or stupefied conditions.}"
+          - p: "_{If the condition was caused by an ongoing effect and you don't remove that effect, the condition returns at the end of your next turn.}"

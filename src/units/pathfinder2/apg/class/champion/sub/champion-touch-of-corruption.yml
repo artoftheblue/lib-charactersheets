@@ -1,0 +1,23 @@
+# Copyright 2025 Marcus Downing
+# This file is compliant with the Open Game License (OGL).
+# See the text of the OGL within this repository.
+
+unit: champion/devotion-spell/touch-of-corruption
+name: "_{Touch of Corruption}"
+group: "_{Advanced Player's Guide}"
+
+require:
+  - unit: focus/champion/apg/touch-of-corruption
+
+inc:
+  - at: '@champion/devotion-spells'
+    add:
+      - paste: focus/champion/apg/touch-of-corruption
+
+  - at: '@focus-spells'
+    add:
+      - action: 1
+        contents:
+          - p:
+            title: "_{Touch of Corruption}"
+            content: "_{Harm a living creature, or heal an undead creature.}"
